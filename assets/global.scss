@@ -72,6 +72,13 @@ a {
   align-items: center;
   background-color: transparent;
 }
+
+.section {
+  position: relative;
+  z-index: 1;
+  padding: 128px 48px;
+  background-color: #fff;
+}
 .side-paddings {
   padding-right: 15px;
   padding-left: 15px;
