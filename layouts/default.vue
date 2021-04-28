@@ -21,11 +21,71 @@
     <section>
       <div class="wrapper sidepaddings">
         <footer>
-          <p>hi</p>
+          <div class="footer-sm">
+            <div class="social-buttons">
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener"
+                class="social-button dark-bg w-inline-block"
+                ><img
+                  src="https://assets.website-files.com/5be96776163440d16fc0e74c/5be9a92c6bace39d6bd2424a_twitter-icon-white.svg"
+                  alt="twitter"
+              /></a>
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener"
+                class="social-button dark-bg w-inline-block"
+                ><img
+                  src="https://assets.website-files.com/5be96776163440d16fc0e74c/5be9a925bfc62e394f5f8bf9_facebook-icon-white.svg"
+                  alt="facebook"
+              /></a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener"
+                class="social-button dark-bg w-inline-block"
+                ><img
+                  src="https://assets.website-files.com/5be96776163440d16fc0e74c/5be9a9258a9149b9edb7ade9_instagram-icon-white.svg"
+                  alt="instagram"
+              /></a>
+              <a
+                href="https://pinterest.com"
+                target="_blank"
+                rel="noopener"
+                class="social-button dark-bg w-inline-block"
+                ><img
+                  src="https://assets.website-files.com/5be96776163440d16fc0e74c/5be9a9268a91497c84b7adea_pinterest-icon-white.svg"
+                  alt="pinterest"
+              /></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <p class="paragraph-small text-grey">
+              1028 &nbsp;Archimedes Avenue, <br />Los Angeles, CA 90210
+            </p>
+          </div>
+          <div class="footer-col">
+            <a
+              href="mailto:your@email.com?subject=Your%20Subject"
+              class="link-grey"
+              >bethany@bethanymariedesign.com</a
+            >
+            <div class="text-grey">+1 213 974-3898</div>
+          </div>
+          <div class="footer-nav">
+            <nuxt-link to="/">home</nuxt-link>
+            <nuxt-link to="/portfolio">portfolio</nuxt-link>
+            <nuxt-link to="/blog">blog</nuxt-link>
+            <nuxt-link to="/about">about</nuxt-link>
+            <nuxt-link to="/contact">contact</nuxt-link>
+          </div>
         </footer>
         <div class="footer-bottom">
           <div>
-            <span class="white">Bethany Marie Design</span> &#169; {{ year }}
+            <span class="text-white">Bethany Marie Design</span> &#169;
+            {{ year }}
           </div>
         </div>
       </div>
@@ -162,5 +222,111 @@ footer {
   font-size: 10px;
   line-height: 16px;
   border-top-color: hsla(0, 0%, 100%, 0.15);
+}
+
+.footer-nav {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  a {
+    color: white;
+    margin-left: 24px;
+    font-size: 10px;
+    line-height: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+.footer-sm {
+  display: flex;
+  width: 25%;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+.social-buttons {
+  display: flex;
+  margin-right: -3px;
+  margin-left: -3px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.social-button {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  margin: 3px;
+  padding: 11px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 1px solid #e9e9e9;
+  border-radius: 50%;
+  border-color: hsla(0, 0%, 100%, 0.3);
+  -webkit-transition: border-color 200ms ease;
+  transition: border-color 200ms ease;
+
+  &:hover {
+    border-color: #e9e9e9;
+  }
+
+  img {
+    max-width: 100%;
+    vertical-align: middle;
+    display: inline-block;
+  }
+}
+
+.footer-col {
+  width: 16.66%;
+  font-size: 12px;
+  line-height: 20px;
+
+  a {
+    color: $grey2;
+  }
+}
+
+.paragraph-small {
+  margin-bottom: 16px;
+  margin-top: 0;
+  font-size: 12px;
+  line-height: 20px;
 }
 </style>
