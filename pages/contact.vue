@@ -18,6 +18,8 @@
             </p>
             <a
               href="mailto:your@email.com?subject=Your%20Subject"
+              rel="noopener"
+              target="_blank"
               class="link w-inline-block"
               ><div>bethany@bmdesign.com</div>
               <div class="link-underline"></div
@@ -26,6 +28,7 @@
               <a
                 href="https://twitter.com"
                 target="_blank"
+                rel="noopener"
                 class="social-button w-inline-block"
                 ><img
                   src="https://assets.website-files.com/5be96776163440d16fc0e74c/5be9a92cbfc62e30ac5f8bff_twitter-icon.svg"
@@ -33,6 +36,7 @@
               ><a
                 href="https://facebook.com"
                 target="_blank"
+                rel="noopener"
                 class="social-button w-inline-block"
                 ><img
                   src="https://assets.website-files.com/5be96776163440d16fc0e74c/5be9a925fc16dc6e43b318b4_facebook-icon.svg"
@@ -40,6 +44,7 @@
               ><a
                 href="https://instagram.com"
                 target="_blank"
+                rel="noopener"
                 class="social-button w-inline-block"
                 ><img
                   src="https://assets.website-files.com/5be96776163440d16fc0e74c/5be9a925ca79973c1bcc8cb1_instagram-icon.svg"
@@ -47,6 +52,7 @@
               ><a
                 href="https://pinterest.com"
                 target="_blank"
+                rel="noopener"
                 class="social-button w-inline-block"
                 ><img
                   src="https://assets.website-files.com/5be96776163440d16fc0e74c/5be9a9266bace31352d24249_pinterest-icon.svg"
@@ -125,7 +131,7 @@ export default {}
   margin-right: 15px;
   margin-left: 15px;
   padding: 104px 7%;
-  border: 1px solid $grey2;
+  border: 1px solid $grey4;
 }
 .link {
   position: relative;

@@ -110,6 +110,12 @@ export default Vue.extend({
 
 <style lang="scss">
 header {
+  position: sticky;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  z-index: 100;
+  background-color: white;
   width: 100%;
   height: 88px;
   margin: 0 auto;
