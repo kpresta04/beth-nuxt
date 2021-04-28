@@ -18,8 +18,35 @@
       </div>
     </header>
     <Nuxt />
+    <section>
+      <div class="wrapper sidepaddings">
+        <footer>
+          <p>hi</p>
+        </footer>
+        <div class="footer-bottom">
+          <div>
+            <span class="white">Bethany Marie Design</span> &#169; {{ year }}
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
+<script lang="ts">
+import Vue from 'vue'
+
+export default Vue.extend({
+  data() {
+    return {
+      year: 2021,
+    }
+  },
+  created() {
+    const date = new Date()
+    this.year = date.getFullYear()
+  },
+})
+</script>
 
 <style lang="scss">
 header {
@@ -89,10 +116,51 @@ nav {
   padding-bottom: 6px;
   padding-left: 15px;
   border-left: 1px solid #e9e9e9;
-  color: #888;
+  color: $grey2;
   font-size: 9px;
   line-height: 16px;
   font-weight: 400;
   letter-spacing: 1.5px;
+}
+
+section {
+  background-color: $dark;
+  color: white;
+  padding: 0 48px;
+}
+
+footer {
+  display: flex;
+  width: 100%;
+  padding-top: 48px;
+  padding-bottom: 56px;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.footer-bottom {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border-top: 1px solid #e9e9e9;
+  color: $grey2;
+  font-size: 10px;
+  line-height: 16px;
+  border-top-color: hsla(0, 0%, 100%, 0.15);
 }
 </style>

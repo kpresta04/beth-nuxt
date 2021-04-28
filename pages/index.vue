@@ -13,7 +13,7 @@ import Vue from 'vue'
 export default Vue.extend({})
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 h1 {
   color: $color-1;
 }
