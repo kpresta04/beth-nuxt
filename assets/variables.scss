@@ -1,0 +1,19 @@
+// color variables
+$dark: hsl(0, 0%, 8%);
+$grey1: #444444;
+$grey2: #888888;
+$grey3: #d1d1d1;
+$grey4: #e9e9e9;
+$haze: #f6f6f6;
+
+$color-1: hsl(84, 37%, 59%);
+$c1-complement: lighten($color-1, 35%);
+
+$color-2: hsl(28, 73%, 67%);
+$c2-complement: lighten($color-2, 35%);
+
+$color-3: hsl(251, 42%, 67%);
+$c3-complement: lighten($color-3, 35%);
+
+$color-4: hsl(339, 70%, 68%);
+$c4-complement: lighten($color-4, 35%);
