@@ -3,8 +3,11 @@
     <header>
       <div class="nav-wrapper">
         <div class="brand-info">
-          <div class="brand-title">Bethany Marie</div>
-          <div class="brand-descr">Design</div>
+          <nuxt-link to="/">
+            <img src="sc.svg" alt="logo" />
+            <div class="brand-title">Bethany Marie</div>
+            <div class="brand-descr">Design</div>
+          </nuxt-link>
         </div>
         <nav>
           <nuxt-link to="/portfolio">portfolio</nuxt-link>
@@ -35,21 +38,22 @@ header {
   display: grid;
   grid-template-columns: 1fr 3fr;
 }
+a {
+  display: flex;
+  align-items: center;
+  color: $dark;
+}
 nav {
   display: flex;
   height: 100%;
   justify-content: flex-end;
   align-items: center;
   padding-right: 4rem;
-
   a {
-    color: $dark;
     text-transform: capitalize;
-    text-decoration: none;
     font-size: 14px;
     margin: 0 2rem;
   }
-
   a:hover {
     text-decoration: underline;
   }
@@ -61,6 +65,13 @@ nav {
   text-transform: uppercase;
   height: 100%;
   padding: 8px 16px 8px 15px;
+
+  img {
+    max-width: 32px;
+    vertical-align: middle;
+    display: inline-block;
+    color: $grey1;
+  }
 }
 .brand-title {
   margin-left: 15px;
