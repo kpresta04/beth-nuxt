@@ -1,7 +1,9 @@
 <template>
   <div class="main">
     <section class="masthead" role="img" aria-label="Image Description">
-      <h1>Contact</h1>
+      <div class="wrapper">
+        <h1>Contact</h1>
+      </div>
     </section>
 
     <div class="section">
