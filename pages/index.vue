@@ -4,7 +4,6 @@
     <p>I am a designer</p>
     <h2>I am h2</h2>
     <h3>I am h3</h3>
-    <button>Hello</button>
   </div>
 </template>
 
