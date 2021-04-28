@@ -57,7 +57,5 @@ h1 {
   line-height: 1;
   text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
   margin-bottom: 28px;
-  border-bottom: 2px solid white;
-  border-
 }
 </style>
