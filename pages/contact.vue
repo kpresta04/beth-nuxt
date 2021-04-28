@@ -16,6 +16,43 @@
               Interested in working with Bethany Marie Design Studio? We'd love
               to hear from you.
             </p>
+            <a
+              href="mailto:your@email.com?subject=Your%20Subject"
+              class="link w-inline-block"
+              ><div>bethany@bmdesign.com</div>
+              <div class="link-underline"></div
+            ></a>
+            <div class="social-buttons contact-v1-social">
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                class="social-button w-inline-block"
+                ><img
+                  src="https://assets.website-files.com/5be96776163440d16fc0e74c/5be9a92cbfc62e30ac5f8bff_twitter-icon.svg"
+                  alt="twitter" /></a
+              ><a
+                href="https://facebook.com"
+                target="_blank"
+                class="social-button w-inline-block"
+                ><img
+                  src="https://assets.website-files.com/5be96776163440d16fc0e74c/5be9a925fc16dc6e43b318b4_facebook-icon.svg"
+                  alt="facebook" /></a
+              ><a
+                href="https://instagram.com"
+                target="_blank"
+                class="social-button w-inline-block"
+                ><img
+                  src="https://assets.website-files.com/5be96776163440d16fc0e74c/5be9a925ca79973c1bcc8cb1_instagram-icon.svg"
+                  alt="instagram" /></a
+              ><a
+                href="https://pinterest.com"
+                target="_blank"
+                class="social-button w-inline-block"
+                ><img
+                  src="https://assets.website-files.com/5be96776163440d16fc0e74c/5be9a9266bace31352d24249_pinterest-icon.svg"
+                  alt="pinterest"
+              /></a>
+            </div>
           </div>
           <div class="contact-form">
             <form id="email-form" name="email-form" data-name="Email Form">
@@ -90,6 +127,49 @@ export default {}
   padding: 104px 7%;
   border: 1px solid $grey2;
 }
+.link {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin-top: -4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-shadow: inset 0 -1px 0 0 #d1d1d1;
+  -webkit-transition: all 150ms ease;
+  transition: all 150ms ease;
+  color: #151515;
+  font-size: 10px;
+  line-height: 16px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.link:hover .link-underline {
+  width: 100%;
+}
+.link-underline {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 1;
+  display: block;
+  width: 0px;
+  height: 1px;
+  margin-right: auto;
+  margin-left: 0px;
+  transition: all 1s ease;
+  background-color: #151515;
+}
 .masthead {
   display: flex;
   justify-content: center;
@@ -111,9 +191,7 @@ export default {}
 }
 
 h1 {
-  position: absolute;
-  top: 35%;
-  left: 10%;
+  text-align: left;
   font-style: normal;
   font-weight: bold;
   font-family: Courier, sans-serif;
@@ -125,8 +203,20 @@ h1 {
   margin-bottom: 28px;
 }
 .contact-info {
-  /* display: flex; */
+  display: flex;
   width: 33.33%;
+  padding-top: 12px;
+  padding-right: 4%;
+  padding-left: 15px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 .contact-form {
   width: 67.77%;
@@ -150,5 +240,20 @@ p {
   margin-bottom: 24px;
   font-size: 14px;
   line-height: 24px;
+}
+
+.contact-v1-social {
+  margin-top: 24px;
+}
+
+.social-button {
+  border: 1px solid #e9e9e9;
+  border-radius: 50%;
+  -webkit-transition: border-color 200ms ease;
+  transition: border-color 200ms ease;
+
+  &:hover {
+    border-color: $dark;
+  }
 }
 </style>

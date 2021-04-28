@@ -112,7 +112,6 @@ export default Vue.extend({
 header {
   width: 100%;
   height: 88px;
-  max-width: $max-div-width;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
