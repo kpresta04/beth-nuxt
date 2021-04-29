@@ -45,7 +45,26 @@
             </p>
             <SocialButtons />
           </div>
-          <div class="right-col"></div>
+          <div class="right-col">
+            <img src="/placeholder.jpg" alt="Bethany" loading="lazy" />
+            <p class="info-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+              vero quidem quis reiciendis illum molestias tempora tempore nam
+              nostrum deserunt!
+            </p>
+            <p class="info-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut neque
+              dolore nihil nobis, aliquid id.
+            </p>
+            <p class="info-text">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora
+              ab laborum architecto nulla animi excepturi, hic optio voluptatem
+              dolores corporis illo quod at praesentium. Sint odit accusantium
+              fuga molestiae maxime.
+            </p>
+            <img src="/sig.png" alt="Bethany's signature" loading="lazy" />
+            <img class="vert" src="/vert-about.jpg" alt="room" loading="lazy" />
+          </div>
         </div>
       </div>
     </div>
@@ -67,12 +86,41 @@ li {
 }
 .flex-wrapper {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
+}
+.right-col {
+  .vert {
+    display: inline-block;
+    max-width: 350px;
+    height: auto;
+    margin-top: 72px;
+  }
+  img {
+    max-width: 200px;
+    height: auto;
+  }
+  img:first-child {
+    float: left;
+    margin-right: 24px;
+    margin-bottom: 10px;
+  }
 }
 .left-col {
   img {
     max-width: 540px;
     height: auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .flex-wrapper {
+    justify-content: space-between;
+  }
+  .left-col {
+    max-width: 600px;
+  }
+  .right-col {
+    max-width: 500px;
   }
 }
 </style>
