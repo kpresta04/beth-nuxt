@@ -15,7 +15,12 @@
               et sit velit, dolore, veniam numquam cum, perspiciatis nostrum
               nulla tempore quisquam? Ullam, eligendi!
             </p>
-            <img src="/simple.jpg" alt="simple design" loading="lazy" />
+            <img
+              class="simple-design"
+              src="/simple.jpg"
+              alt="simple design"
+              loading="lazy"
+            />
             <p class="info-text">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore
               ducimus doloremque quisquam debitis ad eaque iste voluptatem
@@ -63,7 +68,14 @@
               fuga molestiae maxime.
             </p>
             <img src="/sig.png" alt="Bethany's signature" loading="lazy" />
-            <img class="vert" src="/vert-about.jpg" alt="room" loading="lazy" />
+            <div class="img-wrapper">
+              <img
+                class="vert"
+                src="/vert-about.jpg"
+                alt="room"
+                loading="lazy"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -84,13 +96,21 @@ li {
   margin-bottom: 6px;
   font-size: 0.88rem;
 }
+.img-wrapper {
+  display: flex;
+  justify-content: center;
+}
 .flex-wrapper {
   display: flex;
-  flex-wrap: wrap-reverse;
+  flex-wrap: wrap;
+  padding: 2px;
+  justify-content: center;
 }
 .right-col {
+  margin-top: 24px;
   .vert {
     display: inline-block;
+    width: 100%;
     max-width: 350px;
     height: auto;
     margin-top: 72px;
@@ -99,14 +119,16 @@ li {
     max-width: 200px;
     height: auto;
   }
-  img:first-child {
+  img:first-child:not(.vert) {
     float: left;
     margin-right: 24px;
     margin-bottom: 10px;
   }
 }
 .left-col {
-  img {
+  .simple-design {
+    margin-bottom: 10px;
+    width: 100%;
     max-width: 540px;
     height: auto;
   }
