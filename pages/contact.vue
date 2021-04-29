@@ -180,6 +180,17 @@ export default {}
     width: 67.77%;
   }
 }
+@media screen and (min-width: 1025px) {
+  .contact-info {
+    padding-top: 12px;
+    width: 33.33% !important;
+    margin-top: 0;
+  }
+  .contact-form {
+    width: 67.77% !important;
+    margin-top: 0 !important;
+  }
+}
 .contact {
   display: flex;
   margin-right: 15px;
