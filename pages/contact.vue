@@ -62,57 +62,57 @@
           </div>
           <div class="contact-form">
             <form id="email-form" name="email-form" data-name="Email Form">
-              <div class="side-input-wrapper-50"></div>
-              <div class="side-input-wrapper-50"></div>
-              <div class="form-columns w-row">
-                <div class="w-col w-col-6">
-                  <input
-                    type="text"
-                    class="input w-input"
-                    maxlength="256"
-                    name="Contact-Name-3"
-                    data-name="Contact Name 3"
-                    placeholder="Your name"
-                    id="Contact-Name-3"
-                    required=""
-                  />
-                </div>
-                <div class="w-col w-col-6">
-                  <input
-                    type="email"
-                    class="input w-input"
-                    maxlength="256"
-                    name="Contact-Email-3"
-                    data-name="Contact Email 3"
-                    placeholder="Email address"
-                    id="Contact-Email-3"
-                    required=""
-                  />
-                </div>
+              <div class="form-grid">
+                <!-- <div class="form-columns w-row">
+               <div class="w-col w-col-6">
+                  </div> 
+                </div> -->
+                <input
+                  type="text"
+                  class="input w-input"
+                  maxlength="256"
+                  name="Contact-Name-3"
+                  data-name="Contact Name 3"
+                  placeholder="Your name"
+                  id="Contact-Name-3"
+                  required
+                />
+                <!-- <div class="w-col w-col-6"></div> -->
+                <input
+                  type="email"
+                  class="input w-input"
+                  maxlength="256"
+                  name="Contact-Email-3"
+                  data-name="Contact Email 3"
+                  placeholder="Email address"
+                  id="Contact-Email-3"
+                  required
+                />
+                <input
+                  type="text"
+                  class="input w-input"
+                  maxlength="256"
+                  name="Contact-Phone-2"
+                  data-name="Contact Phone 2"
+                  placeholder="Contact Phone"
+                  id="Contact-Phone-2"
+                /><textarea
+                  id="Contact-Message-3"
+                  name="Contact-Message-3"
+                  placeholder="Describe your project..."
+                  maxlength="5000"
+                  data-name="Contact Message 3"
+                  required
+                  class="input text-area w-input"
+                ></textarea
+                ><input
+                  id="submit-btn"
+                  type="submit"
+                  value="Submit Message"
+                  data-wait="Please wait..."
+                  class="button bg-color-2 w-button"
+                />
               </div>
-              <input
-                type="text"
-                class="input w-input"
-                maxlength="256"
-                name="Contact-Phone-2"
-                data-name="Contact Phone 2"
-                placeholder="Contact Phone"
-                id="Contact-Phone-2"
-              /><textarea
-                id="Contact-Message-3"
-                name="Contact-Message-3"
-                placeholder="Describe your project..."
-                maxlength="5000"
-                data-name="Contact Message 3"
-                required=""
-                class="input text-area w-input"
-              ></textarea
-              ><input
-                type="submit"
-                value="Submit Message"
-                data-wait="Please wait..."
-                class="button color-2 w-button"
-              />
             </form>
           </div>
         </div>
@@ -126,6 +126,37 @@ export default {}
 </script>
 
 <style lang="scss" scoped>
+.form-grid {
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 20px;
+}
+#submit-btn {
+  grid-column: 1;
+  grid-row: 4;
+  color: $c2-complement;
+  width: fit-content;
+}
+#Contact-Phone-2 {
+  grid-row: 2;
+  grid-column: 1 / 3;
+}
+#Contact-Message-3 {
+  grid-row: 3;
+  grid-column: 1 / 3;
+}
+#Contact-Email-3 {
+  grid-row: 1;
+  grid-column: 2;
+}
+#Contact-Name-3 {
+  grid-row: 1;
+  grid-column: 1;
+}
+#email-form {
+  width: 100%;
+}
 .contact {
   display: flex;
   margin-right: 15px;
@@ -227,6 +258,14 @@ h1 {
 .contact-form {
   width: 67.77%;
   display: flex;
+  margin-bottom: 0px;
+  padding-right: 15px;
+  padding-left: 15px;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin: 0 0 15px;
 }
 
 .divider {
@@ -261,5 +300,17 @@ p {
   &:hover {
     border-color: $dark;
   }
+}
+
+.input {
+  height: 48px;
+  margin-bottom: 24px;
+  padding: 11px 24px 12px;
+  border-style: none;
+  background-color: #f6f6f6;
+  -webkit-transition: border-color 300ms ease, background-color 300ms ease;
+  transition: border-color 300ms ease, background-color 300ms ease;
+  font-size: 14px;
+  line-height: 24px;
 }
 </style>

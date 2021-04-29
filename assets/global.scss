@@ -95,3 +95,44 @@ a {
 .bg-color-2 {
   background-color: $color-2;
 }
+
+button,
+input[type='submit'] {
+  border: none;
+  display: flex;
+  height: 48px;
+  padding: 12px 24px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: color 400ms ease, background-color 400ms ease,
+    box-shadow 400ms ease;
+  transition: color 400ms ease, background-color 400ms ease,
+    box-shadow 400ms ease;
+  //   color: #fff;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+input:focus-visible,
+textarea:focus-visible {
+  outline: none;
+}
+
+.input.text-area {
+  min-height: 200px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
