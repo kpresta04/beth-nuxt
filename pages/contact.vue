@@ -1,10 +1,6 @@
 <template>
   <div class="main">
-    <section class="masthead" role="img" aria-label="Image Description">
-      <div class="wrapper">
-        <h1>Contact</h1>
-      </div>
-    </section>
+    <Masthead />
 
     <div class="section">
       <div class="wrapper">
@@ -122,7 +118,10 @@
 </template>
 
 <script>
-export default {}
+import Masthead from '~/components/Masthead.vue'
+export default {
+  components: { Masthead },
+}
 </script>
 
 <style lang="scss" scoped>
@@ -243,38 +242,7 @@ export default {}
   transition: all 1s ease;
   background-color: #151515;
 }
-.masthead {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  position: relative;
-  width: 100%;
-  height: 40vh; /* if you don't want it to take up the full screen, reduce this number */
-  overflow: hidden;
-  background-size: cover !important;
-  background: radial-gradient(
-      ellipse at center,
-      rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 0) 61%,
-      rgba(0, 0, 0, 0.65) 100%
-    ),
-    url('/contact.jpg') no-repeat center center scroll;
-}
 
-h1 {
-  text-align: left;
-  font-style: normal;
-  font-weight: bold;
-  font-family: Courier, sans-serif;
-  color: #eee;
-  font-size: 40px;
-  letter-spacing: 0.03em;
-  line-height: 1;
-  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
-  margin-bottom: 28px;
-}
 .contact-info {
   display: flex;
   width: 100%;
