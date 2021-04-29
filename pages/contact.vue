@@ -20,40 +20,8 @@
               ><div>bethany@bmdesign.com</div>
               <div class="link-underline"></div
             ></a>
-            <div class="social-buttons contact-v1-social">
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener"
-                class="social-button w-inline-block"
-                ><img
-                  src="https://assets.website-files.com/5be96776163440d16fc0e74c/5be9a92cbfc62e30ac5f8bff_twitter-icon.svg"
-                  alt="twitter" /></a
-              ><a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener"
-                class="social-button w-inline-block"
-                ><img
-                  src="https://assets.website-files.com/5be96776163440d16fc0e74c/5be9a925fc16dc6e43b318b4_facebook-icon.svg"
-                  alt="facebook" /></a
-              ><a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener"
-                class="social-button w-inline-block"
-                ><img
-                  src="https://assets.website-files.com/5be96776163440d16fc0e74c/5be9a925ca79973c1bcc8cb1_instagram-icon.svg"
-                  alt="instagram" /></a
-              ><a
-                href="https://pinterest.com"
-                target="_blank"
-                rel="noopener"
-                class="social-button w-inline-block"
-                ><img
-                  src="https://assets.website-files.com/5be96776163440d16fc0e74c/5be9a9266bace31352d24249_pinterest-icon.svg"
-                  alt="pinterest"
-              /></a>
+            <div class="contact-v1-social">
+              <SocialButtons />
             </div>
           </div>
           <div class="contact-form">
@@ -119,8 +87,9 @@
 
 <script>
 import Masthead from '~/components/Masthead.vue'
+import SocialButtons from '~/components/SocialButtons.vue'
 export default {
-  components: { Masthead },
+  components: { Masthead, SocialButtons },
 }
 </script>
 
@@ -285,17 +254,6 @@ p {
 
 .contact-v1-social {
   margin-top: 24px;
-}
-
-.social-button {
-  border: 1px solid #e9e9e9;
-  border-radius: 50%;
-  -webkit-transition: border-color 200ms ease;
-  transition: border-color 200ms ease;
-
-  &:hover {
-    border-color: $dark;
-  }
 }
 
 .input {

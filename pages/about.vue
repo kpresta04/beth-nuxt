@@ -15,7 +15,7 @@
               et sit velit, dolore, veniam numquam cum, perspiciatis nostrum
               nulla tempore quisquam? Ullam, eligendi!
             </p>
-            <img src="/simple.jpg" alt="simple design" />
+            <img src="/simple.jpg" alt="simple design" loading="lazy" />
             <p class="info-text">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore
               ducimus doloremque quisquam debitis ad eaque iste voluptatem
@@ -43,6 +43,7 @@
               praesentium, quasi autem dolore. Repudiandae sit cumque soluta.
               Blanditiis doloribus ex commodi. Laudantium!
             </p>
+            <SocialButtons />
           </div>
           <div class="right-col"></div>
         </div>
@@ -53,8 +54,9 @@
 
 <script>
 import Masthead from '~/components/Masthead.vue'
+import SocialButtons from '~/components/SocialButtons.vue'
 export default {
-  components: { Masthead },
+  components: { Masthead, SocialButtons },
 }
 </script>
 
