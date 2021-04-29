@@ -61,6 +61,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+li {
+  margin-bottom: 6px;
+  font-size: 0.88rem;
+}
 .flex-wrapper {
   display: flex;
   flex-wrap: wrap;
