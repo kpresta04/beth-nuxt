@@ -109,6 +109,11 @@ export default Vue.extend({
 </script>
 
 <style lang="scss">
+@media screen and (max-width: 620px) {
+  nav {
+    display: none !important;
+  }
+}
 header {
   position: sticky;
   left: 0px;
