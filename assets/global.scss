@@ -137,3 +137,16 @@ textarea:focus-visible {
   padding-top: 24px;
   padding-bottom: 24px;
 }
+
+@media screen and (max-width: 767px) {
+  .section {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .section {
+    padding: 80px 8px;
+  }
+}

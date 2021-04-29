@@ -126,36 +126,59 @@ export default {}
 </script>
 
 <style lang="scss" scoped>
-.form-grid {
-  display: grid;
-  grid-template-rows: repeat(4, auto);
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 20px;
-}
 #submit-btn {
-  grid-column: 1;
-  grid-row: 4;
   color: $c2-complement;
-  width: fit-content;
 }
-#Contact-Phone-2 {
-  grid-row: 2;
-  grid-column: 1 / 3;
+@media screen and (max-width: 479px) {
+  .contact {
+    margin-right: -8px !important;
+    margin-left: -8px !important;
+    padding: 64px !important;
+    padding-right: 16px !important;
+    padding-left: 16px !important;
+    border-right-style: none !important;
+    border-left-style: none !important;
+  }
 }
-#Contact-Message-3 {
-  grid-row: 3;
-  grid-column: 1 / 3;
-}
-#Contact-Email-3 {
-  grid-row: 1;
-  grid-column: 2;
-}
-#Contact-Name-3 {
-  grid-row: 1;
-  grid-column: 1;
-}
-#email-form {
-  width: 100%;
+@media screen and (min-width: 620px) {
+  .form-grid {
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+  }
+  #submit-btn {
+    grid-column: 1;
+    grid-row: 4;
+    width: fit-content;
+  }
+  #Contact-Phone-2 {
+    grid-row: 2;
+    grid-column: 1 / 3;
+  }
+  #Contact-Message-3 {
+    grid-row: 3;
+    grid-column: 1 / 3;
+  }
+  #Contact-Email-3 {
+    grid-row: 1;
+    grid-column: 2;
+  }
+  #Contact-Name-3 {
+    grid-row: 1;
+    grid-column: 1;
+  }
+  #email-form {
+    width: 100%;
+  }
+  .contact-info {
+    padding-top: 12px;
+    width: 33.33%;
+    margin-top: 0;
+  }
+  .contact-form {
+    width: 67.77%;
+  }
 }
 .contact {
   display: flex;
@@ -163,7 +186,9 @@ export default {}
   margin-left: 15px;
   padding: 104px 7%;
   border: 1px solid $grey4;
+  flex-wrap: wrap;
 }
+
 .link {
   position: relative;
   display: inline-block;
@@ -241,8 +266,7 @@ h1 {
 }
 .contact-info {
   display: flex;
-  width: 33.33%;
-  padding-top: 12px;
+  width: 100%;
   padding-right: 4%;
   padding-left: 15px;
   -webkit-box-orient: vertical;
@@ -256,16 +280,15 @@ h1 {
   align-items: flex-start;
 }
 .contact-form {
-  width: 67.77%;
+  width: 100%;
   display: flex;
-  margin-bottom: 0px;
+  margin-top: 48px;
   padding-right: 15px;
   padding-left: 15px;
   -webkit-box-flex: 1;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  margin: 0 0 15px;
 }
 
 .divider {
@@ -304,6 +327,7 @@ p {
 
 .input {
   height: 48px;
+  width: 100%;
   margin-bottom: 24px;
   padding: 11px 24px 12px;
   border-style: none;

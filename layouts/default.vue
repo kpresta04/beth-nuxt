@@ -109,7 +109,7 @@ export default Vue.extend({
 </script>
 
 <style lang="scss">
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 768px) {
   nav {
     display: none !important;
   }
