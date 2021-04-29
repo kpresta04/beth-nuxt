@@ -270,12 +270,6 @@ export default {
   flex: 1;
 }
 
-.divider {
-  width: 100px;
-  height: 2px;
-  margin-top: 8px;
-  margin-bottom: 24px;
-}
 h3 {
   margin-top: 0px;
   margin-bottom: 12px;

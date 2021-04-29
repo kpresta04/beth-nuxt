@@ -94,7 +94,7 @@ a {
 }
 
 .bg-color-2 {
-  background-color: $color-2;
+  background-color: $color-2 !important;
 }
 
 button,
@@ -149,4 +149,11 @@ textarea:focus-visible {
   .section {
     padding: 80px 8px;
   }
+}
+.divider {
+  width: 100px;
+  height: 2px;
+  margin-top: 8px;
+  margin-bottom: 24px;
+  background-color: $dark;
 }
