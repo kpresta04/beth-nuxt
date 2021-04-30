@@ -25,7 +25,12 @@
             </div>
           </div>
           <div class="contact-form">
-            <form id="email-form" name="email-form" data-name="Email Form">
+            <form
+              id="email-form"
+              name="email-form"
+              data-name="Email Form"
+              autocomplete="on"
+            >
               <div class="form-grid">
                 <!-- <div class="form-columns w-row">
                <div class="w-col w-col-6">

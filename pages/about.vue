@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <Masthead align="right" url="/about-hero.jpg" text="About Me" />
+    <Masthead align="center" url="/about-hero.jpg" text="About Me" />
     <div class="section">
       <div class="wrapper">
         <div class="flex-wrapper">

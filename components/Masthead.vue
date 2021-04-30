@@ -24,7 +24,7 @@ export default {
     },
     align: {
       type: String,
-      default: 'left',
+      default: 'center',
     },
   },
   computed: {
@@ -55,7 +55,6 @@ export default {
 h1 {
   font-style: normal;
   font-weight: bold;
-  font-family: Courier, sans-serif;
   color: #eee;
   font-size: 40px;
   letter-spacing: 0.03em;
