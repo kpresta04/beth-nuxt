@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="page-wrapper">
     <div class="main hero">
       <div class="left-hero">
         <div class="hero-info">
@@ -33,22 +33,26 @@ export default Vue.extend({})
 
 <style lang="scss" scoped>
 @media screen and (max-width: 600px) {
-  .hero {
-    height: unset !important;
+  .page-wrapper {
+    .hero {
+      height: unset;
+    }
   }
 }
 @media screen and (max-width: 1200px) {
-  .right-hero {
-    width: 100% !important;
-    height: 100vh !important;
-    max-height: 50vh !important;
-  }
-  .left-hero {
-    width: 100% !important;
-    height: 50% !important;
-  }
-  .hero-info {
-    padding: 64px 0;
+  .page-wrapper {
+    .right-hero {
+      width: 100%;
+      height: 100vh;
+      max-height: 50vh;
+    }
+    .left-hero {
+      width: 100%;
+      height: 50%;
+    }
+    .hero-info {
+      padding: 64px 0;
+    }
   }
 }
 .hero {
