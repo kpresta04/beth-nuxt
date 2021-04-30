@@ -39,16 +39,18 @@ export default Vue.extend({})
   flex-wrap: wrap-reverse;
 }
 
-.left-hero,
 .right-hero {
   width: 50%;
   height: 100%;
-}
-.right-hero {
   background-color: black;
-  z-index: 42;
+  background: url('/hero1.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .left-hero {
+  width: 50%;
+  height: 100%;
   display: grid;
   place-items: center;
 }
