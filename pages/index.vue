@@ -1,6 +1,6 @@
 <template>
   <div class="page-wrapper">
-    <div class="main hero">
+    <div :class="`main hero ${classes[select]}`">
       <div class="left-hero">
         <div class="hero-info">
           <div class="title">Bethany Marie</div>
@@ -28,7 +28,15 @@
 <script lang="ts">
 import Vue from 'vue'
 
-export default Vue.extend({})
+export default Vue.extend({
+  data() {
+    return {
+      select: 0,
+      classes: ['bg-color-4', 'bg-color-2', 'bg-color-3'],
+      images: ['/hero1.jpg', '/hero2.jpg', '/hero3.jpg'],
+    }
+  },
+})
 </script>
 
 <style lang="scss" scoped>
@@ -60,7 +68,6 @@ export default Vue.extend({})
   height: 100vh;
   max-height: 1200px;
   margin-top: -88px;
-  background-color: $color-4;
   color: white;
   z-index: 1;
   display: flex;

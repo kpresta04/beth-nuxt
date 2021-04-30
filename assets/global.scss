@@ -107,8 +107,17 @@ p {
   color: $grey2;
 }
 
+.bg-color-1 {
+  background-color: $color-1 !important;
+}
 .bg-color-2 {
   background-color: $color-2 !important;
+}
+.bg-color-3 {
+  background-color: $color-3 !important;
+}
+.bg-color-4 {
+  background-color: $color-4 !important;
 }
 
 .button,
