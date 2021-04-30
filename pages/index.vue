@@ -1,22 +1,27 @@
 <template>
-  <div class="main hero">
-    <div class="left-hero">
-      <div class="hero-info">
-        <div class="title">Bethany Marie</div>
-        <h1>
-          <strong><em>Simple</em></strong> & Stylish Designs
-        </h1>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut beatae
-          alias a. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Sunt, rem.
-        </p>
-        <nuxt-link class="button white-button" to="/portfolio"
-          >View my work</nuxt-link
-        >
+  <div>
+    <div class="main hero">
+      <div class="left-hero">
+        <div class="hero-info">
+          <div class="title">Bethany Marie</div>
+          <h1>
+            <strong><em>Simple</em></strong> & Stylish Designs
+          </h1>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut beatae
+            alias a. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sunt, rem.
+          </p>
+          <nuxt-link class="button white-button" to="/portfolio"
+            >View my work</nuxt-link
+          >
+        </div>
       </div>
+      <div class="right-hero"></div>
     </div>
-    <div class="right-hero">l</div>
+    <div class="section">
+      <div class="wrapper"></div>
+    </div>
   </div>
 </template>
 
@@ -27,6 +32,25 @@ export default Vue.extend({})
 </script>
 
 <style lang="scss" scoped>
+@media screen and (max-width: 600px) {
+  .hero {
+    height: unset !important;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .right-hero {
+    width: 100% !important;
+    height: 100vh !important;
+    max-height: 50vh !important;
+  }
+  .left-hero {
+    width: 100% !important;
+    height: 50% !important;
+  }
+  .hero-info {
+    padding: 64px 0;
+  }
+}
 .hero {
   width: 100vw;
   height: 100vh;
@@ -37,6 +61,7 @@ export default Vue.extend({})
   z-index: 1;
   display: flex;
   flex-wrap: wrap-reverse;
+  position: relative;
 }
 
 .right-hero {
