@@ -17,7 +17,10 @@
           >
         </div>
       </div>
-      <div class="right-hero"></div>
+      <div
+        class="right-hero"
+        :style="`background-image: url(${images[select]});`"
+      ></div>
     </div>
     <div class="section">
       <div class="wrapper"></div>
@@ -78,8 +81,6 @@ export default Vue.extend({
 .right-hero {
   width: 50%;
   height: 100%;
-  background-color: black;
-  background: url('/hero1.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
