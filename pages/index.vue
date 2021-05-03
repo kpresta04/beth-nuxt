@@ -77,8 +77,8 @@
         :style="`background-image: url(${images[select]});`"
       >
         <div class="arrows">
-          <div>left</div>
-          <div>right</div>
+          <div @click="shiftLeft">left</div>
+          <div @click="shiftRight">right</div>
         </div>
       </div>
     </div>
@@ -94,11 +94,26 @@ export default Vue.extend({
       select: 0,
       classes: ['bg-color-4', 'bg-color-2', 'bg-color-3'],
       images: ['/hero1.jpg', '/hero2.jpg', '/hero3.jpg'],
+      autoplay: true,
     }
   },
   methods: {
     clickValue: function (e: any) {
       this.select = Number(e.target.id || e.target.parentElement.id)
+    },
+    shiftLeft: function () {
+      if (this.select >= 1) {
+        this.select--
+      } else {
+        this.select = this.classes.length - 1
+      }
+    },
+    shiftRight: function () {
+      if (this.select <= 1) {
+        this.select++
+      } else {
+        this.select = 0
+      }
     },
   },
 })
@@ -139,6 +154,14 @@ export default Vue.extend({
   bottom: 1%;
   justify-content: flex-end;
   margin-right: 63px;
+
+  div {
+    margin: 0 10px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }
 .bullet-row {
   position: absolute;
