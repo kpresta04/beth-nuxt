@@ -60,7 +60,7 @@
         <div class="hero-info">
           <div class="title">Bethany Marie</div>
           <h1>
-            <strong><em>Simple</em></strong> & Stylish Designs
+            <strong><em>Simple</em></strong> & Stylish Interiors
           </h1>
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut beatae
