@@ -273,4 +273,12 @@ p {
   font-size: 14px;
   line-height: 24px;
 }
+
+#Contact-Message-3 {
+  max-width: 100%;
+  min-width: 50%;
+}
+#email-form {
+  max-width: 100%;
+}
 </style>

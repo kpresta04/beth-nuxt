@@ -75,10 +75,12 @@
       <div
         class="right-hero"
         :style="`background-image: url(${images[select]});`"
-      ></div>
-    </div>
-    <div class="section">
-      <div class="wrapper"></div>
+      >
+        <div class="arrows">
+          <div>left</div>
+          <div>right</div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -129,6 +131,15 @@ export default Vue.extend({
 .inactive {
   opacity: 0.5;
 }
+.arrows {
+  position: absolute;
+  width: 100%;
+  right: 0px;
+  display: flex;
+  bottom: 1%;
+  justify-content: flex-end;
+  margin-right: 63px;
+}
 .bullet-row {
   position: absolute;
   width: 100%;
@@ -140,6 +151,7 @@ export default Vue.extend({
   background-color: white;
   border-radius: 12px;
   padding: 3px 8px;
+  z-index: 4;
 
   svg {
     &:hover {
@@ -165,6 +177,7 @@ export default Vue.extend({
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
 }
 .left-hero {
   width: 50%;
