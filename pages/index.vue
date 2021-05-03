@@ -1,6 +1,61 @@
 <template>
   <div class="page-wrapper">
     <div :class="`main hero ${classes[select]}`">
+      <div class="bullet-row">
+        <div class="bullets">
+          <svg
+            @click="clickValue"
+            id="0"
+            :class="select === 0 ? 'active' : 'inactive'"
+            width="10"
+            height="10"
+          >
+            <circle
+              nodeValue="0"
+              cx="5"
+              cy="5"
+              r="2"
+              stroke="black"
+              stroke-width="4"
+              fill="black"
+            />
+          </svg>
+          <svg
+            @click="clickValue"
+            id="1"
+            :class="select === 1 ? 'active' : 'inactive'"
+            width="10"
+            height="10"
+          >
+            <circle
+              value="1"
+              cx="5"
+              cy="5"
+              r="2"
+              stroke="black"
+              stroke-width="4"
+              fill="black"
+            />
+          </svg>
+          <svg
+            @click="clickValue"
+            id="2"
+            :class="select === 2 ? 'active' : 'inactive'"
+            width="10"
+            height="10"
+          >
+            <circle
+              value="2"
+              cx="5"
+              cy="5"
+              r="2"
+              stroke="black"
+              stroke-width="4"
+              fill="black"
+            />
+          </svg>
+        </div>
+      </div>
       <div class="left-hero">
         <div class="hero-info">
           <div class="title">Bethany Marie</div>
@@ -39,6 +94,11 @@ export default Vue.extend({
       images: ['/hero1.jpg', '/hero2.jpg', '/hero3.jpg'],
     }
   },
+  methods: {
+    clickValue: function (e: any) {
+      this.select = Number(e.target.id || e.target.parentElement.id)
+    },
+  },
 })
 </script>
 
@@ -63,6 +123,27 @@ export default Vue.extend({
     }
     .hero-info {
       padding: 64px 0;
+    }
+  }
+}
+.inactive {
+  opacity: 0.5;
+}
+.bullet-row {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+.bullets {
+  background-color: white;
+  border-radius: 12px;
+  padding: 3px 8px;
+
+  svg {
+    &:hover {
+      cursor: pointer;
     }
   }
 }
