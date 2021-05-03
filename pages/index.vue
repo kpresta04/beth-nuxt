@@ -168,7 +168,7 @@ export default Vue.extend({
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
 }
 .bullets {
   background-color: white;
