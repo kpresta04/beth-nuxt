@@ -208,6 +208,9 @@ export default Vue.extend({
       padding: 64px 0;
     }
   }
+  .arrows {
+    display: none !important;
+  }
 }
 .inactive {
   opacity: 0.5;
@@ -225,7 +228,7 @@ export default Vue.extend({
   width: 100%;
   right: 0px;
   display: flex;
-  bottom: 1%;
+  margin-bottom: 20px;
   justify-content: flex-end;
   margin-right: 63px;
   z-index: 4;
@@ -249,7 +252,7 @@ export default Vue.extend({
   background-color: white;
   border-radius: 12px;
   padding: 3px 8px;
-  z-index: 4;
+  z-index: 5;
 
   svg {
     &:hover {
