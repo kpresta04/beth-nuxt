@@ -57,8 +57,14 @@
         </div>
       </div>
       <div class="arrows">
-        <div @click="shiftLeft">left</div>
-        <div @click="shiftRight">right</div>
+        <div class="arrow-wrapper">
+          <div class="arrow" @click="shiftLeft">
+            <img src="/arrow-left-icon.svg" alt="arrow-left" />
+          </div>
+          <div class="arrow" @click="shiftRight">
+            <img src="/arrow-right-icon.svg" alt="arrow-right" />
+          </div>
+        </div>
       </div>
       <div
         class="slide"
@@ -228,16 +234,34 @@ export default Vue.extend({
   width: 100%;
   right: 0px;
   display: flex;
-  margin-bottom: 20px;
   justify-content: flex-end;
-  margin-right: 63px;
   z-index: 4;
 
-  div {
-    margin: 0 10px;
+  .arrow-wrapper {
+    background-color: white;
+    display: grid;
+    /* padding: 15px; */
+    grid-template-columns: 1fr 1fr;
+    width: 134px;
+    height: 62px;
+    place-items: center;
+    margin-right: 15px;
+  }
+  .arrow {
+    /* margin: 0 10px; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
+    img {
+      max-width: 32px;
+    }
 
     &:hover {
       cursor: pointer;
+      background-color: rgb(233, 226, 226, 0.5);
+      opacity: 0.6;
     }
   }
 }
@@ -265,6 +289,7 @@ export default Vue.extend({
   flex-wrap: wrap-reverse;
   position: relative;
   transition: opacity 1000ms ease;
+  width: 100%;
 }
 .hero {
   width: 100vw;
