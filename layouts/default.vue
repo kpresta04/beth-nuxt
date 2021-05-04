@@ -9,6 +9,13 @@
             <div class="brand-descr">Design</div>
           </nuxt-link>
         </div>
+        <div class="hamburg-wrapper">
+          <div class="hamburg">
+            <div class="top-bun"></div>
+            <div class="patty"></div>
+            <div class="bottom-bun"></div>
+          </div>
+        </div>
         <nav>
           <nuxt-link to="/portfolio">portfolio</nuxt-link>
           <nuxt-link to="/blog">blog</nuxt-link>
@@ -110,18 +117,63 @@ export default Vue.extend({
 
 <style lang="scss">
 @media screen and (max-width: 767px) {
-  .brand-title {
-    margin-left: 12px !important;
-    font-size: 12px !important;
-  }
   .brand-descr {
     display: none !important;
   }
+
+  header {
+    height: 60px !important;
+  }
 }
 @media screen and (max-width: 900px) {
+  .nav-wrapper {
+    display: flex !important;
+    justify-content: space-between !important;
+  }
   nav {
     display: none !important;
   }
+  .hamburg-wrapper {
+    display: flex !important;
+  }
+}
+
+.hamburg-wrapper {
+  display: none;
+  height: 100%;
+  width: 100%;
+  max-width: 60px;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 20px;
+}
+.hamburg {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+.top-bun,
+.patty,
+.bottom-bun {
+  height: 2px;
+  background-color: $dark;
+}
+.patty {
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 header {
   position: sticky;
