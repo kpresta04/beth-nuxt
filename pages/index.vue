@@ -1,6 +1,65 @@
 <template>
   <div class="page-wrapper">
     <div :class="`main hero ${classes[select]}`">
+      <div class="bullet-row">
+        <div class="bullets">
+          <svg
+            @click="clickValue"
+            id="0"
+            :class="select === 0 ? 'active' : 'inactive'"
+            width="10"
+            height="10"
+          >
+            <circle
+              nodeValue="0"
+              cx="5"
+              cy="5"
+              r="2"
+              stroke="black"
+              stroke-width="4"
+              fill="black"
+            />
+          </svg>
+          <svg
+            @click="clickValue"
+            id="1"
+            :class="select === 1 ? 'active' : 'inactive'"
+            width="10"
+            height="10"
+          >
+            <circle
+              value="1"
+              cx="5"
+              cy="5"
+              r="2"
+              stroke="black"
+              stroke-width="4"
+              fill="black"
+            />
+          </svg>
+          <svg
+            @click="clickValue"
+            id="2"
+            :class="select === 2 ? 'active' : 'inactive'"
+            width="10"
+            height="10"
+          >
+            <circle
+              value="2"
+              cx="5"
+              cy="5"
+              r="2"
+              stroke="black"
+              stroke-width="4"
+              fill="black"
+            />
+          </svg>
+        </div>
+      </div>
+      <div class="arrows">
+        <div @click="shiftLeft">left</div>
+        <div @click="shiftRight">right</div>
+      </div>
       <div
         class="slide"
         :style="
@@ -9,61 +68,6 @@
             : 'opacity: 0; transform: translateX(-2884px); visibility: hidden; height:0; transition: opacity 1000ms ease;'
         "
       >
-        <div class="bullet-row">
-          <div class="bullets">
-            <svg
-              @click="clickValue"
-              id="0"
-              :class="select === 0 ? 'active' : 'inactive'"
-              width="10"
-              height="10"
-            >
-              <circle
-                nodeValue="0"
-                cx="5"
-                cy="5"
-                r="2"
-                stroke="black"
-                stroke-width="4"
-                fill="black"
-              />
-            </svg>
-            <svg
-              @click="clickValue"
-              id="1"
-              :class="select === 1 ? 'active' : 'inactive'"
-              width="10"
-              height="10"
-            >
-              <circle
-                value="1"
-                cx="5"
-                cy="5"
-                r="2"
-                stroke="black"
-                stroke-width="4"
-                fill="black"
-              />
-            </svg>
-            <svg
-              @click="clickValue"
-              id="2"
-              :class="select === 2 ? 'active' : 'inactive'"
-              width="10"
-              height="10"
-            >
-              <circle
-                value="2"
-                cx="5"
-                cy="5"
-                r="2"
-                stroke="black"
-                stroke-width="4"
-                fill="black"
-              />
-            </svg>
-          </div>
-        </div>
         <div class="left-hero">
           <div class="hero-info">
             <div class="title">Bethany Marie</div>
@@ -80,12 +84,10 @@
             >
           </div>
         </div>
-        <div class="right-hero" :style="`background-image: url(${images[0]});`">
-          <div class="arrows">
-            <div @click="shiftLeft">left</div>
-            <div @click="shiftRight">right</div>
-          </div>
-        </div>
+        <div
+          class="right-hero"
+          :style="`background-image: url(${images[0]});`"
+        ></div>
       </div>
       <div
         class="slide"
@@ -95,61 +97,6 @@
             : 'opacity: 0; transform: translateX(-2884px); visibility: hidden; height:0; transition: opacity 1000ms ease;'
         "
       >
-        <div class="bullet-row">
-          <div class="bullets">
-            <svg
-              @click="clickValue"
-              id="0"
-              :class="select === 0 ? 'active' : 'inactive'"
-              width="10"
-              height="10"
-            >
-              <circle
-                nodeValue="0"
-                cx="5"
-                cy="5"
-                r="2"
-                stroke="black"
-                stroke-width="4"
-                fill="black"
-              />
-            </svg>
-            <svg
-              @click="clickValue"
-              id="1"
-              :class="select === 1 ? 'active' : 'inactive'"
-              width="10"
-              height="10"
-            >
-              <circle
-                value="1"
-                cx="5"
-                cy="5"
-                r="2"
-                stroke="black"
-                stroke-width="4"
-                fill="black"
-              />
-            </svg>
-            <svg
-              @click="clickValue"
-              id="2"
-              :class="select === 2 ? 'active' : 'inactive'"
-              width="10"
-              height="10"
-            >
-              <circle
-                value="2"
-                cx="5"
-                cy="5"
-                r="2"
-                stroke="black"
-                stroke-width="4"
-                fill="black"
-              />
-            </svg>
-          </div>
-        </div>
         <div class="left-hero">
           <div class="hero-info">
             <div class="title">Bethany Marie</div>
@@ -166,12 +113,10 @@
             >
           </div>
         </div>
-        <div class="right-hero" :style="`background-image: url(${images[1]});`">
-          <div class="arrows">
-            <div @click="shiftLeft">left</div>
-            <div @click="shiftRight">right</div>
-          </div>
-        </div>
+        <div
+          class="right-hero"
+          :style="`background-image: url(${images[1]});`"
+        ></div>
       </div>
       <div
         class="slide"
@@ -181,61 +126,6 @@
             : 'opacity: 0; transform: translateX(-2884px); visibility: hidden; height:0; transition: opacity 1000ms ease;'
         "
       >
-        <div class="bullet-row">
-          <div class="bullets">
-            <svg
-              @click="clickValue"
-              id="0"
-              :class="select === 0 ? 'active' : 'inactive'"
-              width="10"
-              height="10"
-            >
-              <circle
-                nodeValue="0"
-                cx="5"
-                cy="5"
-                r="2"
-                stroke="black"
-                stroke-width="4"
-                fill="black"
-              />
-            </svg>
-            <svg
-              @click="clickValue"
-              id="1"
-              :class="select === 1 ? 'active' : 'inactive'"
-              width="10"
-              height="10"
-            >
-              <circle
-                value="1"
-                cx="5"
-                cy="5"
-                r="2"
-                stroke="black"
-                stroke-width="4"
-                fill="black"
-              />
-            </svg>
-            <svg
-              @click="clickValue"
-              id="2"
-              :class="select === 2 ? 'active' : 'inactive'"
-              width="10"
-              height="10"
-            >
-              <circle
-                value="2"
-                cx="5"
-                cy="5"
-                r="2"
-                stroke="black"
-                stroke-width="4"
-                fill="black"
-              />
-            </svg>
-          </div>
-        </div>
         <div class="left-hero">
           <div class="hero-info">
             <div class="title">Bethany Marie</div>
@@ -252,12 +142,10 @@
             >
           </div>
         </div>
-        <div class="right-hero" :style="`background-image: url(${images[2]});`">
-          <div class="arrows">
-            <div @click="shiftLeft">left</div>
-            <div @click="shiftRight">right</div>
-          </div>
-        </div>
+        <div
+          class="right-hero"
+          :style="`background-image: url(${images[2]});`"
+        ></div>
       </div>
     </div>
   </div>
@@ -340,6 +228,7 @@ export default Vue.extend({
   bottom: 1%;
   justify-content: flex-end;
   margin-right: 63px;
+  z-index: 4;
 
   div {
     margin: 0 10px;
