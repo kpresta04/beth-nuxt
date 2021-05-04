@@ -41,7 +41,14 @@
 </template>
 
 <script>
-export default {}
+export default {
+  props: {
+    bg: {
+      type: String,
+      default: 'light',
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
