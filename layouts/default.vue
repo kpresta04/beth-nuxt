@@ -114,10 +114,7 @@ export default Vue.extend({
     margin-left: 12px !important;
     font-size: 12px !important;
   }
-  .brand-info {
-    padding-left: 0 !important;
-  }
-  .brand-info img {
+  .brand-descr {
     display: none !important;
   }
 }
