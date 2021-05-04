@@ -73,7 +73,7 @@
         </div>
       </div>
       <div
-        :class="'right-hero ' + 'shown'"
+        :class="select === 0 ? 'right-hero shown' : 'right-hero hidden'"
         :style="`background-image: url(${images[0]});`"
       >
         <div class="arrows">
@@ -82,7 +82,7 @@
         </div>
       </div>
       <div
-        class="right-hero hidden"
+        :class="select === 1 ? 'right-hero shown' : 'right-hero hidden'"
         :style="`background-image: url(${images[1]});`"
       >
         <div class="arrows">
@@ -91,7 +91,7 @@
         </div>
       </div>
       <div
-        class="right-hero hidden"
+        :class="select === 2 ? 'right-hero shown' : 'right-hero hidden'"
         :style="`background-image: url(${images[2]});`"
       >
         <div class="arrows">
@@ -169,8 +169,8 @@ export default Vue.extend({
   opacity: 0;
 }
 .shown {
-  display: block;
-  opacity: 1;
+  display: block !important;
+  opacity: 1 !important;
 }
 .arrows {
   position: absolute;
@@ -228,6 +228,8 @@ export default Vue.extend({
   background-repeat: no-repeat;
   position: relative;
   transition: opacity 1000ms ease;
+  display: hidden;
+  opacity: 0;
 }
 .left-hero {
   width: 50%;
