@@ -1,102 +1,262 @@
 <template>
   <div class="page-wrapper">
     <div :class="`main hero ${classes[select]}`">
-      <div class="bullet-row">
-        <div class="bullets">
-          <svg
-            @click="clickValue"
-            id="0"
-            :class="select === 0 ? 'active' : 'inactive'"
-            width="10"
-            height="10"
-          >
-            <circle
-              nodeValue="0"
-              cx="5"
-              cy="5"
-              r="2"
-              stroke="black"
-              stroke-width="4"
-              fill="black"
-            />
-          </svg>
-          <svg
-            @click="clickValue"
-            id="1"
-            :class="select === 1 ? 'active' : 'inactive'"
-            width="10"
-            height="10"
-          >
-            <circle
-              value="1"
-              cx="5"
-              cy="5"
-              r="2"
-              stroke="black"
-              stroke-width="4"
-              fill="black"
-            />
-          </svg>
-          <svg
-            @click="clickValue"
-            id="2"
-            :class="select === 2 ? 'active' : 'inactive'"
-            width="10"
-            height="10"
-          >
-            <circle
-              value="2"
-              cx="5"
-              cy="5"
-              r="2"
-              stroke="black"
-              stroke-width="4"
-              fill="black"
-            />
-          </svg>
+      <div
+        class="slide"
+        :style="
+          this.select === 0
+            ? 'opacity: 1; transform: translateX(0); height:100%; transition: opacity 1000ms ease;'
+            : 'opacity: 0; transform: translateX(-2884px); visibility: hidden; height:0; transition: opacity 1000ms ease;'
+        "
+      >
+        <div class="bullet-row">
+          <div class="bullets">
+            <svg
+              @click="clickValue"
+              id="0"
+              :class="select === 0 ? 'active' : 'inactive'"
+              width="10"
+              height="10"
+            >
+              <circle
+                nodeValue="0"
+                cx="5"
+                cy="5"
+                r="2"
+                stroke="black"
+                stroke-width="4"
+                fill="black"
+              />
+            </svg>
+            <svg
+              @click="clickValue"
+              id="1"
+              :class="select === 1 ? 'active' : 'inactive'"
+              width="10"
+              height="10"
+            >
+              <circle
+                value="1"
+                cx="5"
+                cy="5"
+                r="2"
+                stroke="black"
+                stroke-width="4"
+                fill="black"
+              />
+            </svg>
+            <svg
+              @click="clickValue"
+              id="2"
+              :class="select === 2 ? 'active' : 'inactive'"
+              width="10"
+              height="10"
+            >
+              <circle
+                value="2"
+                cx="5"
+                cy="5"
+                r="2"
+                stroke="black"
+                stroke-width="4"
+                fill="black"
+              />
+            </svg>
+          </div>
         </div>
-      </div>
-      <div class="left-hero">
-        <div class="hero-info">
-          <div class="title">Bethany Marie</div>
-          <h1>
-            <strong><em>Simple</em></strong> & Stylish Interiors
-          </h1>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut beatae
-            alias a. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Sunt, rem.
-          </p>
-          <nuxt-link class="button white-button" to="/portfolio"
-            >View my work</nuxt-link
-          >
+        <div class="left-hero">
+          <div class="hero-info">
+            <div class="title">Bethany Marie</div>
+            <h1>
+              <strong><em>Simple</em></strong> & Stylish Interiors
+            </h1>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut
+              beatae alias a. Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Sunt, rem.
+            </p>
+            <nuxt-link class="button white-button" to="/portfolio"
+              >View my work</nuxt-link
+            >
+          </div>
+        </div>
+        <div class="right-hero" :style="`background-image: url(${images[0]});`">
+          <div class="arrows">
+            <div @click="shiftLeft">left</div>
+            <div @click="shiftRight">right</div>
+          </div>
         </div>
       </div>
       <div
-        :class="select === 0 ? 'right-hero shown' : 'right-hero hidden'"
-        :style="`background-image: url(${images[0]});`"
+        class="slide"
+        :style="
+          this.select === 1
+            ? 'opacity: 1; transform: translateX(0); height:100%;  transition: opacity 1000ms ease;'
+            : 'opacity: 0; transform: translateX(-2884px); visibility: hidden; height:0; transition: opacity 1000ms ease;'
+        "
       >
-        <div class="arrows">
-          <div @click="shiftLeft">left</div>
-          <div @click="shiftRight">right</div>
+        <div class="bullet-row">
+          <div class="bullets">
+            <svg
+              @click="clickValue"
+              id="0"
+              :class="select === 0 ? 'active' : 'inactive'"
+              width="10"
+              height="10"
+            >
+              <circle
+                nodeValue="0"
+                cx="5"
+                cy="5"
+                r="2"
+                stroke="black"
+                stroke-width="4"
+                fill="black"
+              />
+            </svg>
+            <svg
+              @click="clickValue"
+              id="1"
+              :class="select === 1 ? 'active' : 'inactive'"
+              width="10"
+              height="10"
+            >
+              <circle
+                value="1"
+                cx="5"
+                cy="5"
+                r="2"
+                stroke="black"
+                stroke-width="4"
+                fill="black"
+              />
+            </svg>
+            <svg
+              @click="clickValue"
+              id="2"
+              :class="select === 2 ? 'active' : 'inactive'"
+              width="10"
+              height="10"
+            >
+              <circle
+                value="2"
+                cx="5"
+                cy="5"
+                r="2"
+                stroke="black"
+                stroke-width="4"
+                fill="black"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="left-hero">
+          <div class="hero-info">
+            <div class="title">Bethany Marie</div>
+            <h1>
+              <strong><em>Simple</em></strong> & Stylish Interiors
+            </h1>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut
+              beatae alias a. Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Sunt, rem.
+            </p>
+            <nuxt-link class="button white-button" to="/portfolio"
+              >View my work</nuxt-link
+            >
+          </div>
+        </div>
+        <div class="right-hero" :style="`background-image: url(${images[1]});`">
+          <div class="arrows">
+            <div @click="shiftLeft">left</div>
+            <div @click="shiftRight">right</div>
+          </div>
         </div>
       </div>
       <div
-        :class="select === 1 ? 'right-hero shown' : 'right-hero hidden'"
-        :style="`background-image: url(${images[1]});`"
+        class="slide"
+        :style="
+          this.select === 2
+            ? 'opacity: 1; transform: translateX(0); height:100%; transition: opacity 1000ms ease;'
+            : 'opacity: 0; transform: translateX(-2884px); visibility: hidden; height:0; transition: opacity 1000ms ease;'
+        "
       >
-        <div class="arrows">
-          <div @click="shiftLeft">left</div>
-          <div @click="shiftRight">right</div>
+        <div class="bullet-row">
+          <div class="bullets">
+            <svg
+              @click="clickValue"
+              id="0"
+              :class="select === 0 ? 'active' : 'inactive'"
+              width="10"
+              height="10"
+            >
+              <circle
+                nodeValue="0"
+                cx="5"
+                cy="5"
+                r="2"
+                stroke="black"
+                stroke-width="4"
+                fill="black"
+              />
+            </svg>
+            <svg
+              @click="clickValue"
+              id="1"
+              :class="select === 1 ? 'active' : 'inactive'"
+              width="10"
+              height="10"
+            >
+              <circle
+                value="1"
+                cx="5"
+                cy="5"
+                r="2"
+                stroke="black"
+                stroke-width="4"
+                fill="black"
+              />
+            </svg>
+            <svg
+              @click="clickValue"
+              id="2"
+              :class="select === 2 ? 'active' : 'inactive'"
+              width="10"
+              height="10"
+            >
+              <circle
+                value="2"
+                cx="5"
+                cy="5"
+                r="2"
+                stroke="black"
+                stroke-width="4"
+                fill="black"
+              />
+            </svg>
+          </div>
         </div>
-      </div>
-      <div
-        :class="select === 2 ? 'right-hero shown' : 'right-hero hidden'"
-        :style="`background-image: url(${images[2]});`"
-      >
-        <div class="arrows">
-          <div @click="shiftLeft">left</div>
-          <div @click="shiftRight">right</div>
+        <div class="left-hero">
+          <div class="hero-info">
+            <div class="title">Bethany Marie</div>
+            <h1>
+              <strong><em>Simple</em></strong> & Stylish Interiors
+            </h1>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut
+              beatae alias a. Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Sunt, rem.
+            </p>
+            <nuxt-link class="button white-button" to="/portfolio"
+              >View my work</nuxt-link
+            >
+          </div>
+        </div>
+        <div class="right-hero" :style="`background-image: url(${images[2]});`">
+          <div class="arrows">
+            <div @click="shiftLeft">left</div>
+            <div @click="shiftRight">right</div>
+          </div>
         </div>
       </div>
     </div>
@@ -208,6 +368,12 @@ export default Vue.extend({
     }
   }
 }
+.slide {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  position: relative;
+  transition: opacity 1000ms ease;
+}
 .hero {
   width: 100vw;
   height: 100vh;
@@ -228,8 +394,6 @@ export default Vue.extend({
   background-repeat: no-repeat;
   position: relative;
   transition: opacity 1000ms ease;
-  display: hidden;
-  opacity: 0;
 }
 .left-hero {
   width: 50%;
