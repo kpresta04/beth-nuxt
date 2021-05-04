@@ -109,7 +109,19 @@ export default Vue.extend({
 </script>
 
 <style lang="scss">
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
+  .brand-title {
+    margin-left: 12px !important;
+    font-size: 12px !important;
+  }
+  .brand-info {
+    padding-left: 0 !important;
+  }
+  .brand-info img {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 900px) {
   nav {
     display: none !important;
   }
