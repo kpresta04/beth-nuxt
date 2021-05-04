@@ -73,8 +73,26 @@
         </div>
       </div>
       <div
-        class="right-hero"
-        :style="`background-image: url(${images[select]});`"
+        :class="'right-hero ' + 'shown'"
+        :style="`background-image: url(${images[0]});`"
+      >
+        <div class="arrows">
+          <div @click="shiftLeft">left</div>
+          <div @click="shiftRight">right</div>
+        </div>
+      </div>
+      <div
+        class="right-hero hidden"
+        :style="`background-image: url(${images[1]});`"
+      >
+        <div class="arrows">
+          <div @click="shiftLeft">left</div>
+          <div @click="shiftRight">right</div>
+        </div>
+      </div>
+      <div
+        class="right-hero hidden"
+        :style="`background-image: url(${images[2]});`"
       >
         <div class="arrows">
           <div @click="shiftLeft">left</div>
@@ -146,6 +164,14 @@ export default Vue.extend({
 .inactive {
   opacity: 0.5;
 }
+.hidden {
+  display: none;
+  opacity: 0;
+}
+.shown {
+  display: block;
+  opacity: 1;
+}
 .arrows {
   position: absolute;
   width: 100%;
@@ -201,6 +227,7 @@ export default Vue.extend({
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+  transition: opacity 1000ms ease;
 }
 .left-hero {
   width: 50%;
