@@ -58,10 +58,10 @@
       </div>
       <div class="arrows">
         <div class="arrow-wrapper">
-          <div class="arrow" @click="shiftLeft">
+          <div class="arrow" @click="clickLeft">
             <img src="/arrow-left-icon.svg" alt="arrow-left" />
           </div>
-          <div class="arrow" @click="shiftRight">
+          <div class="arrow" @click="clickRight">
             <img src="/arrow-right-icon.svg" alt="arrow-right" />
           </div>
         </div>
@@ -171,6 +171,9 @@ export default Vue.extend({
   },
   methods: {
     clickValue: function (e: any) {
+      if (this.autoplay) {
+        this.autoplay = false
+      }
       this.select = Number(e.target.id || e.target.parentElement.id)
     },
     shiftLeft: function () {
@@ -187,6 +190,27 @@ export default Vue.extend({
         this.select = 0
       }
     },
+    clickRight: function () {
+      if (this.autoplay) {
+        this.autoplay = false
+      }
+      this.shiftRight()
+    },
+    clickLeft: function () {
+      if (this.autoplay) {
+        this.autoplay = false
+      }
+      this.shiftLeft()
+    },
+    autoSlide: function () {
+      if (this.autoplay) {
+        this.shiftRight()
+        setTimeout(this.autoSlide, 6000)
+      }
+    },
+  },
+  mounted() {
+    setTimeout(this.autoSlide, 6000)
   },
 })
 </script>
