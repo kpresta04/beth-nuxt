@@ -11,12 +11,26 @@
         </div>
         <div class="hamburg-wrapper">
           <div @click="toggleMenu" class="hamburg">
-            <div class="top-bun"></div>
+            <div
+              :style="
+                menuOpen
+                  ? 'transform: translate3d(0px, 6px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(45deg) skew(0deg, 0deg); transform-style: preserve-3d;'
+                  : 'transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;'
+              "
+              class="top-bun"
+            ></div>
             <div
               :style="menuOpen ? 'opacity: 0' : 'opacity: 1'"
               class="patty"
             ></div>
-            <div class="bottom-bun"></div>
+            <div
+              class="bottom-bun"
+              :style="
+                menuOpen
+                  ? 'transform: translate3d(0px, -6px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(-45deg) skew(0deg, 0deg); transform-style: preserve-3d;'
+                  : 'transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;'
+              "
+            ></div>
           </div>
         </div>
         <nav>
@@ -193,7 +207,14 @@ export default Vue.extend({
 .patty {
   margin-top: 4px;
   margin-bottom: 4px;
+  transition: opacity 200ms ease-in;
 }
+
+.top-bun,
+.bottom-bun {
+  transition: transform 400ms ease;
+}
+
 header {
   position: sticky;
   left: 0px;
