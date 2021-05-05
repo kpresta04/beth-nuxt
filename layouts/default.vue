@@ -10,9 +10,12 @@
           </nuxt-link>
         </div>
         <div class="hamburg-wrapper">
-          <div class="hamburg">
+          <div @click="toggleMenu" class="hamburg">
             <div class="top-bun"></div>
-            <div class="patty"></div>
+            <div
+              :style="menuOpen ? 'opacity: 0' : 'opacity: 1'"
+              class="patty"
+            ></div>
             <div class="bottom-bun"></div>
           </div>
         </div>
@@ -106,11 +109,27 @@ export default Vue.extend({
   data() {
     return {
       year: 2021,
+      menuOpen: false,
     }
   },
   created() {
     const date = new Date()
     this.year = date.getFullYear()
+  },
+  mounted() {
+    document.addEventListener('click', this.closeMenu)
+  },
+  methods: {
+    closeMenu: function (e: any) {
+      if (this.menuOpen) {
+        if (e.target.parentElement.className !== 'hamburg') {
+          this.menuOpen = false
+        }
+      }
+    },
+    toggleMenu: function () {
+      this.menuOpen = !this.menuOpen
+    },
   },
 })
 </script>
