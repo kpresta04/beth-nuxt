@@ -233,7 +233,7 @@ export default Vue.extend({
 }
 .nav-menu {
   z-index: 45;
-  position: sticky;
+  position: fixed;
   left: 0px;
   top: 88px;
   right: 0px;
@@ -246,7 +246,7 @@ export default Vue.extend({
   }
 }
 header {
-  position: sticky;
+  position: fixed;
   left: 0px;
   top: 0px;
   right: 0px;

@@ -20,6 +20,7 @@ html {
 
 body {
   font-family: 'Lato', sans-serif;
+  overflow: hidden;
 }
 
 h1,
@@ -62,6 +63,7 @@ p {
 
 .main {
   min-height: 100vh;
+  margin-top: 88px;
 }
 
 .wrapper {
@@ -167,6 +169,9 @@ textarea:focus-visible {
     padding-top: 64px;
     padding-bottom: 64px;
   }
+  .main {
+    margin-top: 60px !important;
+  }
 }
 
 @media screen and (max-width: 991px) {
@@ -227,8 +232,4 @@ textarea:focus-visible {
   &:hover {
     border-color: #e9e9e9;
   }
-}
-
-.main {
-  margin-top: -210px;
 }
