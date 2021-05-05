@@ -41,6 +41,20 @@
         </nav>
       </div>
     </header>
+    <div
+      class="nav-menu"
+      :style="
+        menuOpen
+          ? 'transform: translateY(0px) translateX(0px); transition: transform 400ms;'
+          : 'transform: translateY(-6000px) translateX(0px); transition: transform 400ms;'
+      "
+    >
+      <nuxt-link class="nav-link" to="/">home</nuxt-link>
+      <nuxt-link class="nav-link" to="/portfolio">portfolio</nuxt-link>
+      <nuxt-link class="nav-link" to="/blog">blog</nuxt-link>
+      <nuxt-link class="nav-link" to="/about">about</nuxt-link>
+      <nuxt-link class="nav-link" to="/contact">contact</nuxt-link>
+    </div>
     <Nuxt />
     <section>
       <div class="wrapper sidepaddings">
@@ -153,6 +167,9 @@ export default Vue.extend({
   .brand-descr {
     display: none !important;
   }
+  .nav-menu {
+    top: 60px !important;
+  }
 
   header {
     height: 60px !important;
@@ -214,7 +231,20 @@ export default Vue.extend({
 .bottom-bun {
   transition: transform 400ms ease;
 }
+.nav-menu {
+  z-index: 45;
+  position: sticky;
+  left: 0px;
+  top: 88px;
+  right: 0px;
+  background-color: white;
 
+  .nav-link {
+    padding: 12px 24px;
+    box-shadow: 0 1px 0 0 #e9e9e9;
+    text-transform: capitalize;
+  }
+}
 header {
   position: sticky;
   left: 0px;

@@ -319,7 +319,6 @@ export default Vue.extend({
   width: 100vw;
   height: 100vh;
   max-height: 1200px;
-  margin-top: -88px;
   color: white;
   z-index: 1;
   display: flex;
