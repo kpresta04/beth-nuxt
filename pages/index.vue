@@ -161,7 +161,6 @@
 import Vue from 'vue'
 
 let touchStartX = 0
-let touchMoveX = 0
 
 export default Vue.extend({
   data() {
