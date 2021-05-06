@@ -160,6 +160,9 @@
 <script lang="ts">
 import Vue from 'vue'
 
+let touchStartX = 0
+let touchMoveX = 0
+
 export default Vue.extend({
   data() {
     return {
@@ -211,6 +214,27 @@ export default Vue.extend({
   },
   mounted() {
     setTimeout(this.autoSlide, 6000)
+    document
+      .querySelector('.hero')
+      ?.addEventListener('touchstart', (e: any) => {
+        e.preventDefault()
+        touchStartX = e.targetTouches[0].clientX
+      })
+    document.querySelector('.hero')?.addEventListener('touchmove', (e: any) => {
+      e.preventDefault()
+      // console.log(e)
+      if (
+        touchStartX !== 0 &&
+        Math.abs(touchStartX - e.targetTouches[0].clientX) > 150
+      ) {
+        if (touchStartX - e.targetTouches[0].clientX < 0) {
+          this.clickLeft()
+        } else {
+          this.clickRight()
+        }
+        touchStartX = 0
+      }
+    })
   },
 })
 </script>
