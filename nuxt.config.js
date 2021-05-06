@@ -37,8 +37,12 @@ export default {
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
     '@nuxtjs/style-resources',
+    '@nuxtjs/prismic',
   ],
-
+  prismic: {
+    endpoint: 'https://blogg654.cdn.prismic.io/api/v2',
+    /* see configuration for more */
+  },
   styleResources: {
     // your settings here
     scss: [`~/assets/variables.scss`],
