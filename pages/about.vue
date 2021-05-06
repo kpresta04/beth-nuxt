@@ -51,7 +51,12 @@
             <SocialButtons />
           </div>
           <div class="right-col">
-            <img src="/placeholder.jpg" alt="Bethany" loading="lazy" />
+            <img
+              class="portrait"
+              src="/placeholder.jpg"
+              alt="Bethany"
+              loading="lazy"
+            />
             <p class="info-text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
               vero quidem quis reiciendis illum molestias tempora tempore nam
@@ -116,7 +121,7 @@ li {
     margin-top: 72px;
   }
   img {
-    max-width: 200px;
+    max-width: 160px;
     height: auto;
   }
   img:first-child:not(.vert) {
@@ -133,11 +138,30 @@ li {
     height: auto;
   }
 }
-
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .flex-wrapper {
-    justify-content: space-between;
+    justify-content: space-between !important;
   }
+  .left-col {
+    max-width: 350px;
+  }
+  .right-col {
+    max-width: 330px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .left-col {
+    max-width: 450px;
+  }
+  .right-col {
+    max-width: 400px;
+
+    .portrait {
+      max-width: 200px;
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
   .left-col {
     max-width: 600px;
   }
