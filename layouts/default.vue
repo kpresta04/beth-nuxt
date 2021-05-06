@@ -80,7 +80,7 @@
                   alt="facebook"
               /></a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/bethanymarie_designs/"
                 target="_blank"
                 rel="noopener"
                 class="social-button dark-bg w-inline-block"
