@@ -257,6 +257,7 @@ export default Vue.extend({
   position: absolute;
   width: 100%;
   right: 0px;
+  bottom: 0px;
   display: flex;
   justify-content: flex-end;
   z-index: 4;
@@ -292,6 +293,7 @@ export default Vue.extend({
 .bullet-row {
   position: absolute;
   width: 100%;
+  bottom: 0px;
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
@@ -324,6 +326,7 @@ export default Vue.extend({
   display: flex;
   flex-wrap: wrap-reverse;
   position: relative;
+  margin-top: 0 !important;
 }
 
 .right-hero {
