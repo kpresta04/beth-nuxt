@@ -120,8 +120,12 @@ li {
     height: auto;
     margin-top: 72px;
   }
-  img {
+  .portrait {
     max-width: 160px;
+    height: auto;
+  }
+  img {
+    max-width: 200px;
     height: auto;
   }
   img:first-child:not(.vert) {
@@ -157,7 +161,7 @@ li {
     max-width: 400px;
 
     .portrait {
-      max-width: 200px;
+      max-width: 200px !important;
     }
   }
 }
