@@ -224,6 +224,9 @@ export default Vue.extend({
   }
 }
 @media screen and (max-width: 1200px) {
+  .bullet-row {
+    bottom: unset !important;
+  }
   .page-wrapper {
     .right-hero {
       width: 100%;
