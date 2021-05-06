@@ -176,6 +176,20 @@ export default Vue.extend({
   }
 }
 @media screen and (max-width: 900px) {
+  footer {
+    padding: 40px 0 !important;
+  }
+  footer > * {
+    width: 100% !important;
+  }
+  .footer-col {
+    width: 50% !important;
+    margin: 24px 0;
+  }
+  .footer-nav a {
+    margin-left: 0 !important;
+    margin-right: 24px;
+  }
   .nav-wrapper {
     display: flex !important;
     justify-content: space-between !important;
@@ -343,6 +357,7 @@ footer {
   -webkit-align-items: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
+  flex-wrap: wrap-reverse;
 }
 
 .footer-bottom {
