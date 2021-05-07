@@ -7,10 +7,12 @@
     >
       &nbsp;
     </div>
-    <div class="blog-post-wrapper">
-      <h6 class="post-info">{{ dateString }}</h6>
-      <h1>{{ doc.data.title[0].text }}</h1>
-      <prismic-rich-text :field="doc.data.content" />
+    <div class="wrap">
+      <div class="blog-post-wrapper">
+        <h6 class="post-info">{{ dateString }}</h6>
+        <h1>{{ doc.data.title[0].text }}</h1>
+        <prismic-rich-text :field="doc.data.content" />
+      </div>
     </div>
   </div>
 </template>
@@ -43,6 +45,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.wrap {
+  background-color: white;
+  max-width: 85%;
+  display: flex;
+  justify-content: center;
+  margin-top: -228px;
+  position: relative;
+}
 .blog-post-wrapper {
   margin: 0 auto;
   max-width: 660px;
