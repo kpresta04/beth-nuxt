@@ -4,7 +4,7 @@
       <div class="nav-wrapper">
         <div class="brand-info">
           <nuxt-link to="/">
-            <img src="sc.svg" alt="logo" />
+            <img src="/sc.svg" alt="logo" />
             <div class="brand-title">Bethany Marie</div>
             <div class="brand-descr">Design</div>
           </nuxt-link>

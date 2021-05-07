@@ -1,7 +1,12 @@
 <template>
   <div class="main">
-    <Masthead :url="doc.data.header_image.url" text="" />
-
+    <!-- <Masthead :url="doc.data.header_image.url" text="" /> -->
+    <div
+      class="header-img"
+      :style="`background-image: url(${doc.data.header_image.url})`"
+    >
+      &nbsp;
+    </div>
     <div class="blog-post-wrapper">
       <h6 class="post-info">{{ dateString }}</h6>
       <h1>{{ doc.data.title[0].text }}</h1>
@@ -49,5 +54,17 @@ export default {
   font-size: 10px;
   letter-spacing: 1px;
   text-transform: uppercase;
+}
+
+.header-img {
+  width: 100%;
+  height: 100vh;
+  margin-top: -88px;
+  background-position: 50% 100%, 0 0, 50% 50%;
+  /* background-size: 0 74px, auto, cover; */
+  /* background-repeat: repeat-x, repeat, no-repeat; */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll, scroll, fixed;
 }
 </style>
