@@ -58,6 +58,16 @@ p {
   font-size: 14px;
   line-height: 24px;
 }
+
+.blog-post-wrapper {
+  p {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  li {
+    margin-bottom: 4px;
+  }
+}
 .info-text {
   color: $grey2;
 }

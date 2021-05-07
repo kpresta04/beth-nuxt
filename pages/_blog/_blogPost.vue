@@ -1,11 +1,11 @@
 <template>
   <div class="main">
     <Masthead :url="doc.data.header_image.url" text="" />
-    <div class="section">
-      <div class="wrapper">
-        <h1>{{ doc.data.title[0].text }}</h1>
-        <prismic-rich-text :field="doc.data.content" />
-      </div>
+
+    <div class="blog-post-wrapper">
+      <h6 class="post-info">{{ dateString }}</h6>
+      <h1>{{ doc.data.title[0].text }}</h1>
+      <prismic-rich-text :field="doc.data.content" />
     </div>
   </div>
 </template>
@@ -21,11 +21,15 @@ export default {
     const doc = await results.find(
       (result) => result.slugs[0] === params.blogPost
     )
-    // console.log(doc)
+
+    const date = new Date(doc.first_publication_date)
+    const dateString = `${date.toLocaleString('default', {
+      month: 'long',
+    })} ${date.getDate()}, ${date.getFullYear()}`
 
     // console.log(params)
     if (doc) {
-      return { doc }
+      return { doc, dateString }
     } else {
       error({ statusCode: 404, message: 'Page not found' })
     }
@@ -33,4 +37,17 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.blog-post-wrapper {
+  margin: 0 auto;
+  max-width: 660px;
+  padding: 0 10px;
+  padding-top: 48px;
+}
+
+.post-info {
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+</style>
