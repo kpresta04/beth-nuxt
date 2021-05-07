@@ -53,7 +53,7 @@
           <div class="right-col">
             <img
               class="portrait"
-              src="/placeholder.jpg"
+              src="/placeholder.webp"
               alt="Bethany"
               loading="lazy"
             />
