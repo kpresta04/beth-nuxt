@@ -1,5 +1,7 @@
 <template>
   <div class="main">
+    <Masthead url="/flowers.jpg" text="Blog" />
+
     <div class="section">
       <div class="wrapper">
         <ul>
@@ -15,7 +17,9 @@
 </template>
 
 <script>
+import Masthead from '~/components/Masthead.vue'
 export default {
+  components: { Masthead },
   async asyncData({ $prismic, params, error }) {
     const doc = await $prismic.api.query(
       $prismic.predicates.at('document.type', 'blog_post')
