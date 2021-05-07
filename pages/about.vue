@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <Masthead align="center" url="/about-hero.jpg" text="About Me" />
+    <Masthead align="center" url="/about-hero.webp" text="About Me" />
     <div class="section">
       <div class="wrapper">
         <div class="flex-wrapper">
@@ -17,7 +17,7 @@
             </p>
             <img
               class="simple-design"
-              src="/simple.jpg"
+              src="/simple.webp"
               alt="simple design"
               loading="lazy"
             />
@@ -76,7 +76,7 @@
             <div class="img-wrapper">
               <img
                 class="vert"
-                src="/vert-about.jpg"
+                src="/vert-about.webp"
                 alt="room"
                 loading="lazy"
               />

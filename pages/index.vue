@@ -167,7 +167,7 @@ export default Vue.extend({
     return {
       select: 0,
       classes: ['bg-color-4', 'bg-color-2', 'bg-color-3'],
-      images: ['/hero1.jpg', '/hero2.jpg', '/hero3.jpg'],
+      images: ['/hero1.webp', '/hero2.webp', '/hero3.webp'],
       autoplay: true,
     }
   },

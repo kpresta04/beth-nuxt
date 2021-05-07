@@ -16,7 +16,7 @@ export default {
   props: {
     url: {
       type: String,
-      default: '/contact.jpg',
+      default: '/contact.webp',
     },
     text: {
       type: String,
