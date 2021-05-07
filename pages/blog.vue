@@ -17,7 +17,9 @@
 <script>
 export default {
   async asyncData({ $prismic, params, error }) {
-    const doc = await $prismic.api.query('')
+    const doc = await $prismic.api.query(
+      $prismic.predicates.at('document.type', 'blog_post')
+    )
     console.log(doc.results)
     if (doc) {
       return { doc }

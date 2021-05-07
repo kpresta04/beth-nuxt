@@ -12,9 +12,15 @@
 <script>
 export default {
   async asyncData({ $prismic, params, error }) {
-    const doc = await $prismic.api.getByID('YJQCwhIAACMAixrc')
+    const { results } = await $prismic.api.query(
+      $prismic.predicates.at('document.type', 'blog_post')
+    )
+    const doc = await results.find(
+      (result) => result.slugs[0] === params.blogPost
+    )
+    // console.log(doc)
 
-    console.log(params)
+    // console.log(params)
     if (doc) {
       return { doc }
     } else {
