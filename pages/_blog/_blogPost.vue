@@ -3,7 +3,10 @@
     <!-- <Masthead :url="doc.data.header_image.url" text="" /> -->
     <div
       class="header-img"
-      :style="`background-image: url(${doc.data.header_image.url})`"
+      :style="`background-image: url(${doc.data.header_image.url});
+      transform: translate3d(0px, -0.002%, 0px) scale3d(1, 1, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+      `"
     >
       &nbsp;
     </div>
@@ -41,6 +44,21 @@ export default {
       error({ statusCode: 404, message: 'Page not found' })
     }
   },
+
+  mounted() {
+    document.addEventListener('scroll', (e) => {
+      const headerImg = document.querySelector('.header-img')
+
+      const scrollPct = e.target.scrollingElement.scrollTop * 0.015
+
+      if (scrollPct < 20) {
+        headerImg.style.transform = `translate3d(0px, ${
+          scrollPct + '%'
+        }, 0px) scale3d(1, 1, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)`
+      }
+    })
+  },
 }
 </script>
 
@@ -76,5 +94,6 @@ export default {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: scroll, scroll, fixed;
+  transform-style: preserve-3d;
 }
 </style>
