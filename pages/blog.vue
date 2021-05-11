@@ -14,7 +14,9 @@
           <div class="w-dyn-list">
             <div role="list" class="blog-categories w-dyn-items">
               <div role="listitem" class="w-dyn-item">
-                <a href="/blog-categories/design" class="tab-link">Design</a>
+                <nuxt-link to="/blog/category/design" class="tab-link"
+                  >Design</nuxt-link
+                >
               </div>
               <div role="listitem" class="w-dyn-item">
                 <a href="/blog-categories/marketing" class="tab-link"
