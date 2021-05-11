@@ -251,7 +251,7 @@ export default {
     color: #888;
   }
   .post-card-bottom {
-    position: absolute;
+    /* position: absolute; */
     left: 0px;
     right: 0px;
     bottom: 0px;

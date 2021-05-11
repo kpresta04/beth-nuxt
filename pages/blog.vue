@@ -4,6 +4,36 @@
 
     <div class="section">
       <div class="wrapper">
+        <div class="tabs-menu">
+          <nuxt-link
+            to="#"
+            aria-current="page"
+            class="tab-link w--current no-ul"
+            >All Posts</nuxt-link
+          >
+          <div class="w-dyn-list">
+            <div role="list" class="blog-categories w-dyn-items">
+              <div role="listitem" class="w-dyn-item">
+                <a href="/blog-categories/design" class="tab-link">Design</a>
+              </div>
+              <div role="listitem" class="w-dyn-item">
+                <a href="/blog-categories/marketing" class="tab-link"
+                  >Marketing</a
+                >
+              </div>
+              <div role="listitem" class="w-dyn-item">
+                <a href="/blog-categories/productivity" class="tab-link"
+                  >Productivity</a
+                >
+              </div>
+              <div role="listitem" class="w-dyn-item">
+                <a href="/blog-categories/tutorial" class="tab-link"
+                  >Tutorial</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="dyn-list">
           <div class="posts">
             <Post
@@ -50,5 +80,53 @@ export default {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+}
+.tabs-menu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 80px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+.tab-link.w--current {
+  background-color: transparent;
+  color: $color-4;
+  text-decoration: none;
+}
+.blog-categories {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+.tab-link {
+  display: inline-block;
+  padding: 14px 20px;
+  background-color: #fff;
+  color: #151515;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  text-decoration: none;
+
+  &:hover:not(.no-ul) {
+    text-decoration: underline;
+  }
 }
 </style>
