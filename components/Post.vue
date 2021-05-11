@@ -44,14 +44,15 @@ export default {
   },
   methods: {
     hoverMe: function (e) {
-      console.log(e)
       //hover content
       e.target.children[0].children[0].style =
         'transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);transform-style: preserve-3d;opacity: 1;'
       //hover background
       e.target.children[0].children[1].style = 'opacity: 1;'
-      e.target.children[0].children[2].style.transform =
-        'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);'
+      //bg-img
+      e.target.children[0].children[2].style = `background-image: url(${this.postData.data.header_image.url});
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;`
     },
 
     hoverEnd: function (e) {
@@ -59,8 +60,9 @@ export default {
         'transform: translate3d(0px, 0px, 0px) scale3d(0.5, 0.5, 1)rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);transform-style: preserve-3d;opacity: 0;'
       e.target.children[0].children[1].style = 'opacity: 0;'
 
-      e.target.children[0].children[2].style.transform =
-        'translate3d(0px, 0px, 0px) scale3d(1.1, 1.1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);'
+      e.target.children[0].children[2].style = `background-image: url(${this.postData.data.header_image.url});
+    transform: translate3d(0px, 0px, 0px) scale3d(1.1, 1.1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;`
     },
   },
 }
@@ -158,7 +160,7 @@ export default {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    transition: all 300ms;
+    transition: all 300ms ease;
   }
   .hover-background {
     position: absolute;
@@ -178,6 +180,7 @@ export default {
     background-position: 50% 50%;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: all 500ms ease-in-out;
   }
 }
 </style>
