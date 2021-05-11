@@ -4,13 +4,15 @@
 
     <div class="section">
       <div class="wrapper">
-        <ul>
-          <li v-for="result in doc.results" :key="result.id">
-            <nuxt-link :to="`/blog/${result.slugs[0]}`">{{
-              result.slugs[0]
-            }}</nuxt-link>
-          </li>
-        </ul>
+        <div class="dyn-list">
+          <div class="posts">
+            <Post
+              v-for="result in docs.results"
+              :key="result.id"
+              :postData="result"
+            />
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -18,15 +20,19 @@
 
 <script>
 import Masthead from '~/components/Masthead.vue'
+import Post from '~/components/Post.vue'
 export default {
-  components: { Masthead },
-  async asyncData({ $prismic, params, error }) {
-    const doc = await $prismic.api.query(
+  components: { Masthead, Post },
+  async asyncData({ $prismic, params, error, store }) {
+    const docs = await $prismic.api.query(
       $prismic.predicates.at('document.type', 'blog_post')
     )
-    console.log(doc.results)
-    if (doc) {
-      return { doc }
+    console.log(docs.results)
+    if (docs) {
+      if (store.state.blogPosts.length < 1) {
+        await store.commit('updateBlogPosts', docs.results)
+      }
+      return { docs }
     } else {
       error({ statusCode: 404, message: 'Page not found' })
     }
@@ -34,4 +40,15 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.posts {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: -56px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+</style>
