@@ -210,16 +210,12 @@ export default Vue.extend({
         setTimeout(this.autoSlide, 6000)
       }
     },
-  },
-  mounted() {
-    setTimeout(this.autoSlide, 6000)
-    document
-      .querySelector('.hero')
-      ?.addEventListener('touchstart', (e: any) => {
-        e.preventDefault()
-        touchStartX = e.targetTouches[0].clientX
-      })
-    document.querySelector('.hero')?.addEventListener('touchmove', (e: any) => {
+
+    touchStart: function (e: any) {
+      e.preventDefault()
+      touchStartX = e.targetTouches[0].clientX
+    },
+    touchDrag: function (e: any) {
       e.preventDefault()
       // console.log(e)
       if (
@@ -233,7 +229,26 @@ export default Vue.extend({
         }
         touchStartX = 0
       }
-    })
+    },
+  },
+  mounted() {
+    setTimeout(this.autoSlide, 6000)
+    document
+      .querySelector('.hero')
+      ?.addEventListener('touchstart', this.touchStart)
+
+    document
+      .querySelector('.hero')
+      ?.addEventListener('touchmove', this.touchDrag)
+  },
+  beforeDestroy() {
+    document
+      .querySelector('.hero')
+      ?.removeEventListener('touchstart', this.touchStart)
+
+    document
+      .querySelector('.hero')
+      ?.removeEventListener('touchmove', this.touchDrag)
   },
 })
 </script>
