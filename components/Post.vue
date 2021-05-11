@@ -25,6 +25,37 @@
           ></div>
         </nuxt-link>
       </div>
+      <div class="post-card-info">
+        <div style="color: #9689ce" class="post-card-category">
+          {{ postData.tags[0] }}
+        </div>
+        <nuxt-link
+          :to="`/blog/${postData.slugs[0]}`"
+          class="link-dark w-inline-block"
+          ><h4 class="capitalize">
+            {{ postData.data.title[0].text }}
+          </h4></nuxt-link
+        >
+        <div class="post-card-decription">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit
+          excepturi ad aperiam sint corrupti ea distinctio ipsum ipsam dolorum
+          tenetur voluptate, eos, similique debitis ipsa.
+        </div>
+        <div class="post-card-bottom">
+          <div>
+            {{
+              new Date(postData.first_publication_date).toLocaleString(
+                'default',
+                {
+                  month: 'short',
+                  day: 'numeric',
+                  year: 'numeric',
+                }
+              )
+            }}
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -110,6 +141,7 @@ export default {
   -ms-flex: 1;
   flex: 1;
   text-align: center;
+  position: relative;
 
   .card-preview {
     position: relative;
@@ -181,6 +213,69 @@ export default {
     background-size: cover;
     background-repeat: no-repeat;
     transition: all 500ms ease-in-out;
+  }
+  .post-card-category {
+    display: inline-block;
+    margin-bottom: 8px;
+    padding: 4px;
+    color: #151515;
+    font-size: 10px;
+    line-height: 16px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 100%;
+  }
+  .link-dark {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .w-inline-block {
+    max-width: 100%;
+    display: inline-block;
+  }
+  h4 {
+    margin-top: 0px;
+    margin-bottom: 12px;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+  .post-card-decription {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    color: #888;
+  }
+  .post-card-bottom {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    margin-top: 24px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-top: 1px solid #e9e9e9;
+    border-bottom: 1px solid #e9e9e9;
+    font-size: 10px;
+    line-height: 16px;
+    text-transform: uppercase;
   }
 }
 </style>
