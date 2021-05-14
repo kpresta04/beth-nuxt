@@ -5,44 +5,58 @@
     <div class="section">
       <div class="wrapper">
         <div class="tabs-menu">
-          <nuxt-link
-            to="#"
-            aria-current="page"
-            class="tab-link w--current no-ul"
-            >All Posts</nuxt-link
+          <div
+            @click="updateSelection('all')"
+            :class="selectedTag === 'all' ? 'tab-link w--current' : 'tab-link'"
           >
+            All Posts
+          </div>
           <div class="w-dyn-list">
             <div role="list" class="blog-categories w-dyn-items">
               <div role="listitem" class="w-dyn-item">
-                <nuxt-link to="/blog/category/design" class="tab-link"
-                  >Design</nuxt-link
+                <div
+                  @click="updateSelection('Design')"
+                  :class="
+                    selectedTag === 'Design'
+                      ? 'tab-link w--current'
+                      : 'tab-link'
+                  "
                 >
+                  Design
+                </div>
               </div>
               <div role="listitem" class="w-dyn-item">
-                <a href="/blog-categories/marketing" class="tab-link"
-                  >Marketing</a
+                <div
+                  @click="updateSelection('Marketing')"
+                  :class="
+                    selectedTag === 'Marketing'
+                      ? 'tab-link w--current'
+                      : 'tab-link'
+                  "
                 >
+                  Marketing
+                </div>
               </div>
+
               <div role="listitem" class="w-dyn-item">
-                <a href="/blog-categories/productivity" class="tab-link"
-                  >Productivity</a
+                <div
+                  @click="updateSelection('Tutorial')"
+                  :class="
+                    selectedTag === 'Tutorial'
+                      ? 'tab-link w--current'
+                      : 'tab-link'
+                  "
                 >
-              </div>
-              <div role="listitem" class="w-dyn-item">
-                <a href="/blog-categories/tutorial" class="tab-link"
-                  >Tutorial</a
-                >
+                  Tutorial
+                </div>
               </div>
             </div>
           </div>
         </div>
         <div class="dyn-list">
           <div class="posts">
-            <Post
-              v-for="result in docs.results"
-              :key="result.id"
-              :postData="result"
-            />
+            <Post v-for="result in docs" :key="result.id" :postData="result" />
+            <h4 v-if="docs.length < 1">No posts found for this tag!</h4>
           </div>
         </div>
       </div>
@@ -55,16 +69,40 @@ import Masthead from '~/components/Masthead.vue'
 import Post from '~/components/Post.vue'
 export default {
   components: { Masthead, Post },
+  data() {
+    return {
+      selectedTag: 'all',
+    }
+  },
+  methods: {
+    updateSelection: function (value) {
+      this.selectedTag = value
+      if (value === 'all') {
+        this.docs = this.$store.state.blogPosts
+        return
+      }
+
+      const filtered = this.$store.state.blogPosts.filter(
+        (post) => post.tags[0] === value
+      )
+      this.docs = filtered
+      // if (filtered.length >0){
+      // }
+      // else{
+      //   this.docs = []
+      // }
+    },
+  },
   async asyncData({ $prismic, params, error, store }) {
     const docs = await $prismic.api.query(
       $prismic.predicates.at('document.type', 'blog_post')
     )
-    console.log(docs.results)
+    console.log(docs)
     if (docs) {
       if (store.state.blogPosts.length < 1) {
         await store.commit('updateBlogPosts', docs.results)
       }
-      return { docs }
+      return { docs: docs.results }
     } else {
       error({ statusCode: 404, message: 'Page not found' })
     }
@@ -82,6 +120,10 @@ export default {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  h4 {
+    text-align: center;
+    width: 100%;
+  }
 }
 .tabs-menu {
   display: -webkit-box;
@@ -127,7 +169,8 @@ export default {
   font-weight: 700;
   text-decoration: none;
 
-  &:hover:not(.no-ul) {
+  &:hover:not(.w--current) {
+    cursor: pointer;
     text-decoration: underline;
   }
 }
