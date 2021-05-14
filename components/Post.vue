@@ -36,10 +36,16 @@
             {{ postData.data.title[0].text }}
           </h4></nuxt-link
         >
-        <div class="post-card-decription">
-          {{
-            'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit excepturi ad aperiam sint corrupti ea distinctio ipsum ipsam dolorum tenetur voluptate, eos, similique debitis ipsa.'
-          }}
+        <div
+          v-if="postData.data.post_description.length > 0"
+          class="post-card-decription"
+        >
+          {{ postData.data.post_description[0].text }}
+        </div>
+        <div v-else class="post-card-decription">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit
+          excepturi ad aperiam sint corrupti ea distinctio ipsum ipsam dolorum
+          tenetur voluptate, eos, similique debitis ipsa.
         </div>
         <div class="post-card-bottom">
           <div>

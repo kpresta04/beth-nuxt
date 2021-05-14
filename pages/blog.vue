@@ -108,7 +108,7 @@ export default {
       if (store.state.blogPosts.length < 1) {
         await store.commit('updateBlogPosts', docs.results)
       }
-      console.log(docs.results)
+      // console.log(docs.results)
       return { docs: docs.results }
     } else {
       error({ statusCode: 404, message: 'Page not found' })
