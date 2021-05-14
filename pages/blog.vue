@@ -86,11 +86,6 @@ export default {
         (post) => post.tags[0] === value
       )
       this.docs = filtered
-      // if (filtered.length >0){
-      // }
-      // else{
-      //   this.docs = []
-      // }
     },
   },
   async asyncData({ $prismic, params, error, store }) {
