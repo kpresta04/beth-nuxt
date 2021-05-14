@@ -45,19 +45,26 @@ export default {
     }
   },
 
-  mounted() {
-    document.addEventListener('scroll', (e) => {
+  methods: {
+    transformHeader: function (e) {
       const headerImg = document.querySelector('.header-img')
 
       const scrollPct = e.target.scrollingElement.scrollTop * 0.015
 
-      if (scrollPct < 20) {
+      if (headerImg && scrollPct < 20) {
         headerImg.style.transform = `translate3d(0px, ${
           scrollPct + '%'
         }, 0px) scale3d(1, 1, 1) rotateX(0deg)
     rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)`
       }
-    })
+    },
+  },
+
+  mounted() {
+    document.addEventListener('scroll', this.transformHeader)
+  },
+  beforeDestroy() {
+    document.removeEventListener('scroll', this.transformHeader)
   },
 }
 </script>
