@@ -37,9 +37,9 @@
           </h4></nuxt-link
         >
         <div class="post-card-decription">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit
-          excepturi ad aperiam sint corrupti ea distinctio ipsum ipsam dolorum
-          tenetur voluptate, eos, similique debitis ipsa.
+          {{
+            'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit excepturi ad aperiam sint corrupti ea distinctio ipsum ipsam dolorum tenetur voluptate, eos, similique debitis ipsa.'
+          }}
         </div>
         <div class="post-card-bottom">
           <div>

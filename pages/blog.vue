@@ -50,6 +50,18 @@
                   Tutorial
                 </div>
               </div>
+              <div role="listitem" class="w-dyn-item">
+                <div
+                  @click="updateSelection('Inspiration')"
+                  :class="
+                    selectedTag === 'Inspiration'
+                      ? 'tab-link w--current'
+                      : 'tab-link'
+                  "
+                >
+                  Inspiration
+                </div>
+              </div>
             </div>
           </div>
         </div>
