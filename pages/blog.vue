@@ -115,6 +115,7 @@ export default {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  justify-content: center;
   h4 {
     text-align: center;
     width: 100%;

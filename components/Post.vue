@@ -100,6 +100,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@media screen and (min-width: 768px) {
+  .post {
+    width: 80% !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .post {
+    width: 33.33% !important;
+  }
+}
 .link-wrap {
   width: 100%;
 }
@@ -108,7 +118,7 @@ export default {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 33.33%;
+  width: 100%;
   padding-right: 15px;
   padding-left: 15px;
   -webkit-box-orient: vertical;
