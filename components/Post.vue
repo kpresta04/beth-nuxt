@@ -26,7 +26,19 @@
         </nuxt-link>
       </div>
       <div class="post-card-info">
-        <div style="color: #9689ce" class="post-card-category">
+        <div
+          :class="
+            postData.tags[0] === 'Inspiration'
+              ? `color-1 post-card-category`
+              : postData.tags[0] === 'Design'
+              ? `color-2 post-card-category`
+              : postData.tags[0] === 'Tutorial'
+              ? `color-3 post-card-category`
+              : postData.tags[0] === 'Marketing'
+              ? `color-4 post-card-category`
+              : `color-1 post-card-category`
+          "
+        >
           {{ postData.tags[0] }}
         </div>
         <nuxt-link
@@ -158,7 +170,33 @@ export default {
   flex: 1;
   text-align: center;
   position: relative;
-
+  .post-card-info {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding-right: 13px;
+    padding-bottom: 80px;
+    padding-left: 13px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    /* -webkit-box-flex: 1; */
+    /* -webkit-flex: 1; */
+    -ms-flex: 1;
+    flex: 1;
+  }
   .card-preview {
     position: relative;
     display: -webkit-box;
