@@ -147,6 +147,7 @@ export default {
   -webkit-align-items: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
+  flex-wrap: wrap;
 }
 .tab-link.w--current {
   background-color: transparent;
