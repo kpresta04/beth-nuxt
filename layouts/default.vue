@@ -108,7 +108,7 @@
             <a
               href="mailto:your@email.com?subject=Your%20Subject"
               class="link-grey"
-              >bethany@bethanymariedesign.com</a
+              >bethany@bmdesign.com</a
             >
             <div class="text-grey">+1 213 974-3898</div>
           </div>
@@ -170,7 +170,12 @@ export default Vue.extend({
   .nav-menu {
     top: 60px !important;
   }
-
+  .footer-nav {
+    justify-content: unset !important;
+    a {
+      margin-right: 16px !important;
+    }
+  }
   header {
     height: 60px !important;
   }
@@ -432,6 +437,7 @@ img {
   width: 16.66%;
   font-size: 12px;
   line-height: 20px;
+  word-break: break-word;
 
   a {
     color: $grey2;
