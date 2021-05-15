@@ -101,7 +101,7 @@
           </div>
           <div class="footer-col">
             <p class="paragraph-small text-grey">
-              1028 &nbsp;Archimedes Avenue, <br />Los Angeles, CA 90210
+              1028 &nbsp;Arch Avenue, <br />Los Angeles, CA 90210
             </p>
           </div>
           <div class="footer-col">
