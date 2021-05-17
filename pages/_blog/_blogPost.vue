@@ -72,9 +72,13 @@ export default {
       month: 'long',
     })} ${date.getDate()}, ${date.getFullYear()}`
 
+    let otherPosts = store.state.blogPosts
+      .filter((post) => post.slugs[0] !== doc.slugs[0])
+      .slice(0, 3)
+
     // console.log(params)
     if (doc) {
-      return { doc, dateString }
+      return { doc, dateString, otherPosts }
     } else {
       error({ statusCode: 404, message: 'Page not found' })
     }
