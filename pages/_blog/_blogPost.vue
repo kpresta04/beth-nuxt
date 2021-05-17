@@ -102,6 +102,17 @@ export default {
   }
 }
 @media screen and (min-width: 1200px) {
+  .blog-post-wrapper {
+    .post-top-avatar {
+      width: 56px;
+      height: 56px;
+      margin-bottom: 20px;
+      border-radius: 50%;
+      background-position: 50% 50%;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
 }
 .wrap {
   background-color: white;
@@ -143,47 +154,63 @@ export default {
   font-size: 10px;
 }
 .post-top-author {
-  position: absolute;
-  z-index: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+  position: relative;
+  width: auto;
+  margin-right: -16px;
+  margin-left: -16px;
+  padding-right: 16px;
+  padding-left: 16px;
   display: flex;
-  width: 25%;
-  margin-left: -33%;
-  padding-top: 24px;
-  padding-right: 40px;
-  padding-bottom: 40px;
-  -webkit-box-orient: vertical;
+  padding-bottom: 16px;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: end;
-  -webkit-align-items: flex-end;
-  -ms-flex-align: end;
-  align-items: flex-end;
-  border-right: 1px solid #e9e9e9;
-  color: #151515;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom: 1px solid #e9e9e9;
+  border-right-style: none;
+  text-align: left;
   font-size: 11px;
   line-height: 16px;
   font-weight: 700;
-  text-align: right;
+
   letter-spacing: 1px;
   text-transform: uppercase;
 }
 .post-top-avatar {
-  width: 56px;
-  height: 56px;
-  margin-bottom: 20px;
-  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 16px;
+  margin-bottom: 0px;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
   background-image: url('/placeholder.webp');
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
 }
+.post-top-author-name {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
 .post-top-author-link {
-  margin-top: 8px;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  margin-top: -1px;
   border-bottom: 1px dashed #888;
   -webkit-transition: color 150ms ease, border-color 150ms ease;
   transition: color 150ms ease, border-color 150ms ease;
