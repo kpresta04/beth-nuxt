@@ -111,6 +111,9 @@ export default {
   }
 }
 @media screen and (min-width: 1200px) {
+  .wrap {
+    padding-left: 100px;
+  }
   .blog-post-wrapper {
     .post-top-author {
       position: absolute;
