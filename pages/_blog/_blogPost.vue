@@ -43,10 +43,17 @@
         <prismic-rich-text :field="doc.data.content" />
       </div>
     </div>
-    <div class="section">
+    <div v-if="otherPosts.length > 0" class="section">
       <div class="wrapper">
         <h2 class="section-title">You Might also like</h2>
         <div class="divider center-margin"></div>
+        <div class="posts">
+          <Post
+            v-for="result in otherPosts"
+            :key="result.id"
+            :postData="result"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -54,8 +61,9 @@
 
 <script>
 import Masthead from '~/components/Masthead.vue'
+import Post from '~/components/Post.vue'
 export default {
-  components: { Masthead },
+  components: { Masthead, Post },
   async asyncData({ $prismic, params, error, store }) {
     const { results } = await $prismic.api.query(
       $prismic.predicates.at('document.type', 'blog_post')
@@ -111,6 +119,7 @@ export default {
 <style lang="scss" scoped>
 @media screen and (min-width: 1200px) {
   .wrap {
+    max-width: 87%;
     padding-left: 11%;
   }
   .blog-post-wrapper {
@@ -274,7 +283,7 @@ export default {
 }
 
 .section-title {
-  margin-top: 0px;
+  margin-top: -50px;
   margin-bottom: 20px;
   font-family: 'Noto Serif', sans-serif;
   font-size: 32px;
@@ -282,8 +291,25 @@ export default {
   font-weight: 400;
   text-transform: capitalize;
   text-align: center;
+  padding-top: 50px;
+  border-top: 1px solid $grey4;
 }
 .center-margin {
-  margin: 0 auto;
+  margin: 0 auto 50px;
+}
+.posts {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: -56px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  justify-content: center;
+  h4 {
+    text-align: center;
+    width: 100%;
+  }
 }
 </style>
