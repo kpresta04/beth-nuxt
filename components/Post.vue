@@ -122,10 +122,16 @@ export default {
   .post {
     width: 80% !important;
   }
+  .card-preview {
+    height: 300px !important;
+  }
 }
 @media screen and (min-width: 1024px) {
   .post {
     width: 33.33% !important;
+  }
+  .card-preview {
+    height: 248px !important;
   }
 }
 .link-wrap {
