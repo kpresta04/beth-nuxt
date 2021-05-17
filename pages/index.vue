@@ -212,11 +212,11 @@ export default Vue.extend({
     },
 
     touchStart: function (e: any) {
-      e.preventDefault()
+      // e.preventDefault()
       touchStartX = e.targetTouches[0].clientX
     },
     touchDrag: function (e: any) {
-      e.preventDefault()
+      // e.preventDefault()
       // console.log(e)
       if (
         touchStartX !== 0 &&
