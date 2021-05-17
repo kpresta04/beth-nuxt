@@ -12,7 +12,26 @@
     </div>
     <div class="wrap">
       <div class="blog-post-wrapper">
-        <h6 class="post-info">{{ dateString }}</h6>
+        <h6>
+          <span class="post-info">
+            {{ dateString }}
+          </span>
+          in
+          <span
+            :class="
+              doc.tags[0] === 'Inspiration'
+                ? `color-1 post-top-category`
+                : doc.tags[0] === 'Design'
+                ? `color-2 post-top-category`
+                : doc.tags[0] === 'Tutorial'
+                ? `color-3 post-top-category`
+                : doc.tags[0] === 'Marketing'
+                ? `color-4 post-top-category`
+                : `color-1 post-top-category`
+            "
+            >{{ doc.tags[0] }}</span
+          >
+        </h6>
         <h1>{{ doc.data.title[0].text }}</h1>
         <prismic-rich-text :field="doc.data.content" />
       </div>
@@ -102,5 +121,12 @@ export default {
   background-repeat: no-repeat;
   background-attachment: scroll, scroll, fixed;
   transform-style: preserve-3d;
+}
+.post-top-category {
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 10px;
 }
 </style>
