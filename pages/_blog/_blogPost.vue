@@ -112,7 +112,7 @@ export default {
 }
 @media screen and (min-width: 1200px) {
   .wrap {
-    padding-left: 100px;
+    padding-left: 11%;
   }
   .blog-post-wrapper {
     .post-top-author {
