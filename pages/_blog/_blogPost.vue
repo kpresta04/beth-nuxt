@@ -96,9 +96,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@media screen and (min-width: 1024px) {
+  .wrap {
+    max-width: 87%;
+  }
+}
+@media screen and (min-width: 1200px) {
+}
 .wrap {
   background-color: white;
-  max-width: 85%;
   display: flex;
   justify-content: center;
   margin-top: -228px;
