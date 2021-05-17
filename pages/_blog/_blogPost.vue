@@ -100,8 +100,7 @@ export default {
 .blog-post-wrapper {
   margin: 0 auto;
   max-width: 660px;
-  padding: 0 10px;
-  padding-top: 48px;
+  padding: 48px 10px;
 }
 
 .post-info {
