@@ -103,6 +103,37 @@ export default {
 }
 @media screen and (min-width: 1200px) {
   .blog-post-wrapper {
+    .post-top-author {
+      position: absolute;
+      z-index: 1;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      width: 25%;
+      margin-left: -33%;
+      padding-top: 24px;
+      padding-right: 40px;
+      padding-bottom: 40px;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: end;
+      -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+      align-items: flex-end;
+      border-right: 1px solid #e9e9e9;
+      border-bottom: none;
+      color: #151515;
+      font-size: 11px;
+      line-height: 16px;
+      font-weight: 700;
+      text-align: right;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
     .post-top-avatar {
       width: 56px;
       height: 56px;
@@ -111,6 +142,9 @@ export default {
       background-position: 50% 50%;
       background-size: cover;
       background-repeat: no-repeat;
+    }
+    .post-top-author-link {
+      margin-top: 8px;
     }
   }
 }
