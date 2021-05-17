@@ -42,11 +42,11 @@
         <h1>{{ doc.data.title[0].text }}</h1>
         <prismic-rich-text :field="doc.data.content" />
       </div>
-      <div class="section">
-        <div class="wrapper">
-          <h2 class="section-title">You Might also like</h2>
-          <div class="divider center-margin"></div>
-        </div>
+    </div>
+    <div class="section">
+      <div class="wrapper">
+        <h2 class="section-title">You Might also like</h2>
+        <div class="divider center-margin"></div>
       </div>
     </div>
   </div>
@@ -56,10 +56,13 @@
 import Masthead from '~/components/Masthead.vue'
 export default {
   components: { Masthead },
-  async asyncData({ $prismic, params, error }) {
+  async asyncData({ $prismic, params, error, store }) {
     const { results } = await $prismic.api.query(
       $prismic.predicates.at('document.type', 'blog_post')
     )
+    if (store.state.blogPosts.length < 1) {
+      await store.commit('updateBlogPosts', results)
+    }
     const doc = await results.find(
       (result) => result.slugs[0] === params.blogPost
     )
