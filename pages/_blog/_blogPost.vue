@@ -12,6 +12,13 @@
     </div>
     <div class="wrap">
       <div class="blog-post-wrapper">
+        <div class="post-top-author">
+          <div class="post-top-avatar"></div>
+          <div class="post-top-author-name">Bethany Marie</div>
+          <nuxt-link to="/about" class="post-top-author-link"
+            >About Author</nuxt-link
+          >
+        </div>
         <h6>
           <span class="post-info">
             {{ dateString }}
@@ -98,6 +105,7 @@ export default {
   position: relative;
 }
 .blog-post-wrapper {
+  position: relative;
   margin: 0 auto;
   max-width: 660px;
   padding: 48px 10px;
@@ -127,5 +135,58 @@ export default {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 10px;
+}
+.post-top-author {
+  position: absolute;
+  z-index: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 25%;
+  margin-left: -33%;
+  padding-top: 24px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  border-right: 1px solid #e9e9e9;
+  color: #151515;
+  font-size: 11px;
+  line-height: 16px;
+  font-weight: 700;
+  text-align: right;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.post-top-avatar {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  background-image: url('/placeholder.webp');
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.post-top-author-link {
+  margin-top: 8px;
+  border-bottom: 1px dashed #888;
+  -webkit-transition: color 150ms ease, border-color 150ms ease;
+  transition: color 150ms ease, border-color 150ms ease;
+  color: #888;
+  font-size: 11px;
+  line-height: 16px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  text-decoration: none;
+  text-transform: none;
 }
 </style>
