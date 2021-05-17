@@ -105,11 +105,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@media screen and (min-width: 1024px) {
-  .wrap {
-    max-width: 87%;
-  }
-}
 @media screen and (min-width: 1200px) {
   .wrap {
     padding-left: 11%;
