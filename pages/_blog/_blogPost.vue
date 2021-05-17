@@ -42,6 +42,12 @@
         <h1>{{ doc.data.title[0].text }}</h1>
         <prismic-rich-text :field="doc.data.content" />
       </div>
+      <div class="section">
+        <div class="wrapper">
+          <h2 class="section-title">You Might also like</h2>
+          <div class="divider center-margin"></div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -151,9 +157,14 @@ export default {
 .wrap {
   background-color: white;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin-top: -228px;
   position: relative;
+
+  .section {
+    width: 100%;
+  }
 }
 .blog-post-wrapper {
   position: relative;
@@ -255,5 +266,19 @@ export default {
   letter-spacing: 0px;
   text-decoration: none;
   text-transform: none;
+}
+
+.section-title {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  font-family: 'Noto Serif', sans-serif;
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 400;
+  text-transform: capitalize;
+  text-align: center;
+}
+.center-margin {
+  margin: 0 auto;
 }
 </style>
