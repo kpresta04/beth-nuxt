@@ -7,6 +7,9 @@ export const mutations = {
   updateBlogPosts: (state, payload) => {
     state.blogPosts = payload
   },
+  updateProjects: (state, payload) => {
+    state.projects = payload
+  },
 }
 
 export const actions = {
