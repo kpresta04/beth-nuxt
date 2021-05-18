@@ -3,6 +3,9 @@
     <div class="project-wrapper">
       <div class="project" v-for="project in docs" :key="project.id">
         <nuxt-link class="project-link" :to="`/projects/${project.slugs[0]}`">
+          <h4 class="project-title">
+            {{ project.data.project_name[0].text }}
+          </h4>
           <div
             class="bg"
             :style="`background-image: url(${project.data.images[0]._image.url});`"
@@ -56,11 +59,38 @@ export default {
   margin: 0 0 20px;
 }
 
+.project-link {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.project-title {
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+  color: white;
+  letter-spacing: 0.5rem;
+}
+
 .bg {
   height: 100%;
   width: 100%;
+  position: relative;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.bg::before {
+  content: '';
+  position: absolute;
+  background: linear-gradient(0deg, #00000038 30%, #ffffff44 100%);
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  left: 0;
+  top: 0;
 }
 </style>
