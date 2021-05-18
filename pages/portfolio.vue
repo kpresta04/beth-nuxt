@@ -1,9 +1,15 @@
 <template>
-  <div class="main">port</div>
+  <div class="main">
+    <div class="section"></div>
+  </div>
 </template>
 
 <script>
 export default {}
 </script>
 
-<style lang="scss" scoped></style>
+<style
+  lang="sc
+Mastheadss"
+  scoped
+></style>
