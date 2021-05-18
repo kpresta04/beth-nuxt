@@ -3,13 +3,14 @@
     <div class="project-wrapper">
       <div class="project" v-for="project in docs" :key="project.id">
         <nuxt-link class="project-link" :to="`/projects/${project.slugs[0]}`">
-          <h4 class="project-title">
-            {{ project.data.project_name[0].text }}
-          </h4>
           <div
             class="bg"
             :style="`background-image: url(${project.data.images[0]._image.url});`"
-          ></div>
+          >
+            <h4 class="project-title">
+              {{ project.data.project_name[0].text }}
+            </h4>
+          </div>
         </nuxt-link>
       </div>
     </div>
@@ -67,11 +68,19 @@ export default {
 
 .project-title {
   text-transform: uppercase;
+  z-index: 54;
+
+  letter-spacing: 0.2rem;
+
   position: absolute;
-  bottom: 100px;
-  left: 0;
-  color: white;
-  letter-spacing: 0.5rem;
+  color: #fff;
+  width: calc(100% - 2rem);
+
+  left: 1rem;
+
+  bottom: 2rem;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
 }
 
 .bg {
@@ -81,6 +90,12 @@ export default {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0, 1);
+  opacity: 1;
+  &:hover {
+    opacity: 0.85;
+  }
 }
 
 .bg::before {
@@ -89,7 +104,7 @@ export default {
   background: linear-gradient(0deg, #00000038 30%, #ffffff44 100%);
   width: 100%;
   height: 100%;
-  z-index: 3;
+  z-index: 0;
   left: 0;
   top: 0;
 }
