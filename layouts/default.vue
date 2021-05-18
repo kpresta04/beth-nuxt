@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="layout">
     <header>
       <div class="nav-wrapper">
         <div class="brand-info">
@@ -276,6 +276,8 @@ header {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+}
+.layout {
   a {
     display: flex;
     align-items: center;
