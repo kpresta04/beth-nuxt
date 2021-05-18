@@ -276,6 +276,11 @@ header {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  a {
+    display: flex;
+    align-items: center;
+    color: $dark;
+  }
 }
 .nav-wrapper {
   margin: 0 auto;
@@ -285,11 +290,7 @@ header {
   display: grid;
   grid-template-columns: 1fr 3fr;
 }
-a {
-  display: flex;
-  align-items: center;
-  color: $dark;
-}
+
 nav {
   display: flex;
   height: 100%;

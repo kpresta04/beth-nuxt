@@ -2,10 +2,12 @@
   <div class="main">
     <div class="project-wrapper">
       <div class="project" v-for="project in docs" :key="project.id">
-        <div
-          class="bg"
-          :style="`background-image: url(${project.data.images[0]._image.url});`"
-        ></div>
+        <nuxt-link class="project-link" :to="`/projects/${project.slugs[0]}`">
+          <div
+            class="bg"
+            :style="`background-image: url(${project.data.images[0]._image.url});`"
+          ></div>
+        </nuxt-link>
       </div>
     </div>
   </div>
