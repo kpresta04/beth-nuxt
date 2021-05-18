@@ -37,10 +37,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@media screen and(min-width:1024px) {
+  .main {
+    .project {
+      width: 50%;
+    }
+  }
+}
 @media screen and(min-width:1200px) {
   .main {
     .project-wrapper {
       max-width: 1800px;
+    }
+
+    .project {
+      height: 600px;
     }
   }
 }
@@ -55,8 +66,8 @@ export default {
 .project {
   padding-left: 0.625rem;
   padding-right: 0.625rem;
-  width: 50%;
-  height: 600px;
+  width: 100%;
+  height: 45vh;
   margin: 0 0 20px;
 }
 
