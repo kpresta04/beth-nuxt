@@ -1,15 +1,11 @@
 <template>
   <div class="main">
-    <div class="section">
-      <div class="project-wrapper">
-        <div class="project-grid">
-          <div class="project" v-for="project in docs" :key="project.id">
-            <img
-              :src="project.data.images[0]._image.url"
-              :alt="project.data.images[0]._image.alt || 'project image'"
-            />
-          </div>
-        </div>
+    <div class="project-wrapper">
+      <div class="project" v-for="project in docs" :key="project.id">
+        <div
+          class="bg"
+          :style="`background-image: url(${project.data.images[0]._image.url});`"
+        ></div>
       </div>
     </div>
   </div>
@@ -35,15 +31,34 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@media screen and(min-width:1200px) {
+  .main {
+    .project-wrapper {
+      max-width: 1800px;
+    }
+  }
+}
 .project-wrapper {
+  margin: 128px auto;
   width: 100%;
-  max-width: 1800px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  /* justify-content: center; */
+  padding: 0 1rem;
 }
 .project {
-  padding: 0 50px;
-  max-width: 800px;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  width: 50%;
+  height: 600px;
+  margin: 0 0 20px;
+}
+
+.bg {
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 </style>
