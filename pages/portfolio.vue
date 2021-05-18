@@ -1,5 +1,11 @@
 <template>
   <div class="main">
+    <!-- <masthead url="/interior.jpg" text="Projects" /> -->
+    <div class="page-title">
+      <h1>Projects</h1>
+      <div class="divider"></div>
+    </div>
+
     <div class="project-wrapper">
       <div class="project" v-for="project in docs" :key="project.id">
         <nuxt-link class="project-link" :to="`/projects/${project.slugs[0]}`">
@@ -18,7 +24,9 @@
 </template>
 
 <script>
+import Masthead from '~/components/Masthead.vue'
 export default {
+  components: { Masthead },
   async asyncData({ $prismic, params, error, store }) {
     const docs = await $prismic.api.query(
       $prismic.predicates.at('document.type', 'project')
@@ -37,6 +45,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@media screen and(min-width:768px) {
+  .main {
+    .page-title {
+      margin-top: 9rem;
+    }
+  }
+}
 @media screen and(min-width:1024px) {
   .main {
     .project {
@@ -56,7 +71,7 @@ export default {
   }
 }
 .project-wrapper {
-  margin: 128px auto;
+  margin: 72px auto;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -67,7 +82,7 @@ export default {
   padding-left: 0.625rem;
   padding-right: 0.625rem;
   width: 100%;
-  height: 45vh;
+  height: 55vh;
   margin: 0 0 20px;
 }
 
@@ -118,5 +133,18 @@ export default {
   z-index: 0;
   left: 0;
   top: 0;
+}
+
+.page-title {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  margin-top: 5rem;
+
+  h1 {
+    width: 100%;
+  }
 }
 </style>

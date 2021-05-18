@@ -19,6 +19,7 @@
               v-for="image in doc.data.images.slice(1, doc.data.images.length)"
               :field="image._image"
               :key="image._image.url"
+              class="loopy"
             />
           </div>
         </div>
