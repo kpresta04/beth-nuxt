@@ -14,7 +14,7 @@
             <prismic-rich-text :field="doc.data.description" />
           </div>
 
-          <div class="image-grid">
+          <div class="image-grid" v-if="doc.data.images.length > 1">
             <prismic-image
               v-for="image in doc.data.images.slice(1, doc.data.images.length)"
               :field="image._image"
