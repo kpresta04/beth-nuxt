@@ -7,8 +7,28 @@
     </div>
 
     <div class="project-wrapper">
-      <div class="project" v-for="project in docs" :key="project.id">
+      <div
+        class="project"
+        v-for="project in docs"
+        :key="project.id"
+        @mouseenter="hoverMe"
+        @mouseleave="hoverEnd"
+      >
         <nuxt-link class="project-link" :to="`/projects/${project.slugs[0]}`">
+          <div
+            class="hover-content"
+            style="
+              transform: translate3d(0px, 0px, 0px) scale3d(0.5, 0.5, 1)
+                rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+              transform-style: preserve-3d;
+              opacity: 0;
+            "
+          >
+            <div class="button">
+              <div>View More</div>
+            </div>
+          </div>
+          <div class="hover-bg" style="opacity: 0"></div>
           <div
             class="bg"
             :style="`background-image: url(${project.data.images[0]._image.url});`"
@@ -40,6 +60,28 @@ export default {
     } else {
       error({ statusCode: 404, message: 'Page not found' })
     }
+  },
+  methods: {
+    hoverMe: function (e) {
+      //hover content
+      e.target.children[0].children[0].style =
+        'transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);transform-style: preserve-3d;opacity: 1;'
+      //   //hover background
+      e.target.children[0].children[1].style = 'opacity: 1;'
+      //   //bg-img
+      //   e.target.children[0].children[2].style = `background-image: url(${this.postData.data.header_image.url});
+      // transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+      // transform-style: preserve-3d;`
+    },
+
+    hoverEnd: function (e) {
+      e.target.children[0].children[0].style =
+        'transform: translate3d(0px, 0px, 0px) scale3d(0.5, 0.5, 1)rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);transform-style: preserve-3d;opacity: 0;'
+      e.target.children[0].children[1].style = 'opacity: 0;'
+      //   e.target.children[0].children[2].style = `background-image: url(${this.postData.data.header_image.url});
+      // transform: translate3d(0px, 0px, 0px) scale3d(1.1, 1.1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+      // transform-style: preserve-3d;`
+    },
   },
 }
 </script>
@@ -119,9 +161,9 @@ export default {
 
   transition: opacity 0.4s cubic-bezier(0.4, 0, 0, 1);
   opacity: 1;
-  &:hover {
+  /* &:hover {
     opacity: 0.85;
-  }
+  } */
 }
 
 .bg::before {
@@ -146,5 +188,45 @@ export default {
   h1 {
     width: 100%;
   }
+}
+.hover-bg {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  z-index: 5;
+  transition: all 300ms ease;
+
+  background-color: rgba(21, 21, 21, 0.4);
+}
+.hover-content {
+  .button {
+    background-color: white;
+    &:hover {
+      color: white;
+      background-color: $color-3;
+    }
+  }
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  z-index: 6;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 24px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  transition: all 300ms ease;
 }
 </style>
