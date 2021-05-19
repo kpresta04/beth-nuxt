@@ -68,8 +68,18 @@ export default {
 
     .first-image {
       margin-bottom: 6.25rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main {
+    .first-image {
       height: 100vh;
     }
+  }
+  .bg-img {
+    height: 100vh !important;
   }
 }
 .o-label {
@@ -93,8 +103,8 @@ export default {
 .first-image {
   height: 50vh;
   width: 100%;
-  max-height: 1100px;
-  max-width: 1400px;
+  max-height: 1280px;
+  max-width: 1700px;
 
   background-position: center;
   background-size: cover;
@@ -115,7 +125,9 @@ export default {
   .bg-img {
     margin-bottom: 3.125rem;
 
-    height: 100vh;
+    height: 50vh;
+    max-height: 1280px;
+    max-width: 1700px;
     /* max-height: 50vh; */
     background-position: center;
     background-size: cover;
