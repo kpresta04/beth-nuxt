@@ -15,11 +15,16 @@
           </div>
 
           <div class="image-grid" v-if="doc.data.images.length > 1">
-            <prismic-image
+            <div
+              class="img-wrapper"
               v-for="image in doc.data.images.slice(1, doc.data.images.length)"
-              :field="image._image"
               :key="image._image.url"
-            />
+            >
+              <div
+                class="bg-img"
+                :style="`background-image: url(${image._image.url})`"
+              ></div>
+            </div>
           </div>
         </div>
       </div>
@@ -107,11 +112,14 @@ export default {
 .image-grid {
   margin-top: 6.25rem;
 
-  img {
+  .bg-img {
     margin-bottom: 3.125rem;
 
-    height: 100%;
-    max-height: 50vh;
+    height: 100vh;
+    /* max-height: 50vh; */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     width: auto;
   }
 }
