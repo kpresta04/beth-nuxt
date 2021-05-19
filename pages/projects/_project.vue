@@ -19,7 +19,6 @@
               v-for="image in doc.data.images.slice(1, doc.data.images.length)"
               :field="image._image"
               :key="image._image.url"
-              class="loopy"
             />
           </div>
         </div>
@@ -56,6 +55,18 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@media screen and (min-width: 768px) {
+  .main {
+    .project {
+      padding-left: 100px;
+    }
+
+    .first-image {
+      margin-bottom: 6.25rem;
+      height: 100vh;
+    }
+  }
+}
 .o-label {
   text-transform: uppercase;
   font-size: 13px;
@@ -75,7 +86,7 @@ export default {
 }
 
 .first-image {
-  height: 100vh;
+  height: 50vh;
   width: 100%;
   max-height: 1100px;
   max-width: 1400px;
@@ -83,13 +94,12 @@ export default {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  margin-bottom: 6.25rem;
+  margin-bottom: 5.25rem;
   margin-top: 4rem;
 }
 
 .project {
   width: 100%;
-  padding-left: 100px;
 }
 .flex-wrapper {
   width: 100%;
@@ -101,7 +111,7 @@ export default {
     margin-bottom: 3.125rem;
 
     height: 100%;
-    max-height: 100vh;
+    max-height: 50vh;
     width: auto;
   }
 }
