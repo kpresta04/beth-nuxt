@@ -6,7 +6,7 @@
     :style="bgStyle"
   >
     <div class="wrapper">
-      <h1 :style="textAlign">{{ text }}</h1>
+      <h1 class="bottom-up" :style="textAlign">{{ text }}</h1>
     </div>
   </section>
 </template>
