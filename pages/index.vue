@@ -1,5 +1,5 @@
 <template>
-  <div class="page-wrapper">
+  <div class="page-wrapper from-opaque">
     <div :class="`main hero ${classes[select]}`">
       <div class="bullet-row">
         <div class="bullets">
