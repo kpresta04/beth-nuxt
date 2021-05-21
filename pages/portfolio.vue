@@ -2,7 +2,7 @@
   <div class="main">
     <!-- <masthead url="/interior.jpg" text="Projects" /> -->
     <div class="page-title">
-      <h1>Projects</h1>
+      <h1 class="bottom-up">Projects</h1>
       <div class="divider"></div>
     </div>
 
@@ -119,6 +119,7 @@ export default {
   flex-wrap: wrap;
   /* justify-content: center; */
   padding: 0 1rem;
+  position: relative;
 }
 .project {
   padding-left: 0.625rem;
