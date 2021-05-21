@@ -260,3 +260,33 @@ textarea:focus-visible {
 .capitalize {
   text-transform: capitalize;
 }
+.overlay {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 100;
+
+  background-color: #fff;
+}
+.roll-right {
+  animation-name: roll-right;
+  animation-timing-function: cubic-bezier(0.5, 0, 0.2, 1);
+  animation-duration: 1000ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes roll-right {
+  from {
+    display: block;
+    transform: translate3d(0%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+      rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  }
+
+  to {
+    display: none;
+    transform: translate3d(100%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+      rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  }
+}
