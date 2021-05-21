@@ -33,7 +33,7 @@ export default {
   },
   computed: {
     bgStyle() {
-      return `background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 61%, rgba(0, 0, 0, 0.65) 100%), url(${this.url}) no-repeat center center scroll;`
+      return `background: url(${this.url}) no-repeat center center scroll;`
     },
     textAlign() {
       return `text-align: ${this.align}; color: ${this.color}`
