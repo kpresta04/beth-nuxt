@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="layout">
     <header>
       <div class="nav-wrapper">
         <div class="brand-info">
@@ -277,6 +277,13 @@ header {
   display: flex;
   justify-content: space-between;
 }
+.layout {
+  a {
+    display: flex;
+    align-items: center;
+    color: $dark;
+  }
+}
 .nav-wrapper {
   margin: 0 auto;
   height: 100%;
@@ -285,11 +292,7 @@ header {
   display: grid;
   grid-template-columns: 1fr 3fr;
 }
-a {
-  display: flex;
-  align-items: center;
-  color: $dark;
-}
+
 nav {
   display: flex;
   height: 100%;

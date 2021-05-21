@@ -55,13 +55,13 @@ a {
 }
 p {
   margin-bottom: 24px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
 }
 
 .blog-post-wrapper {
   p {
-    font-size: 16px;
+    font-size: 1.3rem;
     line-height: 28px;
   }
   li {
@@ -201,6 +201,12 @@ textarea:focus-visible {
   .section {
     padding: 80px 16px;
   }
+  .blog-post-wrapper {
+    p {
+      font-size: 20px;
+      line-height: 1.34 !important;
+    }
+  }
 }
 @media screen and (max-width: 1200px) {
   .bullet-row {
@@ -259,4 +265,101 @@ textarea:focus-visible {
 
 .capitalize {
   text-transform: capitalize;
+}
+.absolute {
+  position: absolute;
+}
+.overlay {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 100;
+
+  background-color: #fff;
+}
+.roll-right {
+  animation-name: roll-right;
+  animation-timing-function: cubic-bezier(0.5, 0, 0.2, 1);
+  animation-duration: 1000ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes roll-right {
+  from {
+    display: block;
+    transform: translate3d(0%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+      rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  }
+
+  to {
+    display: none;
+    transform: translate3d(100%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+      rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  }
+}
+.bottom-up {
+  animation-name: bottom-up;
+  animation-timing-function: cubic-bezier(0.5, 0, 0.2, 1);
+  animation-duration: 400ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+@keyframes bottom-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0px, 100%, 0px) scale3d(1, 1, 1) rotateX(0deg)
+      rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+      rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+  }
+}
+.expand {
+  animation-name: expand;
+  animation-timing-function: cubic-bezier(0.5, 0, 0.2, 1);
+  animation-duration: 400ms;
+  animation-delay: 400ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+@keyframes expand {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100px;
+  }
+}
+
+.from-opaque {
+  animation-name: from-opaque;
+  animation-timing-function: cubic-bezier(0.5, 0, 0.2, 1);
+  animation-duration: 400ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+@keyframes from-opaque {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.4s;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
 }
