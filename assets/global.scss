@@ -61,7 +61,7 @@ p {
 
 .blog-post-wrapper {
   p {
-    font-size: 16px;
+    font-size: 1.3rem;
     line-height: 28px;
   }
   li {
@@ -200,6 +200,12 @@ textarea:focus-visible {
 @media screen and (max-width: 991px) {
   .section {
     padding: 80px 16px;
+  }
+  .blog-post-wrapper {
+    p {
+      font-size: 20px;
+      line-height: 1.34 !important;
+    }
   }
 }
 @media screen and (max-width: 1200px) {
