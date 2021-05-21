@@ -6,7 +6,7 @@
           <div class="o-label">Project</div>
           <h1 class="project-name">{{ doc.data.project_name[0].text }}</h1>
           <div
-            class="first-image from-opaque"
+            class="first-image"
             :style="`background-image:url(${doc.data.images[0]._image.url});`"
           ></div>
 

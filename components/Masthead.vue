@@ -1,6 +1,6 @@
 <template>
   <section
-    class="masthead from-opaque"
+    class="masthead"
     role="img"
     aria-label="Image Description"
     :style="bgStyle"
