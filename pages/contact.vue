@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <Masthead />
+    <Masthead bgColor="2" />
 
     <div class="section">
       <div class="wrapper">

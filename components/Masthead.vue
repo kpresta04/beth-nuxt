@@ -1,12 +1,16 @@
 <template>
   <section
-    class="masthead"
+    :class="`masthead bg-color-${bgColor}`"
     role="img"
     aria-label="Image Description"
     :style="bgStyle"
   >
     <div class="wrapper">
       <h1 class="bottom-up" :style="textAlign">{{ text }}</h1>
+      <div
+        class="divider expand"
+        style="background-color: white; margin: 0 auto"
+      ></div>
     </div>
   </section>
 </template>
@@ -29,6 +33,10 @@ export default {
     color: {
       type: String,
       default: 'white',
+    },
+    bgColor: {
+      type: String,
+      default: '1',
     },
   },
   computed: {
@@ -63,7 +71,7 @@ h1 {
   font-size: 40px;
   letter-spacing: 0.03em;
   line-height: 1;
-  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
+  /* text-shadow: 1px 2px 4px rgba(0, 0, 0, 1); */
   margin-bottom: 28px;
 }
 </style>

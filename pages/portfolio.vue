@@ -2,7 +2,7 @@
   <div class="main">
     <!-- <masthead url="/interior.jpg" text="Projects" /> -->
     <div class="page-title">
-      <h1 class="bottom-up">Projects</h1>
+      <h1 class="bottom-up">Portfolio</h1>
       <div class="divider"></div>
     </div>
 
@@ -62,19 +62,19 @@ export default {
       error({ statusCode: 404, message: 'Page not found' })
     }
   },
-  mounted() {
-    const projects = [...document.querySelectorAll('.project')]
-    projects.forEach((proj) => {
-      proj.addEventListener('touchstart', this.blockClickEvent)
-    })
-  },
-  beforeDestroy() {
-    const projects = [...document.querySelectorAll('.project')]
+  // mounted() {
+  //   const projects = [...document.querySelectorAll('.project')]
+  //   projects.forEach((proj) => {
+  //     proj.addEventListener('touchstart', this.blockClickEvent)
+  //   })
+  // },
+  // beforeDestroy() {
+  //   const projects = [...document.querySelectorAll('.project')]
 
-    projects.forEach((proj) => {
-      proj.removeEventListener('touchstart', this.blockClickEvent)
-    })
-  },
+  //   projects.forEach((proj) => {
+  //     proj.removeEventListener('touchstart', this.blockClickEvent)
+  //   })
+
   methods: {
     blockClickEvent: function (e) {
       e.preventDefault()
