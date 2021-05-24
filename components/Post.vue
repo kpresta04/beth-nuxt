@@ -244,7 +244,7 @@ export default {
       background-color: white;
       &:hover {
         color: white;
-        background-color: $color-1;
+        background-color: $color-2;
       }
     }
     position: absolute;

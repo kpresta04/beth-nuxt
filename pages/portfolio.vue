@@ -1,10 +1,10 @@
 <template>
   <div class="main">
-    <!-- <masthead url="/interior.jpg" text="Projects" /> -->
-    <div class="page-title">
+    <masthead text="Portfolio" bgColor="4" />
+    <!-- <div class="page-title">
       <h1 class="bottom-up">Portfolio</h1>
       <div class="divider"></div>
-    </div>
+    </div> -->
 
     <div class="project-wrapper">
       <div
@@ -224,7 +224,7 @@ export default {
     background-color: white;
     &:hover {
       color: white;
-      background-color: $color-3;
+      background-color: $color-4;
     }
   }
   position: absolute;

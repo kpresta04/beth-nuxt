@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <Masthead url="/flowers.webp" text="Blog" bgColor="4" />
+    <Masthead url="/flowers.webp" text="Blog" bgColor="2" />
 
     <div class="section">
       <div class="wrapper">
@@ -151,7 +151,7 @@ export default {
 }
 .tab-link.w--current {
   background-color: transparent;
-  color: $color-4;
+  color: $color-2;
   text-decoration: none;
 }
 .blog-categories {

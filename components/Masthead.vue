@@ -3,7 +3,6 @@
     :class="`masthead bg-color-${bgColor}`"
     role="img"
     aria-label="Image Description"
-    :style="bgStyle"
   >
     <div class="wrapper">
       <h1 class="bottom-up" :style="textAlign">{{ text }}</h1>
