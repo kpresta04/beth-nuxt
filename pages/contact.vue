@@ -101,6 +101,10 @@ export default {
 <style lang="scss" scoped>
 #submit-btn {
   color: white;
+
+  &:hover {
+    background-color: darken($color-1, 15%) !important;
+  }
 }
 @media screen and (max-width: 479px) {
   .contact {
