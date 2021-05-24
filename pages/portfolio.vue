@@ -11,6 +11,7 @@
         class="project"
         v-for="project in docs"
         :key="project.id"
+        :id="`proj-${project.id}`"
         @mouseenter="hoverMe"
         @mouseleave="hoverEnd"
       >
@@ -61,7 +62,24 @@ export default {
       error({ statusCode: 404, message: 'Page not found' })
     }
   },
+  mounted() {
+    const projects = [...document.querySelectorAll('.project')]
+    projects.forEach((proj) => {
+      proj.addEventListener('touchstart', this.blockClickEvent)
+    })
+  },
+  beforeDestroy() {
+    const projects = [...document.querySelectorAll('.project')]
+
+    projects.forEach((proj) => {
+      proj.removeEventListener('touchstart', this.blockClickEvent)
+    })
+  },
   methods: {
+    blockClickEvent: function (e) {
+      e.preventDefault()
+      e.target.click()
+    },
     hoverMe: function (e) {
       //hover content
       e.target.children[0].children[0].style =
