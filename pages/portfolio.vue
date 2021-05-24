@@ -107,7 +107,7 @@ export default {
 <style lang="scss" scoped>
 @media screen and(min-width:768px) {
   .main {
-    .page-title {
+    .project-wrapper {
       margin-top: 9rem;
     }
   }
