@@ -118,6 +118,7 @@ li {
     width: 100%;
     max-width: 350px;
     height: auto;
+    max-height: 622px;
     margin-top: 72px;
   }
   .portrait {
