@@ -1,7 +1,12 @@
 <template>
   <div class="post">
     <div class="card">
-      <div @mouseenter="hoverMe" @mouseleave="hoverEnd" class="link-wrap">
+      <div
+        :id="`lw-${postData.id}`"
+        @mouseenter="hoverMe"
+        @mouseleave="hoverEnd"
+        class="link-wrap"
+      >
         <nuxt-link class="card-preview" :to="`/blog/${postData.slugs[0]}`">
           <div
             class="hover-content"
@@ -93,6 +98,15 @@ export default {
       default: {},
     },
   },
+  mounted() {
+    const el = document.querySelector(`#lw-${this.postData.id}`)
+
+    el.addEventListener('touchstart', this.blockClickEvent)
+  },
+  beforeDestroy() {
+    const el = document.querySelector(`#lw-${this.postData.id}`)
+    el.removeEventListener('touchstart', this.blockClickEvent)
+  },
   methods: {
     hoverMe: function (e) {
       //hover content
@@ -114,6 +128,11 @@ export default {
       e.target.children[0].children[2].style = `background-image: url(${this.postData.data.header_image.url});
     transform: translate3d(0px, 0px, 0px) scale3d(1.1, 1.1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
     transform-style: preserve-3d;`
+    },
+
+    blockClickEvent: function (e) {
+      e.preventDefault()
+      e.target.click()
     },
   },
 }
