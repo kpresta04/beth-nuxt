@@ -12,7 +12,6 @@
         <div class="hamburg-wrapper">
           <div class="hamburg">
             <div
-              @click="toggleMenu"
               :style="
                 menuOpen
                   ? 'transform: translate3d(0px, 6px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(45deg) skew(0deg, 0deg); transform-style: preserve-3d;'
@@ -25,6 +24,7 @@
               class="patty"
             ></div>
             <div
+              @click="toggleMenu"
               class="bottom-bun"
               :style="
                 menuOpen
