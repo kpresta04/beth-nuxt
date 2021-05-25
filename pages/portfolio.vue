@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <masthead text="Portfolio" bgColor="4" />
+    <masthead text="Portfolio" bgColor="4" url="/mg.jpg" />
     <!-- <div class="page-title">
       <h1 class="bottom-up">Portfolio</h1>
       <div class="divider"></div>

@@ -1,11 +1,12 @@
 <template>
   <section
     :style="bgStyle"
-    :class="`masthead bg-color-${bgColor}`"
+    :class="`masthead`"
     role="img"
     aria-label="Image Description"
   >
-    <div class="wrapper">
+    <div :class="`bg-cover bg-color-${bgColor}`"></div>
+    <div class="wrapper title-container">
       <h1 class="bottom-up" :style="textAlign">{{ text }}</h1>
       <div
         class="divider expand"
@@ -41,7 +42,7 @@ export default {
   },
   computed: {
     bgStyle() {
-      return `background-image: linear-gradient(8deg,rgba(52,16,177,.7),rgba(106,60,204,.7)),url(${this.url})`
+      return `background-image: url(${this.url})`
     },
     textAlign() {
       return `text-align: ${this.align}; color: ${this.color}`
@@ -51,6 +52,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.title-container {
+  position: absolute !important;
+  z-index: 3;
+}
 .masthead {
   display: flex;
   justify-content: center;
@@ -65,6 +70,19 @@ export default {
   background-repeat: no-repeat !important;
   background-position: center center !important;
   background-attachment: scroll !important;
+  z-index: 1;
+}
+.bg-cover {
+  z-index: 2;
+  background-color: black;
+  height: 100%;
+  width: 100vw;
+  /* background-image: linear-gradient(
+    8deg,
+    rgba(52, 16, 177, 0.9),
+    rgba(106, 60, 204, 0.9)
+  ); */
+  opacity: 0.6;
 }
 
 h1 {
@@ -74,7 +92,7 @@ h1 {
   font-size: 40px;
   letter-spacing: 0.03em;
   line-height: 1;
-  /* text-shadow: 1px 2px 4px rgba(0, 0, 0, 1); */
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.6);
   margin-bottom: 28px;
 }
 </style>
