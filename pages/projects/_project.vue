@@ -29,6 +29,13 @@
         </div>
       </div>
     </div>
+    <div class="section">
+      <div class="wrapper">
+        <nuxt-link :to="`/projects/${nextProject.slugs[0]}`"
+          >Next project</nuxt-link
+        >
+      </div>
+    </div>
   </div>
 </template>
 
@@ -45,13 +52,11 @@ export default {
       (result) => result.slugs[0] === params.project
     )
 
-    let otherPost = store.state.projects
-      .filter((proj) => proj.slugs[0] !== doc.slugs[0])
-      .slice(0, 1)
+    const docIndex = results.indexOf(doc)
+    let nextProject = results[docIndex + 1] || results[0]
 
-    console.log(doc)
     if (doc) {
-      return { doc, otherPost }
+      return { doc, nextProject }
     } else {
       error({ statusCode: 404, message: 'Page not found' })
     }
