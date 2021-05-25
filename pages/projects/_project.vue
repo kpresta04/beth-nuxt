@@ -78,7 +78,7 @@ export default {
 
     const docIndex = results.indexOf(doc)
     let nextProject = results[docIndex + 1] || results[0]
-    console.log({ nextProject })
+    // console.log({ nextProject })
     if (doc) {
       return { doc, nextProject }
     } else {
