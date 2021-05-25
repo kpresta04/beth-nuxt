@@ -1,5 +1,6 @@
 <template>
   <section
+    :style="bgStyle"
     :class="`masthead bg-color-${bgColor}`"
     role="img"
     aria-label="Image Description"
@@ -40,7 +41,7 @@ export default {
   },
   computed: {
     bgStyle() {
-      return `background: url(${this.url}) no-repeat center center scroll;`
+      return `background-image: linear-gradient(8deg,rgba(52,16,177,.7),rgba(106,60,204,.7)),url(${this.url})`
     },
     textAlign() {
       return `text-align: ${this.align}; color: ${this.color}`
@@ -61,6 +62,9 @@ export default {
   height: 40vh; /* if you don't want it to take up the full screen, reduce this number */
   overflow: hidden;
   background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-attachment: scroll !important;
 }
 
 h1 {
