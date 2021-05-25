@@ -29,6 +29,37 @@
         </div>
       </div>
     </div>
+    <div class="section">
+      <div class="wrapper">
+        <div class="next-project">
+          <div class="left-half">
+            <div class="o-label">Next project</div>
+            <nuxt-link :to="`/projects/${nextProject.slugs[0]}`">
+              <h1 class="project-name">
+                {{ nextProject.data.project_name[0].text }}
+              </h1>
+            </nuxt-link>
+            <nuxt-link
+              :to="`/projects/${nextProject.slugs[0]}`"
+              class="button text-white bg-color-4 next-button"
+            >
+              View more
+            </nuxt-link>
+          </div>
+          <div class="right-half">
+            <nuxt-link :to="`/projects/${nextProject.slugs[0]}`">
+              <div
+                class="next-bg"
+                :style="`background-image: url(${nextProject.data.images[0]._image.url})`"
+              ></div>
+              <div class="button text-white bg-color-4 next-button">
+                View more
+              </div>
+            </nuxt-link>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -45,13 +76,11 @@ export default {
       (result) => result.slugs[0] === params.project
     )
 
-    let otherPost = store.state.projects
-      .filter((proj) => proj.slugs[0] !== doc.slugs[0])
-      .slice(0, 1)
-
-    console.log(doc)
+    const docIndex = results.indexOf(doc)
+    let nextProject = results[docIndex + 1] || results[0]
+    // console.log({ nextProject })
     if (doc) {
-      return { doc, otherPost }
+      return { doc, nextProject }
     } else {
       error({ statusCode: 404, message: 'Page not found' })
     }
@@ -60,8 +89,62 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.next-project {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.left-half {
+  padding-bottom: 1rem;
+  display: grid;
+  place-content: center;
+
+  .button {
+    display: none;
+  }
+}
+.right-half {
+  display: flex;
+  flex-wrap: wrap;
+  a {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .button {
+    margin-top: 3rem;
+  }
+}
+.next-bg {
+  height: 50vh;
+  width: 75vw;
+  max-width: 400px;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-attachment: scroll !important;
+}
+.next-button {
+  text-transform: capitalize;
+  width: fit-content;
+  color: white;
+
+  &:hover {
+    background-color: darken($color-4, 15%) !important;
+  }
+}
 @media screen and (min-width: 768px) {
   .main {
+    .right-half {
+      .button {
+        display: none;
+      }
+    }
+    .left-half {
+      .button {
+        display: flex;
+      }
+    }
     .project {
       padding-left: 100px;
     }
@@ -98,6 +181,7 @@ export default {
 
 .project-name {
   text-transform: capitalize;
+  color: black;
 }
 
 .first-image {

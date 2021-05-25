@@ -25,6 +25,7 @@
               class="patty"
             ></div>
             <div
+              @click="toggleMenu"
               class="bottom-bun"
               :style="
                 menuOpen
