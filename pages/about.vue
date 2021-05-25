@@ -1,6 +1,11 @@
 <template>
   <div class="main">
-    <Masthead align="center" url="/about-hero.webp" text="About Me" />
+    <Masthead
+      align="center"
+      url="/about-hero.webp"
+      text="About Me"
+      bgColor="3"
+    />
     <div class="section">
       <div class="wrapper">
         <div class="flex-wrapper">

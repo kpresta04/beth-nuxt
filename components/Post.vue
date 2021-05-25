@@ -98,15 +98,7 @@ export default {
       default: {},
     },
   },
-  mounted() {
-    const el = document.querySelector(`#lw-${this.postData.id}`)
 
-    el.addEventListener('touchstart', this.blockClickEvent)
-  },
-  beforeDestroy() {
-    const el = document.querySelector(`#lw-${this.postData.id}`)
-    el.removeEventListener('touchstart', this.blockClickEvent)
-  },
   methods: {
     hoverMe: function (e) {
       //hover content
@@ -132,7 +124,8 @@ export default {
 
     blockClickEvent: function (e) {
       e.preventDefault()
-      e.target.click()
+      // e.target.click()
+      console.log(e)
     },
   },
 }
@@ -251,7 +244,7 @@ export default {
       background-color: white;
       &:hover {
         color: white;
-        background-color: $color-1;
+        background-color: $color-2;
       }
     }
     position: absolute;

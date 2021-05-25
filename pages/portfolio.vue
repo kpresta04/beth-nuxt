@@ -1,10 +1,10 @@
 <template>
   <div class="main">
-    <!-- <masthead url="/interior.jpg" text="Projects" /> -->
-    <div class="page-title">
-      <h1 class="bottom-up">Projects</h1>
+    <masthead text="Portfolio" bgColor="4" />
+    <!-- <div class="page-title">
+      <h1 class="bottom-up">Portfolio</h1>
       <div class="divider"></div>
-    </div>
+    </div> -->
 
     <div class="project-wrapper">
       <div
@@ -62,19 +62,19 @@ export default {
       error({ statusCode: 404, message: 'Page not found' })
     }
   },
-  mounted() {
-    const projects = [...document.querySelectorAll('.project')]
-    projects.forEach((proj) => {
-      proj.addEventListener('touchstart', this.blockClickEvent)
-    })
-  },
-  beforeDestroy() {
-    const projects = [...document.querySelectorAll('.project')]
+  // mounted() {
+  //   const projects = [...document.querySelectorAll('.project')]
+  //   projects.forEach((proj) => {
+  //     proj.addEventListener('touchstart', this.blockClickEvent)
+  //   })
+  // },
+  // beforeDestroy() {
+  //   const projects = [...document.querySelectorAll('.project')]
 
-    projects.forEach((proj) => {
-      proj.removeEventListener('touchstart', this.blockClickEvent)
-    })
-  },
+  //   projects.forEach((proj) => {
+  //     proj.removeEventListener('touchstart', this.blockClickEvent)
+  //   })
+
   methods: {
     blockClickEvent: function (e) {
       e.preventDefault()
@@ -107,7 +107,7 @@ export default {
 <style lang="scss" scoped>
 @media screen and(min-width:768px) {
   .main {
-    .page-title {
+    .project-wrapper {
       margin-top: 9rem;
     }
   }
@@ -224,7 +224,7 @@ export default {
     background-color: white;
     &:hover {
       color: white;
-      background-color: $color-3;
+      background-color: $color-4;
     }
   }
   position: absolute;

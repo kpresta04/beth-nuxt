@@ -1,13 +1,13 @@
 <template>
   <div class="main">
-    <Masthead />
+    <Masthead bgColor="1" />
 
     <div class="section">
       <div class="wrapper">
         <div class="contact">
           <div class="contact-info">
             <h3>Let's Get in Touch</h3>
-            <div class="divider bg-color-2"></div>
+            <div class="divider bg-color-1"></div>
             <p class="text-grey">
               Interested in working with Bethany Marie Design Studio? We'd love
               to hear from you.
@@ -79,7 +79,7 @@
                   type="submit"
                   value="Submit Message"
                   data-wait="Please wait..."
-                  class="button bg-color-2 w-button"
+                  class="button bg-color-1 w-button"
                 />
               </div>
             </form>
@@ -100,7 +100,11 @@ export default {
 
 <style lang="scss" scoped>
 #submit-btn {
-  color: $c2-complement;
+  color: white;
+
+  &:hover {
+    background-color: darken($color-1, 15%) !important;
+  }
 }
 @media screen and (max-width: 479px) {
   .contact {
