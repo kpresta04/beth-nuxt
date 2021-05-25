@@ -31,9 +31,15 @@
     </div>
     <div class="section">
       <div class="wrapper">
-        <nuxt-link :to="`/projects/${nextProject.slugs[0]}`"
-          >Next project</nuxt-link
-        >
+        <div class="next-project">
+          <div class="left-half">
+            <div class="o-label">Next project</div>
+            <nuxt-link :to="`/projects/${nextProject.slugs[0]}`"
+              >Next project</nuxt-link
+            >
+          </div>
+          <div class="right-half"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -54,7 +60,7 @@ export default {
 
     const docIndex = results.indexOf(doc)
     let nextProject = results[docIndex + 1] || results[0]
-
+    console.log(nextProject)
     if (doc) {
       return { doc, nextProject }
     } else {
