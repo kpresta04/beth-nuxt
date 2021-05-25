@@ -82,7 +82,7 @@ export default {
     rgba(52, 16, 177, 0.9),
     rgba(106, 60, 204, 0.9)
   ); */
-  opacity: 0.6;
+  opacity: 0.8;
 }
 
 h1 {
