@@ -81,12 +81,12 @@
               <strong><em>Simple</em></strong> & Stylish Interiors
             </h1>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut
-              beatae alias a. Lorem ipsum dolor sit amet consectetur adipisicing
-              elit. Sunt, rem.
+              {{ heroTexts[select].descr }}
             </p>
-            <nuxt-link class="button white-button" to="/portfolio"
-              >View my work</nuxt-link
+            <nuxt-link
+              class="button white-button"
+              :to="`${heroTexts[select].buttonHref}`"
+              >{{ heroTexts[select].buttonText }}</nuxt-link
             >
           </div>
         </div>
@@ -110,12 +110,12 @@
               <strong><em>Simple</em></strong> & Stylish Interiors
             </h1>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut
-              beatae alias a. Lorem ipsum dolor sit amet consectetur adipisicing
-              elit. Sunt, rem.
+              {{ heroTexts[select].descr }}
             </p>
-            <nuxt-link class="button white-button" to="/portfolio"
-              >View my work</nuxt-link
+            <nuxt-link
+              class="button white-button"
+              :to="`${heroTexts[select].buttonHref}`"
+              >{{ heroTexts[select].buttonText }}</nuxt-link
             >
           </div>
         </div>
@@ -139,12 +139,12 @@
               <strong><em>Simple</em></strong> & Stylish Interiors
             </h1>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut
-              beatae alias a. Lorem ipsum dolor sit amet consectetur adipisicing
-              elit. Sunt, rem.
+              {{ heroTexts[select].descr }}
             </p>
-            <nuxt-link class="button white-button" to="/portfolio"
-              >View my work</nuxt-link
+            <nuxt-link
+              class="button white-button"
+              :to="`${heroTexts[select].buttonHref}`"
+              >{{ heroTexts[select].buttonText }}</nuxt-link
             >
           </div>
         </div>
@@ -169,6 +169,31 @@ export default Vue.extend({
       classes: ['bg-color-4', 'bg-color-2', 'bg-color-3'],
       images: ['/hero1.webp', '/hero2.webp', '/hero3.webp'],
       autoplay: true,
+      heroTexts: [
+        {
+          title: '<strong><em>Simple</em></strong> & Stylish Interiors',
+          descr:
+            'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut beatae alias a. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, rem.',
+          buttonText: 'View my work',
+          buttonHref: '/portfolio',
+        },
+        {
+          title: '<strong><em>Simple</em></strong> & Stylish Interiors',
+          descr:
+            'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut beatae alias a. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, rem.',
+
+          buttonText: 'View blog',
+          buttonHref: '/blog',
+        },
+        {
+          title: '<strong><em>Simple</em></strong> & Stylish Interiors',
+          descr:
+            'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut beatae alias a. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, rem.',
+
+          buttonText: 'about me',
+          buttonHref: '/about',
+        },
+      ],
     }
   },
   methods: {
