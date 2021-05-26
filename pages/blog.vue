@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <Masthead url="/flowers.webp" text="Blog" bgColor="2" />
+    <Masthead url="/iq.webp" text="Blog" bgColor="2" />
 
     <div class="section">
       <div class="wrapper">
