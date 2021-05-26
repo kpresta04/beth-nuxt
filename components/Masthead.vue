@@ -92,7 +92,7 @@ h1 {
   font-size: 40px;
   letter-spacing: 0.03em;
   line-height: 1;
-  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
   margin-bottom: 28px;
 }
 </style>
