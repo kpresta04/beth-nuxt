@@ -102,17 +102,17 @@
             </div>
           </div>
           <div class="footer-col">
-            <p class="paragraph-small text-grey">
+            <!-- <p class="paragraph-small text-grey">
               1028 &nbsp;Arch Avenue, <br />Los Angeles, CA 90210
-            </p>
+            </p> -->
           </div>
           <div class="footer-col">
-            <a
+            <!-- <a
               href="mailto:your@email.com?subject=Your%20Subject"
               class="link-grey"
               >bethany@bmdesign.com</a
             >
-            <div class="text-grey">+1 213 974-3898</div>
+            <div class="text-grey">+1 213 974-3898</div> -->
           </div>
           <div class="footer-nav">
             <nuxt-link to="/">home</nuxt-link>
