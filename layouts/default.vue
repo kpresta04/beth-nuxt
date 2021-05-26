@@ -9,8 +9,8 @@
             <div class="brand-descr">Design</div>
           </nuxt-link>
         </div>
-        <div class="hamburg-wrapper">
-          <div class="hamburg">
+        <div class="hamburg-wrapper" @click="toggleMenu">
+          <div class="hamburg" @click="toggleMenu">
             <div
               @click="toggleMenu"
               :style="
