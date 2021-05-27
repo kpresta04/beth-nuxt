@@ -43,6 +43,13 @@
         <prismic-rich-text :field="doc.data.content" />
       </div>
     </div>
+    <div
+      v-observe-visibility="{
+        callback: visibilityChanged,
+      }"
+    >
+      l
+    </div>
     <div v-if="otherPosts.length > 0" class="section">
       <div class="wrapper">
         <h2 class="section-title">You Might also like</h2>
@@ -62,6 +69,7 @@
 <script>
 import Masthead from '~/components/Masthead.vue'
 import Post from '~/components/Post.vue'
+
 export default {
   components: { Masthead, Post },
   async asyncData({ $prismic, params, error, store }) {
@@ -93,6 +101,10 @@ export default {
   },
 
   methods: {
+    visibilityChanged(isVisible, entry) {
+      this.isVisible = isVisible
+      console.log(entry.isIntersecting)
+    },
     transformHeader: function (e) {
       const headerImg = document.querySelector('.header-img')
 
