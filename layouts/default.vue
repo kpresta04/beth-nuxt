@@ -156,12 +156,12 @@ export default Vue.extend({
   mounted() {
     document.addEventListener('click', this.closeMenu)
     const hWrapper = document.querySelector('#h-wrapper')
-    hWrapper?.addEventListener('touchend', this.toggleMenu)
+    hWrapper?.addEventListener('touchend', this.openMenu)
   },
   beforeDestroy() {
     document.removeEventListener('click', this.closeMenu)
     const hWrapper = document.querySelector('#h-wrapper')
-    hWrapper?.removeEventListener('touchend', this.toggleMenu)
+    hWrapper?.removeEventListener('touchend', this.openMenu)
   },
   methods: {
     closeMenu: function (e: any) {
@@ -174,7 +174,7 @@ export default Vue.extend({
         }
       }
     },
-    toggleMenu: function () {
+    openMenu: function () {
       // console.log('togglin')
       if (!this.menuOpen) {
         this.menuChanging = true
