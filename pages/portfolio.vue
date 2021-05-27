@@ -62,7 +62,7 @@ export default {
       if (store.state.projects.length < 1) {
         await store.commit('updateProjects', docs.results)
       }
-      console.log(docs.results)
+      // console.log(docs.results)
       return { docs: docs.results }
     } else {
       error({ statusCode: 404, message: 'Page not found' })
