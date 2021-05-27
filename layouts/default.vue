@@ -9,7 +9,7 @@
             <div class="brand-descr">Design</div>
           </nuxt-link>
         </div>
-        <div class="hamburg-wrapper" @click="toggleMenu">
+        <div id="h-wrapper" class="hamburg-wrapper" @click="toggleMenu">
           <div class="hamburg" @click="toggleMenu">
             <div
               @click="toggleMenu"
@@ -148,6 +148,13 @@ export default Vue.extend({
   },
   mounted() {
     document.addEventListener('click', this.closeMenu)
+    // const hWrapper = document.querySelector('#h-wrapper')
+    // hWrapper?.addEventListener('touchend', this.toggleMenu)
+  },
+  beforeDestroy() {
+    document.removeEventListener('click', this.closeMenu)
+    // const hWrapper = document.querySelector('#h-wrapper')
+    // hWrapper?.removeEventListener('touchend', this.toggleMenu)
   },
   methods: {
     closeMenu: function (e: any) {
@@ -217,6 +224,7 @@ export default Vue.extend({
   align-items: center;
   justify-content: flex-end;
   padding: 20px;
+  z-index: 42;
 }
 .hamburg {
   width: 20px;
@@ -235,6 +243,7 @@ export default Vue.extend({
   -webkit-align-items: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
+  z-index: 2;
 }
 .top-bun,
 .patty,
