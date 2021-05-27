@@ -47,9 +47,7 @@
       v-observe-visibility="{
         callback: visibilityChanged,
       }"
-    >
-      l
-    </div>
+    ></div>
     <div v-if="otherPosts.length > 0" class="section">
       <div class="wrapper">
         <h2 class="section-title">You Might also like</h2>
