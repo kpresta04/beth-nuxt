@@ -43,12 +43,7 @@
         <prismic-rich-text :field="doc.data.content" />
       </div>
     </div>
-    <div
-      v-observe-visibility="{
-        callback: visibilityChanged,
-        once: true,
-      }"
-    ></div>
+
     <div v-if="otherPosts.length > 0" class="section">
       <div class="wrapper">
         <h2 class="section-title">You Might also like</h2>
@@ -100,10 +95,6 @@ export default {
   },
 
   methods: {
-    visibilityChanged(isVisible, entry) {
-      this.isVisible = isVisible
-      console.log(entry.isIntersecting)
-    },
     transformHeader: function (e) {
       const headerImg = document.querySelector('.header-img')
 

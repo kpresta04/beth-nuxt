@@ -8,6 +8,11 @@
 
     <div class="project-wrapper">
       <div
+        v-observe-visibility="{
+          callback: visibilityChanged,
+          once: true,
+          throttle: 400,
+        }"
         class="project"
         v-for="project in docs"
         :key="project.id"
@@ -76,6 +81,14 @@ export default {
   //   })
 
   methods: {
+    visibilityChanged(isVisible, entry) {
+      this.isVisible = isVisible
+
+      if (entry.isIntersecting) {
+        entry.target.style = 'opacity: 1;'
+      }
+      // console.log(entry.isIntersecting, entry.target)
+    },
     blockClickEvent: function (e) {
       e.preventDefault()
       e.target.click()
@@ -145,6 +158,8 @@ export default {
   width: 100%;
   height: 55vh;
   margin: 0 0 20px;
+  opacity: 0;
+  transition: all 400ms ease;
 }
 
 .project-link {
