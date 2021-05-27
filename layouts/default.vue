@@ -9,10 +9,9 @@
             <div class="brand-descr">Design</div>
           </nuxt-link>
         </div>
-        <div id="h-wrapper" class="hamburg-wrapper" @click="toggleMenu">
-          <div class="hamburg" @click="toggleMenu">
+        <div id="h-wrapper" class="hamburg-wrapper">
+          <div class="hamburg">
             <div
-              @click="toggleMenu"
               :style="
                 menuOpen
                   ? 'transform: translate3d(0px, 6px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(45deg) skew(0deg, 0deg); transform-style: preserve-3d;'
@@ -25,7 +24,6 @@
               class="patty"
             ></div>
             <div
-              @click="toggleMenu"
               class="bottom-bun"
               :style="
                 menuOpen
@@ -148,13 +146,13 @@ export default Vue.extend({
   },
   mounted() {
     document.addEventListener('click', this.closeMenu)
-    // const hWrapper = document.querySelector('#h-wrapper')
-    // hWrapper?.addEventListener('touchend', this.toggleMenu)
+    const hWrapper = document.querySelector('#h-wrapper')
+    hWrapper?.addEventListener('touchend', this.toggleMenu)
   },
   beforeDestroy() {
     document.removeEventListener('click', this.closeMenu)
-    // const hWrapper = document.querySelector('#h-wrapper')
-    // hWrapper?.removeEventListener('touchend', this.toggleMenu)
+    const hWrapper = document.querySelector('#h-wrapper')
+    hWrapper?.removeEventListener('touchend', this.toggleMenu)
   },
   methods: {
     closeMenu: function (e: any) {
