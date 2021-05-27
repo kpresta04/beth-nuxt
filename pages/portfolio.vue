@@ -9,7 +9,7 @@
     <div class="project-wrapper">
       <div
         v-observe-visibility="{
-          callback: visibilityChanged,
+          callback: changeOpacity,
           once: true,
           throttle: 400,
         }"
@@ -51,6 +51,7 @@
 
 <script>
 import Masthead from '~/components/Masthead.vue'
+import { changeOpacity } from '~/utils/vis'
 export default {
   components: { Masthead },
   async asyncData({ $prismic, params, error, store }) {
@@ -81,14 +82,7 @@ export default {
   //   })
 
   methods: {
-    visibilityChanged(isVisible, entry) {
-      this.isVisible = isVisible
-
-      if (entry.isIntersecting) {
-        entry.target.style = 'opacity: 1;'
-      }
-      // console.log(entry.isIntersecting, entry.target)
-    },
+    changeOpacity,
     blockClickEvent: function (e) {
       e.preventDefault()
       e.target.click()

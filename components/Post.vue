@@ -28,7 +28,14 @@
     transform: translate3d(0px, 0px, 0px) scale3d(1.1, 1.1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
     transform-style: preserve-3d;`"
           ></div>
-          <div class="overlay roll-right"></div>
+          <div
+            class="overlay"
+            v-observe-visibility="{
+              callback: addClass,
+              once: true,
+              throttle: 400,
+            }"
+          ></div>
         </nuxt-link>
       </div>
       <div class="post-card-info">
@@ -85,6 +92,7 @@
 </template>
 
 <script>
+import { addClass } from '~/utils/vis'
 export default {
   data() {
     return {
@@ -100,6 +108,7 @@ export default {
   },
 
   methods: {
+    addClass,
     hoverMe: function (e) {
       //hover content
       e.target.children[0].children[0].style =
@@ -164,6 +173,8 @@ export default {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+
+  transition: opacity 400ms ease;
 }
 .card {
   display: -webkit-box;
