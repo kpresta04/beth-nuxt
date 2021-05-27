@@ -8,6 +8,11 @@
 
     <div class="project-wrapper">
       <div
+        v-observe-visibility="{
+          callback: changeOpacity,
+          once: true,
+          throttle: 400,
+        }"
         class="project"
         v-for="project in docs"
         :key="project.id"
@@ -46,6 +51,7 @@
 
 <script>
 import Masthead from '~/components/Masthead.vue'
+import { changeOpacity } from '~/utils/vis'
 export default {
   components: { Masthead },
   async asyncData({ $prismic, params, error, store }) {
@@ -56,7 +62,7 @@ export default {
       if (store.state.projects.length < 1) {
         await store.commit('updateProjects', docs.results)
       }
-      console.log(docs.results)
+      // console.log(docs.results)
       return { docs: docs.results }
     } else {
       error({ statusCode: 404, message: 'Page not found' })
@@ -76,6 +82,7 @@ export default {
   //   })
 
   methods: {
+    changeOpacity,
     blockClickEvent: function (e) {
       e.preventDefault()
       e.target.click()
@@ -145,6 +152,8 @@ export default {
   width: 100%;
   height: 55vh;
   margin: 0 0 20px;
+  opacity: 0;
+  transition: all 400ms ease;
 }
 
 .project-link {
