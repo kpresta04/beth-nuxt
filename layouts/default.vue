@@ -133,11 +133,20 @@
 <script lang="ts">
 import Vue from 'vue'
 
+const hamburgClasses = [
+  'hamburg-wrapper',
+  'hamburg',
+  'top-bun',
+  'patty',
+  'bottom-bun',
+]
+
 export default Vue.extend({
   data() {
     return {
       year: 2021,
       menuOpen: false,
+      menuChanging: false,
     }
   },
   created() {
@@ -156,14 +165,25 @@ export default Vue.extend({
   },
   methods: {
     closeMenu: function (e: any) {
+      // console.log(hamburgClasses.includes(e.target.className))
       if (this.menuOpen) {
-        if (e.target.parentElement.className !== 'hamburg') {
+        if (!hamburgClasses.includes(e.target.className)) {
+          this.menuOpen = false
+        } else if (!this.menuChanging) {
           this.menuOpen = false
         }
       }
     },
     toggleMenu: function () {
-      this.menuOpen = !this.menuOpen
+      // console.log('togglin')
+      if (!this.menuOpen) {
+        this.menuChanging = true
+        this.menuOpen = true
+
+        setTimeout(() => {
+          this.menuChanging = false
+        }, 300)
+      }
     },
   },
 })

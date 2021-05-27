@@ -46,6 +46,7 @@
     <div
       v-observe-visibility="{
         callback: visibilityChanged,
+        once: true,
       }"
     ></div>
     <div v-if="otherPosts.length > 0" class="section">
