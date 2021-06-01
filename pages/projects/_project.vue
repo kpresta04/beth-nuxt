@@ -19,6 +19,11 @@
               class="img-wrapper"
               v-for="image in doc.data.images.slice(1, doc.data.images.length)"
               :key="image._image.url"
+              v-observe-visibility="{
+                callback: changeOpacity,
+                once: true,
+                throttle: 400,
+              }"
             >
               <div
                 class="bg-img"
@@ -31,7 +36,14 @@
     </div>
     <div class="section">
       <div class="wrapper">
-        <div class="next-project">
+        <div
+          class="next-project"
+          v-observe-visibility="{
+            callback: changeOpacity,
+            once: true,
+            throttle: 400,
+          }"
+        >
           <div class="left-half">
             <div class="o-label">Next project</div>
             <nuxt-link :to="`/projects/${nextProject.slugs[0]}`">
@@ -64,6 +76,8 @@
 </template>
 
 <script>
+import { changeOpacity } from '~/utils/vis'
+
 export default {
   async asyncData({ $prismic, params, error, store }) {
     const { results } = await $prismic.api.query(
@@ -85,14 +99,23 @@ export default {
       error({ statusCode: 404, message: 'Page not found' })
     }
   },
+  methods: {
+    changeOpacity,
+  },
 }
 </script>
 
 <style scoped lang="scss">
+.img-wrapper {
+  opacity: 0;
+  transition: all 400ms ease;
+}
 .next-project {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  opacity: 0;
+  transition: all 400ms ease;
 }
 .left-half {
   padding-bottom: 1rem;
