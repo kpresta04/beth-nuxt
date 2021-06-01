@@ -37,6 +37,8 @@
           <nuxt-link to="/portfolio">portfolio</nuxt-link>
           <nuxt-link to="/blog">blog</nuxt-link>
           <nuxt-link to="/about">about</nuxt-link>
+          <nuxt-link to="/services">services</nuxt-link>
+
           <nuxt-link to="/contact">contact</nuxt-link>
         </nav>
       </div>
@@ -53,6 +55,8 @@
       <nuxt-link class="nav-link" to="/portfolio">portfolio</nuxt-link>
       <nuxt-link class="nav-link" to="/blog">blog</nuxt-link>
       <nuxt-link class="nav-link" to="/about">about</nuxt-link>
+      <nuxt-link class="nav-link" to="/services">services</nuxt-link>
+
       <nuxt-link class="nav-link" to="/contact">contact</nuxt-link>
     </div>
     <Nuxt />
@@ -117,6 +121,8 @@
             <nuxt-link to="/portfolio">portfolio</nuxt-link>
             <nuxt-link to="/blog">blog</nuxt-link>
             <nuxt-link to="/about">about</nuxt-link>
+            <nuxt-link to="/services">services</nuxt-link>
+
             <nuxt-link to="/contact">contact</nuxt-link>
           </div>
         </footer>
@@ -201,6 +207,7 @@ export default Vue.extend({
     justify-content: unset !important;
     a {
       margin-right: 16px !important;
+      padding: 5px 0;
     }
   }
   header {
