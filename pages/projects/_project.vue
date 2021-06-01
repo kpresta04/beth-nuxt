@@ -36,7 +36,14 @@
     </div>
     <div class="section">
       <div class="wrapper">
-        <div class="next-project">
+        <div
+          class="next-project"
+          v-observe-visibility="{
+            callback: changeOpacity,
+            once: true,
+            throttle: 400,
+          }"
+        >
           <div class="left-half">
             <div class="o-label">Next project</div>
             <nuxt-link :to="`/projects/${nextProject.slugs[0]}`">
@@ -107,6 +114,8 @@ export default {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  opacity: 0;
+  transition: all 400ms ease;
 }
 .left-half {
   padding-bottom: 1rem;
