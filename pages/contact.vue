@@ -28,8 +28,10 @@
             <form
               id="email-form"
               name="email-form"
-              data-name="Email Form"
               autocomplete="on"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+              method="POST"
             >
               <div class="form-grid">
                 <!-- <div class="form-columns w-row">
@@ -82,6 +84,8 @@
                   class="button bg-color-1 w-button"
                 />
               </div>
+
+              <input type="hidden" name="form-name" value="email-form" />
             </form>
           </div>
         </div>
