@@ -15,10 +15,9 @@
             </h2>
             <div class="divider"></div>
             <p class="info-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptates dolorum veritatis voluptatem quia obcaecati dolor autem
-              et sit velit, dolore, veniam numquam cum, perspiciatis nostrum
-              nulla tempore quisquam? Ullam, eligendi!
+              As I have been studying, I have found that I am drawn and inspired
+              by a range of styles and continue to develop my own personal
+              style.
             </p>
             <img
               class="simple-design"
@@ -27,55 +26,54 @@
               loading="lazy"
             />
             <p class="info-text">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore
-              ducimus doloremque quisquam debitis ad eaque iste voluptatem
-              sapiente excepturi repellendus natus ipsa quia quos facilis, amet
-              expedita iusto laboriosam vitae labore harum possimus inventore
-              non eligendi? Pariatur cumque, minus dolores nemo amet voluptatum
-              explicabo illo modi, reprehenderit dolorem id corporis.
+              Drawn to simple, classic lines of the mid-century modern design
+              and blending this with the comfort of a country aesthetic. I love
+              to incorporate an injection of personality in every design.
             </p>
 
             <h4>My Values</h4>
             <p class="info-text">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad
-              dignissimos omnis magnam deleniti doloremque unde soluta hic modi
-              consectetur fugiat?
+              Drawn and inspired by the world around me, I love to experiment
+              with colours and design. However, each of my designs are centred
+              around the following values:
             </p>
             <ul>
-              <li>Value</li>
-              <li>Value</li>
-              <li>Value</li>
-              <li>Value</li>
+              <li>Warmth</li>
+              <li>Comfort</li>
+              <li>Practicality</li>
             </ul>
             <p class="info-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-              aperiam quidem reiciendis quo cupiditate modi laudantium quia
-              praesentium, quasi autem dolore. Repudiandae sit cumque soluta.
-              Blanditiis doloribus ex commodi. Laudantium!
+              Join me on my journey to discover my design and how this
+              incorporates into my projects.
             </p>
             <SocialButtons />
           </div>
           <div class="right-col">
-            <img
-              class="portrait"
-              src="/placeholder.webp"
-              alt="Bethany"
-              loading="lazy"
-            />
+            <img class="portrait" src="/bm.webp" alt="Bethany" loading="lazy" />
             <p class="info-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-              vero quidem quis reiciendis illum molestias tempora tempore nam
-              nostrum deserunt!
+              I’m Bethany, and like many other people these past two years I
+              have been exploring what motivates and brings me happiness. I kept
+              coming back to the same aspect: Design.
             </p>
             <p class="info-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut neque
-              dolore nihil nobis, aliquid id.
+              Following 4 years studying Events Management at Sheffield
+              University, I have spent the last 8 years working in the
+              hospitality and event sector. With a passion for creating an
+              experience and happiness, I am now taking those years of
+              experience and joining this with my long-time passion of design.
             </p>
             <p class="info-text">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora
-              ab laborum architecto nulla animi excepturi, hic optio voluptatem
-              dolores corporis illo quod at praesentium. Sint odit accusantium
-              fuga molestiae maxime.
+              Even with a passion, to fully begin this new journey I understood
+              I needed to gain further knowledge. I have spent the last 6 months
+              undertaking the Professional Interior Design Diploma with the
+              National Design Academy. After passing in June 2021, I am now
+              beginning the bachelor’s degree course. Taking the time to develop
+              my skills and broaden my design knowledge.
+            </p>
+            <p class="info-text">
+              Come along with me as I continue this new journey of my life.
+              Catch up with me on my Instagram page and blog. Stay tuned for the
+              services I look to offer as I progress in this journey!
             </p>
             <img src="/sig.png" alt="Bethany's signature" loading="lazy" />
             <div class="img-wrapper">
