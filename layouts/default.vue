@@ -34,10 +34,10 @@
           </div>
         </div>
         <nav>
-          <nuxt-link to="/portfolio">portfolio</nuxt-link>
-          <nuxt-link to="/blog">blog</nuxt-link>
+          <!-- <nuxt-link to="/portfolio">portfolio</nuxt-link> -->
+          <!-- <nuxt-link to="/blog">blog</nuxt-link> -->
           <nuxt-link to="/about">about</nuxt-link>
-          <nuxt-link to="/services">services</nuxt-link>
+          <!-- <nuxt-link to="/services">services</nuxt-link> -->
 
           <nuxt-link to="/contact">contact</nuxt-link>
         </nav>
@@ -52,10 +52,10 @@
       "
     >
       <nuxt-link class="nav-link" to="/">home</nuxt-link>
-      <nuxt-link class="nav-link" to="/portfolio">portfolio</nuxt-link>
-      <nuxt-link class="nav-link" to="/blog">blog</nuxt-link>
+      <!-- <nuxt-link class="nav-link" to="/portfolio">portfolio</nuxt-link> -->
+      <!-- <nuxt-link class="nav-link" to="/blog">blog</nuxt-link> -->
       <nuxt-link class="nav-link" to="/about">about</nuxt-link>
-      <nuxt-link class="nav-link" to="/services">services</nuxt-link>
+      <!-- <nuxt-link class="nav-link" to="/services">services</nuxt-link> -->
 
       <nuxt-link class="nav-link" to="/contact">contact</nuxt-link>
     </div>
@@ -118,10 +118,10 @@
           </div>
           <div class="footer-nav">
             <nuxt-link to="/">home</nuxt-link>
-            <nuxt-link to="/portfolio">portfolio</nuxt-link>
-            <nuxt-link to="/blog">blog</nuxt-link>
+            <!-- <nuxt-link to="/portfolio">portfolio</nuxt-link> -->
+            <!-- <nuxt-link to="/blog">blog</nuxt-link> -->
             <nuxt-link to="/about">about</nuxt-link>
-            <nuxt-link to="/services">services</nuxt-link>
+            <!-- <nuxt-link to="/services">services</nuxt-link> -->
 
             <nuxt-link to="/contact">contact</nuxt-link>
           </div>
