@@ -80,8 +80,8 @@
             <h1>
               <strong><em>Simple</em></strong> & Stylish Interiors
             </h1>
-            <p>
-              {{ heroTexts[select].descr }}
+            <p class="break">
+              <!-- {{ heroTexts[select].descr }} -->
             </p>
             <nuxt-link
               class="button white-button"
@@ -109,8 +109,8 @@
             <h1>
               <strong><em>Simple</em></strong> & Stylish Interiors
             </h1>
-            <p>
-              {{ heroTexts[select].descr }}
+            <p class="break">
+              <!-- {{ heroTexts[select].descr }} -->
             </p>
             <nuxt-link
               class="button white-button"
@@ -138,8 +138,8 @@
             <h1>
               <strong><em>Simple</em></strong> & Stylish Interiors
             </h1>
-            <p>
-              {{ heroTexts[select].descr }}
+            <p class="break">
+              <!-- {{ heroTexts[select].descr }} -->
             </p>
             <nuxt-link
               class="button white-button"
@@ -318,6 +318,9 @@ export default Vue.extend({
 .shown {
   display: block !important;
   opacity: 1 !important;
+}
+.break {
+  width: 100%;
 }
 .arrows {
   position: absolute;
