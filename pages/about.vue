@@ -51,7 +51,7 @@
           <div class="right-col">
             <img class="portrait" src="/bm.webp" alt="Bethany" loading="lazy" />
             <p class="info-text">
-              I’m Bethany, and like many other people these past two years I
+              I’m Bethany, and like many other people these past two years, I
               have been exploring what motivates and brings me happiness. I kept
               coming back to the same aspect: Design.
             </p>
