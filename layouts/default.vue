@@ -5,6 +5,8 @@
         <div class="brand-info">
           <nuxt-link to="/">
             <img src="/sc.svg" alt="logo" />
+
+            <!-- <span class="text-logo"> BM </span> -->
             <div class="brand-title">Bethany Marie</div>
             <div class="brand-descr">Design</div>
           </nuxt-link>
@@ -210,6 +212,9 @@ export default Vue.extend({
       padding: 5px 0;
     }
   }
+  .brand-info {
+    line-height: 60px !important;
+  }
   header {
     height: 60px !important;
   }
@@ -250,6 +255,13 @@ export default Vue.extend({
   justify-content: flex-end;
   padding: 20px;
   z-index: 42;
+}
+.text-logo {
+  font-family: 'Noto Serif', sans-serif;
+  letter-spacing: 2px;
+  color: rgba(136, 136, 136, 1);
+  font-size: 1.4rem;
+  /* text-decoration: underline; */
 }
 .hamburg {
   width: 20px;
@@ -350,6 +362,7 @@ nav {
   align-items: center;
   text-transform: uppercase;
   height: 100%;
+  line-height: 88px;
   padding: 8px 16px 8px 15px;
 
   img {
