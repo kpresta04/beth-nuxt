@@ -6,19 +6,21 @@ $grey3: #d1d1d1;
 $grey4: #e9e9e9;
 $haze: #f6f6f6;
 
-$color-1: hsl(84, 37%, 59%);
+// contact page
+$color-1: #644a2f;
 $c1-complement: lighten($color-1, 35%);
 
-$color-2: hsl(28, 73%, 67%);
+$color-2: #bfa06a;
 $c2-complement: lighten($color-2, 35%);
 
-$color-3: hsl(251, 42%, 67%);
+$color-3: #bf8c89;
 $c3-complement: lighten($color-3, 35%);
 
-$color-4: hsl(339, 70%, 68%);
+$color-4: #d1c2a7;
 $c4-complement: lighten($color-4, 35%);
 
-$color-5: hsl(209, 95%, 68%);
+// services page
+$color-5: #520d09;
 $c5-complement: lighten($color-5, 35%);
 
 $max-div-width: 1620px;

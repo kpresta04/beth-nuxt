@@ -9,8 +9,8 @@
             <h3>Let's Get in Touch</h3>
             <div class="divider bg-color-1"></div>
             <p class="text-grey">
-              Interested in working with Bethany Marie Design Studio? We'd love
-              to hear from you.
+              Interested in working with Bethany Marie Design? We'd love to hear
+              from you.
             </p>
             <a
               href="mailto:your@email.com?subject=Your%20Subject"

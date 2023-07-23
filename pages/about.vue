@@ -15,10 +15,9 @@
             </h2>
             <div class="divider"></div>
             <p class="info-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptates dolorum veritatis voluptatem quia obcaecati dolor autem
-              et sit velit, dolore, veniam numquam cum, perspiciatis nostrum
-              nulla tempore quisquam? Ullam, eligendi!
+              Working holistically with clients to create a beautiful design.
+              With an emphasis on comfortable, liveable spaces, we curate
+              designs to match their personality.
             </p>
             <img
               class="simple-design"
@@ -27,57 +26,66 @@
               loading="lazy"
             />
             <p class="info-text">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore
-              ducimus doloremque quisquam debitis ad eaque iste voluptatem
-              sapiente excepturi repellendus natus ipsa quia quos facilis, amet
-              expedita iusto laboriosam vitae labore harum possimus inventore
-              non eligendi? Pariatur cumque, minus dolores nemo amet voluptatum
-              explicabo illo modi, reprehenderit dolorem id corporis.
+              Drawn to simple, classic lines of the modern farmhouse design,
+              blending this with the comfort of a country aesthetic. I love to
+              incorporate a touch of personality in every design.
             </p>
 
             <h4>My Values</h4>
             <p class="info-text">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad
-              dignissimos omnis magnam deleniti doloremque unde soluta hic modi
-              consectetur fugiat?
+              With the client at the forefront my work is centred around the
+              following values:
             </p>
             <ul>
-              <li>Value</li>
-              <li>Value</li>
-              <li>Value</li>
-              <li>Value</li>
+              <li>Offering a simple approach at an affordable price</li>
+              <li>
+                Working with clients with respect and integrity at the forefront
+              </li>
+              <li>Ensuring a comfortable environemnt for my clients</li>
+              <li>
+                Focus on creating comfortable, liveable and functional spaces
+              </li>
             </ul>
             <p class="info-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-              aperiam quidem reiciendis quo cupiditate modi laudantium quia
-              praesentium, quasi autem dolore. Repudiandae sit cumque soluta.
-              Blanditiis doloribus ex commodi. Laudantium!
+              Join me on my journey to discover my design and how this
+              incorporates into my projects.
             </p>
             <SocialButtons />
           </div>
           <div class="right-col">
             <img
               class="portrait"
-              src="/placeholder.webp"
+              src="/bmmawife.png"
               alt="Bethany"
               loading="lazy"
             />
             <p class="info-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-              vero quidem quis reiciendis illum molestias tempora tempore nam
-              nostrum deserunt!
+              I’m Bethany, over recent years I have been exploring what
+              motivates and brings me happiness. I kept coming back to the same
+              aspect: Design.
             </p>
             <p class="info-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut neque
-              dolore nihil nobis, aliquid id.
+              Following 4 years studying Events Management at Sheffield
+              University, I have spent the last 10 years working in the
+              hospitality and event sector. With a passion for creating an
+              experience and happiness, I am now taking those years of
+              experience and joining this with my long-time passion of design. I
+              am currently studying Interior Design with the National Design
+              Academy and am looking to start my own business in the near
+              future.
             </p>
             <p class="info-text">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora
-              ab laborum architecto nulla animi excepturi, hic optio voluptatem
-              dolores corporis illo quod at praesentium. Sint odit accusantium
-              fuga molestiae maxime.
+              My personal inspirations have come from the experiences I have
+              lived and the place i travel, in particular my time in the United
+              States. My personal design style lends towards neutral palettes,
+              an abundance of textures and classic lines. However, I love to
+              work with your close memories and interests to create a beautiful
+              and meaningful design that you will love.
             </p>
-            <img src="/sig.png" alt="Bethany's signature" loading="lazy" />
+            <p class="info-text">
+              Come along with me as I continue this new journey of my life and
+              catch up with me on my Instagram page and Threads.
+            </p>
             <div class="img-wrapper">
               <img
                 class="vert"
