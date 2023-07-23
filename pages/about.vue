@@ -15,9 +15,9 @@
             </h2>
             <div class="divider"></div>
             <p class="info-text">
-              As I have been studying, I have found that I am drawn and inspired
-              by a range of styles and continue to develop my own personal
-              style.
+              Working holistically with clients to create a beautiful design.
+              With an emphasis on comfortable, liveable spaces, we curate
+              designs to match their personality.
             </p>
             <img
               class="simple-design"
@@ -26,21 +26,25 @@
               loading="lazy"
             />
             <p class="info-text">
-              Drawn to simple, classic lines of the mid-century modern design
-              and blending this with the comfort of a country aesthetic. I love
-              to incorporate an injection of personality in every design.
+              Drawn to simple, classic lines of the modern farmhouse design,
+              blending this with the comfort of a country aesthetic. I love to
+              incorporate a touch of personality in every design.
             </p>
 
             <h4>My Values</h4>
             <p class="info-text">
-              Drawn and inspired by the world around me, I love to experiment
-              with colours and design. However, each of my designs are centred
-              around the following values:
+              With the client at the forefront my work is centred around the
+              following values:
             </p>
             <ul>
-              <li>Warmth</li>
-              <li>Comfort</li>
-              <li>Practicality</li>
+              <li>Offering a simple approach at an affordable price</li>
+              <li>
+                Working with clients with respect and integrity at the forefront
+              </li>
+              <li>Ensuring a comfortable environemnt for my clients</li>
+              <li>
+                Focus on creating comfortable, liveable and functional spaces
+              </li>
             </ul>
             <p class="info-text">
               Join me on my journey to discover my design and how this
@@ -49,33 +53,39 @@
             <SocialButtons />
           </div>
           <div class="right-col">
-            <img class="portrait" src="/bm.webp" alt="Bethany" loading="lazy" />
+            <img
+              class="portrait"
+              src="/bmmawife.png"
+              alt="Bethany"
+              loading="lazy"
+            />
             <p class="info-text">
-              I’m Bethany, and like many other people these past two years, I
-              have been exploring what motivates and brings me happiness. I kept
-              coming back to the same aspect: Design.
+              I’m Bethany, over recent years I have been exploring what
+              motivates and brings me happiness. I kept coming back to the same
+              aspect: Design.
             </p>
             <p class="info-text">
               Following 4 years studying Events Management at Sheffield
-              University, I have spent the last 8 years working in the
+              University, I have spent the last 10 years working in the
               hospitality and event sector. With a passion for creating an
               experience and happiness, I am now taking those years of
-              experience and joining this with my long-time passion of design.
+              experience and joining this with my long-time passion of design. I
+              am currently studying Interior Design with the National Design
+              Academy and am looking to start my own business in the near
+              future.
             </p>
             <p class="info-text">
-              Even with a passion, to fully begin this new journey I understood
-              I needed to gain further knowledge. I have spent the last 6 months
-              undertaking the Professional Interior Design Diploma with the
-              National Design Academy. After passing in June 2021, I am now
-              beginning the bachelor’s degree course. Taking the time to develop
-              my skills and broaden my design knowledge.
+              My personal inspirations have come from the experiences I have
+              lived and the place i travel, in particular my time in the United
+              States. My personal design style lends towards neutral palettes,
+              an abundance of textures and classic lines. However, I love to
+              work with your close memories and interests to create a beautiful
+              and meaningful design that you will love.
             </p>
             <p class="info-text">
-              Come along with me as I continue this new journey of my life.
-              Catch up with me on my Instagram page and blog. Stay tuned for the
-              services I look to offer as I progress in this journey!
+              Come along with me as I continue this new journey of my life and
+              catch up with me on my Instagram page and Threads.
             </p>
-            <img src="/sig.png" alt="Bethany's signature" loading="lazy" />
             <div class="img-wrapper">
               <img
                 class="vert"

@@ -4,7 +4,7 @@
       <div class="nav-wrapper">
         <div class="brand-info">
           <nuxt-link to="/">
-            <img src="/sc.svg" alt="logo" />
+            <img src="/bm2.png" alt="logo" />
 
             <!-- <span class="text-logo"> BM </span> -->
             <div class="brand-title">Bethany Marie</div>
@@ -36,10 +36,10 @@
           </div>
         </div>
         <nav>
-          <!-- <nuxt-link to="/portfolio">portfolio</nuxt-link> -->
+          <nuxt-link to="/portfolio">portfolio</nuxt-link>
+          <nuxt-link to="/services">services</nuxt-link>
           <!-- <nuxt-link to="/blog">blog</nuxt-link> -->
           <nuxt-link to="/about">about</nuxt-link>
-          <!-- <nuxt-link to="/services">services</nuxt-link> -->
 
           <nuxt-link to="/contact">contact</nuxt-link>
         </nav>
@@ -54,10 +54,10 @@
       "
     >
       <nuxt-link class="nav-link" to="/">home</nuxt-link>
-      <!-- <nuxt-link class="nav-link" to="/portfolio">portfolio</nuxt-link> -->
+      <nuxt-link class="nav-link" to="/portfolio">portfolio</nuxt-link>
+      <nuxt-link class="nav-link" to="/services">services</nuxt-link>
       <!-- <nuxt-link class="nav-link" to="/blog">blog</nuxt-link> -->
       <nuxt-link class="nav-link" to="/about">about</nuxt-link>
-      <!-- <nuxt-link class="nav-link" to="/services">services</nuxt-link> -->
 
       <nuxt-link class="nav-link" to="/contact">contact</nuxt-link>
     </div>
@@ -120,10 +120,10 @@
           </div>
           <div class="footer-nav">
             <nuxt-link to="/">home</nuxt-link>
-            <!-- <nuxt-link to="/portfolio">portfolio</nuxt-link> -->
+            <nuxt-link to="/portfolio">portfolio</nuxt-link>
+            <nuxt-link to="/services">services</nuxt-link>
             <!-- <nuxt-link to="/blog">blog</nuxt-link> -->
             <nuxt-link to="/about">about</nuxt-link>
-            <!-- <nuxt-link to="/services">services</nuxt-link> -->
 
             <nuxt-link to="/contact">contact</nuxt-link>
           </div>
@@ -349,7 +349,7 @@ nav {
   padding-right: 4rem;
   a {
     text-transform: capitalize;
-    font-size: 14px;
+    font-size: 18px;
     margin: 0 2rem;
   }
   a:hover {
@@ -366,7 +366,7 @@ nav {
   padding: 8px 16px 8px 15px;
 
   img {
-    max-width: 32px;
+    max-width: 64px;
     vertical-align: middle;
     display: inline-block;
     color: $grey1;
@@ -374,10 +374,10 @@ nav {
 }
 .brand-title {
   margin-left: 15px;
-  font-family: 'Noto Serif', sans-serif;
+  /* font-family: 'Cormorant Garamond', sans-serif; */
   font-size: 16px;
   line-height: 20px;
-  font-weight: 500;
+  /* font-weight: 500; */
   letter-spacing: 5px;
   width: max-content;
 }

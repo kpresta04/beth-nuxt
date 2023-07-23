@@ -78,7 +78,7 @@
           <div class="hero-info">
             <div class="title">Bethany Marie</div>
             <h1>
-              <strong><em>Simple</em></strong> & Stylish Interiors
+              <strong><em>Simple</em></strong> & Liveable Interiors
             </h1>
             <p class="break">
               <!-- {{ heroTexts[select].descr }} -->
@@ -107,7 +107,7 @@
           <div class="hero-info">
             <div class="title">Bethany Marie</div>
             <h1>
-              <strong><em>Simple</em></strong> & Stylish Interiors
+              <strong><em>Simple</em></strong> & Beautiful Interiors
             </h1>
             <p class="break">
               <!-- {{ heroTexts[select].descr }} -->
@@ -136,7 +136,7 @@
           <div class="hero-info">
             <div class="title">Bethany Marie</div>
             <h1>
-              <strong><em>Simple</em></strong> & Stylish Interiors
+              <strong><em>Simple</em></strong> & Comfortable Interiors
             </h1>
             <p class="break">
               <!-- {{ heroTexts[select].descr }} -->
@@ -171,24 +171,19 @@ export default Vue.extend({
       autoplay: true,
       heroTexts: [
         {
-          title: '<strong><em>Simple</em></strong> & Stylish Interiors',
-          descr:
-            'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut beatae alias a. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, rem.',
-          buttonText: 'View my work',
+          title: '<strong><em>Simple</em></strong> & Beautiful Interiors',
+
+          buttonText: 'View Portfolio',
           buttonHref: '/portfolio',
         },
         {
-          title: '<strong><em>Simple</em></strong> & Stylish Interiors',
-          descr:
-            'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut beatae alias a. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, rem.',
+          title: '<strong><em>Simple</em></strong> & Beautiful Interiors',
 
-          buttonText: 'View blog',
-          buttonHref: '/blog',
+          buttonText: 'View Services',
+          buttonHref: '/services',
         },
         {
-          title: '<strong><em>Simple</em></strong> & Stylish Interiors',
-          descr:
-            'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut beatae alias a. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, rem.',
+          title: '<strong><em>Simple</em></strong> & Beautiful Interiors',
 
           buttonText: 'about me',
           buttonHref: '/about',

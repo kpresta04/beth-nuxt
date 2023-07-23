@@ -18,11 +18,16 @@ export default {
       },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/sc.svg' },
+      { rel: 'icon', type: 'image/x-icon', href: '/bmicon.svg' },
       {
         rel: 'stylesheet',
         href:
           'https://fonts.googleapis.com/css2?family=Lato&family=Noto+Serif&display=swap',
+      },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Cormorant+Garamond&display=swap',
       },
     ],
   },
