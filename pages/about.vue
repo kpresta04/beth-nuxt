@@ -41,7 +41,7 @@
               <li>
                 Working with clients with respect and integrity at the forefront
               </li>
-              <li>Ensuring a comfortable environemnt for my clients</li>
+              <li>Ensuring a comfortable environment for my clients</li>
               <li>
                 Focus on creating comfortable, liveable and functional spaces
               </li>
