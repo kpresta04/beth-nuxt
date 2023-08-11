@@ -67,57 +67,11 @@
         <footer>
           <div class="footer-sm">
             <div class="social-buttons">
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener"
-                class="social-button dark-bg w-inline-block"
-                ><img
-                  src="https://assets.website-files.com/5be96776163440d16fc0e74c/5be9a92c6bace39d6bd2424a_twitter-icon-white.svg"
-                  alt="twitter"
-              /></a>
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener"
-                class="social-button dark-bg w-inline-block"
-                ><img
-                  src="https://assets.website-files.com/5be96776163440d16fc0e74c/5be9a925bfc62e394f5f8bf9_facebook-icon-white.svg"
-                  alt="facebook"
-              /></a>
-              <a
-                href="https://www.instagram.com/bethanymarie_designs/"
-                target="_blank"
-                rel="noopener"
-                class="social-button dark-bg w-inline-block"
-                ><img
-                  src="https://assets.website-files.com/5be96776163440d16fc0e74c/5be9a9258a9149b9edb7ade9_instagram-icon-white.svg"
-                  alt="instagram"
-              /></a>
-              <a
-                href="https://pinterest.com"
-                target="_blank"
-                rel="noopener"
-                class="social-button dark-bg w-inline-block"
-                ><img
-                  src="https://assets.website-files.com/5be96776163440d16fc0e74c/5be9a9268a91497c84b7adea_pinterest-icon-white.svg"
-                  alt="pinterest"
-              /></a>
+              <SocialButtons bg="dark" />
             </div>
           </div>
-          <div class="footer-col">
-            <!-- <p class="paragraph-small text-grey">
-              1028 &nbsp;Arch Avenue, <br />Los Angeles, CA 90210
-            </p> -->
-          </div>
-          <div class="footer-col">
-            <!-- <a
-              href="mailto:your@email.com?subject=Your%20Subject"
-              class="link-grey"
-              >bethany@bmdesign.com</a
-            >
-            <div class="text-grey">+1 213 974-3898</div> -->
-          </div>
+          <div class="footer-col"></div>
+          <div class="footer-col"></div>
           <div class="footer-nav">
             <nuxt-link to="/">home</nuxt-link>
             <nuxt-link to="/portfolio">portfolio</nuxt-link>
@@ -140,6 +94,7 @@
 </template>
 <script lang="ts">
 import Vue from 'vue'
+import SocialButtons from '~/components/SocialButtons.vue'
 
 const hamburgClasses = [
   'hamburg-wrapper',
@@ -150,6 +105,7 @@ const hamburgClasses = [
 ]
 
 export default Vue.extend({
+  components: { SocialButtons },
   data() {
     return {
       year: 2021,
