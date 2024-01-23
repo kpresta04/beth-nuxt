@@ -167,6 +167,7 @@ export default {
   z-index: 54;
 
   letter-spacing: 0.2rem;
+  background-color: #000000a6;
 
   position: absolute;
   color: #fff;
