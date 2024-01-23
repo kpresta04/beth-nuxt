@@ -62,7 +62,6 @@ export default {
       if (store.state.projects.length < 1) {
         await store.commit('updateProjects', docs.results)
       }
-      // console.log(docs.results)
       return { docs: docs.results }
     } else {
       error({ statusCode: 404, message: 'Page not found' })
@@ -116,6 +115,9 @@ export default {
   .main {
     .project-wrapper {
       margin-top: 9rem;
+    }
+    .hover-content {
+      display: flex;
     }
   }
 }
@@ -178,6 +180,10 @@ export default {
   bottom: 2rem;
   padding-left: 0.625rem;
   padding-right: 0.625rem;
+}
+
+.hover-content {
+  display: none;
 }
 
 .bg {
@@ -243,10 +249,6 @@ export default {
   right: 0%;
   bottom: 0%;
   z-index: 6;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   padding: 24px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
